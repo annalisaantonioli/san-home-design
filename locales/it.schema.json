@@ -2318,6 +2318,23 @@
         "name": "Rich text"
       }
     },
+    "fancy-img-grid": {
+      "name": "Fancy Grid Image",
+      "settings": {
+        "full_width": {
+          "label": "Crea sezione a larghezza intera"
+        }
+      },
+      "blocks": {
+        "image": {
+          "name": "Immagine",
+          "label": "Image"
+        }
+      },
+      "presets": {
+        "name": "Rich text"
+      }
+    },
     "apps": {
       "name": "App",
       "settings": {
