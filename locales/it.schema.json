@@ -2319,7 +2319,7 @@
       }
     },
     "fancy-img-grid": {
-      "name": "Fancy Grid Image",
+      "name": "Fancy Grid Images",
       "settings": {
         "full_width": {
           "label": "Crea sezione a larghezza intera"
@@ -2332,7 +2332,7 @@
         }
       },
       "presets": {
-        "name": "Rich text"
+        "name": "Fancy grid images"
       }
     },
     "apps": {
