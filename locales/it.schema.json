@@ -2328,7 +2328,11 @@
       "blocks": {
         "image": {
           "name": "Immagine",
-          "label": "Image"
+          "label": "Image",
+          "settings": {
+            "name": "Immagine",
+            "label": "Image"
+          }
         }
       },
       "presets": {
