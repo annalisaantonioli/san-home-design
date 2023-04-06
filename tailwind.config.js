@@ -1,5 +1,5 @@
 module.exports = {
-  prefix: 'twcss-',
+  prefix: 'shd-',
   content: [
     './layout/*.liquid',
     './templates/*.liquid',
@@ -21,8 +21,10 @@ module.exports = {
         heading: 'var(--font-heading-family)',
       },
     },
-    color: {
+    colors: {
       black: '#000000',
+      white: '#fff',
+      'sun-green-dark': '#636C45',
     },
   },
   plugins: [],
