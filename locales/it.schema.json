@@ -2330,8 +2330,10 @@
           "name": "Immagine",
           "label": "Image",
           "settings": {
-            "name": "Immagine",
-            "label": "Image"
+            "image": {
+              "name": "Immagine",
+              "label": "Image"
+            }
           }
         }
       },
