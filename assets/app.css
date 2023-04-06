@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e5e7eb;
+  border-color: currentColor;
   /* 2 */
 }
 
@@ -40,11 +40,9 @@ html {
   -moz-tab-size: 4;
   /* 3 */
   -o-tab-size: 4;
-  tab-size: 4;
+     tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
 }
 
@@ -81,7 +79,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /*
@@ -125,8 +123,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -349,16 +346,14 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-input::-moz-placeholder,
-textarea::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
   /* 2 */
 }
 
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
@@ -378,7 +373,7 @@ Set the default cursor for buttons.
 */
 
 button,
-[role='button'] {
+[role="button"] {
   cursor: pointer;
 }
 
@@ -428,9 +423,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-*,
-::before,
-::after {
+*, ::before, ::after {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
   --tw-rotate: 0;
@@ -438,16 +431,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-skew-y: 0;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
-  --tw-pan-x: ;
-  --tw-pan-y: ;
-  --tw-pinch-zoom: ;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
   --tw-scroll-snap-strictness: proximity;
-  --tw-ordinal: ;
-  --tw-slashed-zero: ;
-  --tw-numeric-figure: ;
-  --tw-numeric-spacing: ;
-  --tw-numeric-fraction: ;
-  --tw-ring-inset: ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: rgb(59 130 246 / 0.5);
@@ -455,60 +448,70 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
-  --tw-blur: ;
-  --tw-brightness: ;
-  --tw-contrast: ;
-  --tw-grayscale: ;
-  --tw-hue-rotate: ;
-  --tw-invert: ;
-  --tw-saturate: ;
-  --tw-sepia: ;
-  --tw-drop-shadow: ;
-  --tw-backdrop-blur: ;
-  --tw-backdrop-brightness: ;
-  --tw-backdrop-contrast: ;
-  --tw-backdrop-grayscale: ;
-  --tw-backdrop-hue-rotate: ;
-  --tw-backdrop-invert: ;
-  --tw-backdrop-opacity: ;
-  --tw-backdrop-saturate: ;
-  --tw-backdrop-sepia: ;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
 }
 
-.twcss-container {
-  width: 100%;
+.shd-flex {
+  display: flex;
 }
 
-@media (min-width: 320px) {
-  .twcss-container {
-    max-width: 320px;
-  }
+.shd-hidden {
+  display: none;
 }
 
-@media (min-width: 750px) {
-  .twcss-container {
-    max-width: 750px;
-  }
+.shd-items-center {
+  align-items: center;
 }
 
-@media (min-width: 990px) {
-  .twcss-container {
-    max-width: 990px;
-  }
+.shd-justify-between {
+  justify-content: space-between;
 }
 
-@media (min-width: 1440px) {
-  .twcss-container {
-    max-width: 1440px;
-  }
+.shd-border-b {
+  border-bottom-width: 1px;
 }
 
-@media (min-width: 1920px) {
-  .twcss-container {
-    max-width: 1920px;
-  }
+.shd-border-sun-green-dark\/40 {
+  border-color: rgb(99 108 69 / 0.4);
 }
 
-.twcss-block {
-  display: block;
+.shd-py-14 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.shd-text-center {
+  text-align: center;
+}
+
+.shd-text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.shd-shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shd-filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
