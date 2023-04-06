@@ -58,9 +58,9 @@
         "template--16067985408173__240917ae-efc6-43da-9750-aad5d8ce8320-168079430155e2eb72-2"
       ],
       "settings": {
-        "full_width": true,
-        "padding_top": 100,
-        "padding_bottom": 100
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 72
       }
     },
     "featured_collection": {
