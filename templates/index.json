@@ -1,5 +1,28 @@
 {
   "sections": {
+    "52bb21a4-96cf-4682-ad0b-f5a1cfb13f61": {
+      "type": "animated-title",
+      "blocks": {
+        "template--16067985408173__52bb21a4-96cf-4682-ad0b-f5a1cfb13f61-16813108595ba2683c-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Bonjour<\/p>",
+            "heading_size": "hxl"
+          }
+        }
+      },
+      "block_order": [
+        "template--16067985408173__52bb21a4-96cf-4682-ad0b-f5a1cfb13f61-16813108595ba2683c-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -91,6 +114,7 @@
     }
   },
   "order": [
+    "52bb21a4-96cf-4682-ad0b-f5a1cfb13f61",
     "rich_text",
     "240917ae-efc6-43da-9750-aad5d8ce8320",
     "44040203-4d71-4ed9-8f14-511f32250d69"
