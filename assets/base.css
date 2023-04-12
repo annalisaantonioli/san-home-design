@@ -2315,9 +2315,9 @@ product-info .loading-overlay:not(.hidden) ~ *,
   background-color: rgb(var(--color-background));
 }
 
-.header-wrapper--border-bottom {
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
-}
+/* .header-wrapper--border-bottom {
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.5);
+} */
 
 .header {
   display: grid;
@@ -2361,7 +2361,8 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
   .header:not(.header--middle-left, .header--middle-center)
     .header__inline-menu {
-    margin-top: 1.05rem;
+    margin-top: 2.05rem;
+    border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.5);
   }
 }
 
