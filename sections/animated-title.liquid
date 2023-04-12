@@ -30,7 +30,7 @@
   <div class="animated-title content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} animated-title--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
     <div class="animated-title__wrapper animated-title__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
       <div class="animated-title__blocks {{ section.settings.content_alignment }}">
-              <h2 class="rich-text__heading rte inline-richtext animated-title-lettering overflow-hidden {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+              <h2 class="animated-title__heading rte inline-richtext animated-title-lettering overflow-hidden {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
                 {{ block.settings.heading | replace: 'p>', 'span>' }}
               </h2>
       </div>
@@ -71,20 +71,20 @@ anime({
       "options": [
         {
           "value": "left",
-          "label": "t:sections.rich-text.settings.desktop_content_position.options__1.label"
+          "label": "t:sections.animated-title.settings.desktop_content_position.options__1.label"
         },
         {
           "value": "center",
-          "label": "t:sections.rich-text.settings.desktop_content_position.options__2.label"
+          "label": "t:sections.animated-title.settings.desktop_content_position.options__2.label"
         },
         {
           "value": "right",
-          "label": "t:sections.rich-text.settings.desktop_content_position.options__3.label"
+          "label": "t:sections.animated-title.settings.desktop_content_position.options__3.label"
         }
       ],
       "default": "center",
-      "label": "t:sections.rich-text.settings.desktop_content_position.label",
-      "info": "t:sections.rich-text.settings.desktop_content_position.info"
+      "label": "t:sections.animated-title.settings.desktop_content_position.label",
+      "info": "t:sections.animated-title.settings.desktop_content_position.info"
     },
     {
       "type": "select",
@@ -92,19 +92,19 @@ anime({
       "options": [
         {
           "value": "left",
-          "label": "t:sections.rich-text.settings.content_alignment.options__1.label"
+          "label": "t:sections.animated-title.settings.content_alignment.options__1.label"
         },
         {
           "value": "center",
-          "label": "t:sections.rich-text.settings.content_alignment.options__2.label"
+          "label": "t:sections.animated-title.settings.content_alignment.options__2.label"
         },
         {
           "value": "right",
-          "label": "t:sections.rich-text.settings.content_alignment.options__3.label"
+          "label": "t:sections.animated-title.settings.content_alignment.options__3.label"
         }
       ],
       "default": "center",
-      "label": "t:sections.rich-text.settings.content_alignment.label"
+      "label": "t:sections.animated-title.settings.content_alignment.label"
     },
     {
       "type": "select",
@@ -138,7 +138,7 @@ anime({
       "type": "checkbox",
       "id": "full_width",
       "default": true,
-      "label": "t:sections.rich-text.settings.full_width.label"
+      "label": "t:sections.animated-title.settings.full_width.label"
     },
     {
       "type": "header",
@@ -168,14 +168,14 @@ anime({
   "blocks": [
     {
       "type": "heading",
-      "name": "t:sections.rich-text.blocks.heading.name",
+      "name": "t:sections.animated-title.blocks.heading.name",
       "limit": 3,
       "settings": [
         {
           "type": "richtext",
           "id": "heading",
           "default": "<p>Talk about your brand</p>",
-          "label": "t:sections.rich-text.blocks.heading.settings.heading.label"
+          "label": "t:sections.animated-title.blocks.heading.settings.heading.label"
         },
         {
           "type": "select",
@@ -206,7 +206,7 @@ anime({
   ],
   "presets": [
     {
-      "name": "t:sections.rich-text.presets.name",
+      "name": "t:sections.animated-title.presets.name",
       "blocks": [
         {
           "type": "heading"
