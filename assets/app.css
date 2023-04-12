@@ -512,6 +512,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.shd-m-2\.5 {
+  margin: 0.625rem;
+}
+
+.shd-m-2 {
+  margin: 0.5rem;
+}
+
 .shd-flex {
   display: flex;
 }
@@ -526,6 +534,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .shd-justify-between {
   justify-content: space-between;
+}
+
+.shd-overflow-hidden {
+  overflow: hidden;
 }
 
 .shd-border-b {

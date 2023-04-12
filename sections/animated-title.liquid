@@ -3,6 +3,12 @@
 
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'animated-title.css' | asset_url | stylesheet_tag }}</noscript>
+<style>
+  .hidden-letters {
+    opacity: 0;
+    transform: translateY(100%)
+  }
+</style>
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -24,7 +30,7 @@
       <div class="animated-title__blocks {{ section.settings.content_alignment }}">
         {%- for block in section.blocks -%}
          
-              <h2 class="animated-title__heading rte inline-richtext {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+              <h2 class="animated-title__heading rte inline-richtext animated-title-lettering shd-overflow-hidden {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
                 {{ block.settings.heading | replace: 'p>', 'span>' }}
               </h2>
         
@@ -63,6 +69,25 @@
     </div>
   </div>
 </div>
+<script>
+  console.log('animating')
+  const title = document.querySelector('.animated-title-lettering')
+  const letters = title.innerText.split('')
+  letters.forEach(function(letter) {
+     const span = document.createElement('span')
+     span.classList.add('hidden-letter')
+     title.appendChild(span)
+    
+ });
+ 
+  anime({
+    targets: span,
+    translateY: ['100%', 0],
+    opacity: 1,
+    delay: anime.stagger(100) // increase delay by 100ms for each elements.
+  });
+ </script>
+ 
 
 {% schema %}
 {
@@ -219,6 +244,8 @@
         {
           "type": "heading"
         }
+
+        
       ]
     }
   ]
