@@ -13,7 +13,7 @@
         "template--16067985473709__5ab3a2f0-ae66-4f05-8e16-edc3ddd8cb7d-1681399730cf122d28-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>“Bonjour!“<\/p>",
+            "heading": "<p>“Bonjour!”<\/p>",
             "heading_size": "h1"
           }
         },
@@ -49,10 +49,67 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "061111db-3b6b-4be6-a78b-b9ad03048159": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16067985473709__061111db-3b6b-4be6-a78b-b9ad03048159-168139989944cd83f9-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dummy_1200x1200_ffffff_cccccc.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16067985473709__061111db-3b6b-4be6-a78b-b9ad03048159-168139989944cd83f9-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dummy_1200x1200_ffffff_cccccc.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16067985473709__061111db-3b6b-4be6-a78b-b9ad03048159-168139989944cd83f9-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dummy_1200x1200_ffffff_cccccc.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16067985473709__061111db-3b6b-4be6-a78b-b9ad03048159-168139989944cd83f9-0",
+        "template--16067985473709__061111db-3b6b-4be6-a78b-b9ad03048159-168139989944cd83f9-1",
+        "template--16067985473709__061111db-3b6b-4be6-a78b-b9ad03048159-168139989944cd83f9-2"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "5ab3a2f0-ae66-4f05-8e16-edc3ddd8cb7d"
+    "5ab3a2f0-ae66-4f05-8e16-edc3ddd8cb7d",
+    "061111db-3b6b-4be6-a78b-b9ad03048159"
   ]
 }
