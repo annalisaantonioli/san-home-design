@@ -84,3 +84,14 @@
 .animated-title__blocks.right .animated-title__buttons {
   justify-content: flex-end;
 }
+
+
+.animated-title-lettering {
+  opacity: 0;
+}
+
+.hidden-letter {
+  opacity: 0;
+  transform: translateY(100%);
+  display: inline-block;
+}

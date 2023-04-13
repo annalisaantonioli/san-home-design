@@ -532,6 +532,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
+.shd-justify-center {
+  justify-content: center;
+}
+
 .shd-justify-between {
   justify-content: space-between;
 }
@@ -553,9 +557,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
+.shd-text-san-green-dark {
+  --tw-text-opacity: 1;
+  color: rgb(99 108 69 / var(--tw-text-opacity));
+}
+
 .shd-text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.shd-opacity-0 {
+  opacity: 0;
 }
 
 .shd-shadow-xl {

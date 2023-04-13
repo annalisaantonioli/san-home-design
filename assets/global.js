@@ -1331,3 +1331,68 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+const titles = document.querySelectorAll('.animated-title-lettering');
+
+if (titles) {
+  titles.forEach( title  => {
+    const letters = title.innerText.split('');
+    title.innerText = '';
+    letters.forEach(function (letter) {
+      const span = document.createElement('span');
+      span.classList.add('hidden-letter');
+      span.innerText = letter;
+      title.appendChild(span);
+    }); 
+   // }, 1000)
+  });
+}
+// Animat text
+document.addEventListener("DOMContentLoaded", (event) => {
+ 
+  const titles = document.querySelectorAll('.animated-title-lettering');
+if (titles) {
+  titles.forEach( title  => {
+    const letters = title.querySelectorAll('.hidden-letter')
+    const nextSection = title.closest('.section').nextElementSibling
+    anime.set(nextSection, {marginTop: '100vh', opacity: 0})
+
+    // obeserving entering
+    function handleIntersection(entries) {
+      // The callback will return an array of entries, even if you are only observing a single item
+      entries.map((entry) => {
+        if (entry.isIntersecting) {
+          
+          setTimeout(() => {
+            anime.set(title, {opacity: 1})
+            let tl = anime.timeline({
+              duration: 2000
+            });
+            
+            tl.add({
+              targets: [letters],
+              opacity: 1,
+              scale: [0, 1],
+              duration: 1500,
+              elasticity: 600,
+              delay: anime.stagger(100), // increase delay by 100ms for each elements.
+            }).add({
+              targets: nextSection,
+              marginTop: 0,
+              opacity: 1,
+              easing: 'easeOutExpo', 
+            }, '-=140')
+          }, 1000)
+        } 
+      });
+    }
+    const observer = new IntersectionObserver(handleIntersection);
+    observer.observe(title);
+
+   // setTimeout(()=> {
+
+   // }, 1000)
+  });
+}
+}, false);
+
+
