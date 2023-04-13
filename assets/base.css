@@ -3064,3 +3064,20 @@ details-disclosure > details {
 .collection-list-title.shd-text-san-green-dark {
   color: #636C45;
 }
+
+.shopify-policy__title {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.shopify-policy__container h3  {
+  margin-bottom: 25px;
+}
+
+.shopify-policy__container .rte ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+.shopify-policy__container .rte ol li {
+  margin-bottom: 8px;
+}
