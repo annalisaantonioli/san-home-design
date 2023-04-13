@@ -5,31 +5,15 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer-0": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
-          }
-        },
-        "footer-1": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Info",
-            "menu": "footer"
-          }
-        },
         "footer-2": {
           "type": "text",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "heading": "",
+            "subtext": "<p>San home design nasce dal desiderio di circondarsi di bellezza e stile anche a tavola.<br\/>Complementi d’arredo con un design accattivante e originale<br\/>per la colazione, un pranzo in famiglia o una cena formale.<br\/>Tutti i prodotti sono l’espressione<br\/>di una lunga ricerca di materiali e di un continuo studio del design<\/p>"
           }
         }
       },
       "block_order": [
-        "footer-0",
-        "footer-1",
         "footer-2"
       ],
       "settings": {
