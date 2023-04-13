@@ -30,7 +30,7 @@
   <div class="page-width section-{{ section.id }}-padding isolate">
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin shd-justify-center">
-        <h2 class="title inline-richtext {{ section.settings.heading_size }} {%if section.settings.color_scheme == 'accent-2'%} text-san-green-dark {% endif %}">
+        <h2 class="title inline-richtext {{ section.settings.heading_size }} {%if section.settings.color_scheme == 'accent-2'%} shd-text-san-green-dark {% endif %}">
           {{ section.settings.title }}
         </h2>
         {%- if section.settings.button_label != blank and show_mobile_slider -%} 
