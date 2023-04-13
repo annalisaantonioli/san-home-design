@@ -922,6 +922,10 @@ summary::-webkit-details-marker {
   margin: 3rem 0 2rem;
 }
 
+.title-wrapper-with-link.shd-justify-center {
+  justify-content: center
+}
+
 .title-wrapper-with-link .title {
   margin: 0;
 }
