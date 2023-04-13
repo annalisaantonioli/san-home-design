@@ -3062,5 +3062,5 @@ details-disclosure > details {
 
 
 .collection-list-title.shd-text-san-green-dark {
-  @apply shd-text-san-green-dark
+  color: #636C45;
 }
