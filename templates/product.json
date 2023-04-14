@@ -49,46 +49,40 @@
           "settings": {
           }
         },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
-          }
-        },
         "collapsible-row-2": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
+            "heading": "Dimensioni",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.shd.dimensioni.value }}<\/p>",
             "page": ""
           }
         },
         "collapsible-row-3": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
+            "heading": "Spessore",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.shd.spessore | metafield_tag }}<\/p>",
             "page": ""
           }
         },
-        "share": {
-          "type": "share",
+        "3aa8f66e-e611-4da0-b355-aafac497d33d": {
+          "type": "collapsible_tab",
           "settings": {
-            "share_label": "Share"
+            "heading": "Peso",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.shd.peso | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "b4516efd-76da-4c9a-af4f-239b25630d17": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materiale",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.shd.materiale.value }}<\/p>",
+            "page": ""
           }
         }
       },
@@ -101,11 +95,10 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "collapsible-row-0",
-        "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share"
+        "3aa8f66e-e611-4da0-b355-aafac497d33d",
+        "b4516efd-76da-4c9a-af4f-239b25630d17"
       ],
       "settings": {
         "enable_sticky_info": true,
