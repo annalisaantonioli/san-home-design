@@ -468,32 +468,50 @@
 </div>
 <div class="shd-mt-20 md:shd-flex ">
   <div class="md:shd-w-[40%] shd-mb-20 md:shd-mr-20 product__spec">
+    {%- if product.metafields.shd.dimensioni -%}
     <div class="shd-justify-between shd-items-center shd-flex shd-border-t shd-border-san-green-dark shd-py-2">
       <span>{{ 'shd_custom.dimensioni' | t }}</span><span>{{ product.metafields.shd.dimensioni }}</span>
     </div>
+  {%- endif -%}
+  {%- if product.metafields.shd.spessore.value -%}
     <div class="shd-justify-between shd-items-center shd-flex shd-border-t shd-border-san-green-dark shd-py-2">
       <span>{{ 'shd_custom.spessore' | t }}</span><span>{{ product.metafields.shd.spessore.value }} {{ product.metafields.shd.spessore.unit }}</span>
     </div>
+  {%- endif -%}
+  {%- if product.metafields.shd.peso.value -%}
     <div class="shd-justify-between shd-items-center shd-flex shd-border-t shd-border-san-green-dark shd-py-2">
       <span>{{ 'shd_custom.peso' | t }}</span><span>{{ product.metafields.shd.peso.value }} {{ product.metafields.shd.peso.unit }}</span>
     </div>
+  {%- endif -%}
+  {%- if product.metafields.shd.materiale -%}
     <div class="shd-justify-between shd-items-center shd-flex shd-border-y shd-border-san-green-dark shd-py-2">
       <span>{{ 'shd_custom.materiale' | t }}</span><span>{{ product.metafields.shd.materiale }}</span>
     </div>
+  {%- endif -%}
+
   </div>
   <div class="md:shd-w-[40%] shd-mb-20 ">
-    <div class="shd-justify-between shd-items-center shd-flex shd-border-t shd-border-san-green-dark shd-py-2">
-      <span>{{ 'shd_custom.dimensioni' | t }}</span><span>{{ product.metafields.shd.dimensioni }}</span>
+    {%- if product.metafields.shd.certificato -%}
+      <div class="shd-list-item shd-pb-3">
+        {{ 'shd_custom.certificato' | t }}
+      </div>
+ 
+    {%- endif -%}
+    {%- if product.metafields.shd.facile_da_pulire -%}
+    <div class="shd-list-item shd-pb-3">
+      {{ 'shd_custom.facile_da_pulire' | t }}
     </div>
-    <div class="shd-justify-between shd-items-center shd-flex shd-border-t shd-border-san-green-dark shd-py-2">
-      <span>{{ 'shd_custom.spessore' | t }}</span><span>{{ product.metafields.shd.spessore.value }} {{ product.metafields.shd.spessore.unit }}</span>
+  {%- endif -%}
+  {%- if product.metafields.shd.waterproof -%}
+    <div class="shd-list-item shd-pb-3">
+      {{ 'shd_custom.waterproof' | t }}
     </div>
-    <div class="shd-justify-between shd-items-center shd-flex">
-      <span>{{ 'shd_custom.peso' | t }}</span><span>{{ product.metafields.shd.peso.value }} {{ product.metafields.shd.peso.unit }}</span>
+  {%- endif -%}
+  {%- if product.metafields.shd.antiscivolo -%}
+    <div class="shd-list-item shd-pb-3">
+      {{ 'shd_custom.antiscivolo' | t }}
     </div>
-    <div class="shd-justify-between shd-items-center shd-flex">
-      <span>{{ 'shd_custom.materiale' | t }}</span><span>{{ product.metafields.shd.materiale }}</span>
-    </div>
+  {%- endif -%}
   </div>
 </div>
   {% render 'product-media-modal' variant_images: variant_images %}

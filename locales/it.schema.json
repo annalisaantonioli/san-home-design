@@ -3382,11 +3382,5 @@
         "name": "Riga multipla"
       }
     }
-  },
-  "shd_custom": {
-    "materiale": "Materiale",
-    "peso": "Peso",
-    "dimensioni": "Dimensioni",
-    "spessore": "Spessore"
   }
 }
