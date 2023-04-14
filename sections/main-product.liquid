@@ -162,12 +162,12 @@
                   {%- endif -%}
                 {%- endif -%}
               </p>
-            {%- when 'description' -%}
+            {% comment %} {%- when 'description' -%}
               {%- if product.description != blank -%}
                 <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                   {{ product.description }}
                 </div>
-              {%- endif -%}
+              {%- endif -%} {% endcomment %}
             {%- when 'sku' -%}
               <p
                 class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -440,6 +440,7 @@
           {% render 'icon-arrow' %}
         </a>
       </product-info>
+     
     </div>
     {%- if section.settings.media_position == 'right' -%}
       {% comment %} Duplicate gallery to display after product content on tablet/desktop breakpoint {% endcomment %}
@@ -448,7 +449,53 @@
       </div>
     {%- endif -%}
   </div>
+<div class="shd-mt-20">
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+   
+      {%- when 'description' -%}
+        {%- if product.description != blank -%}
+          <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+            <h2 class="shd-py-8">{{ 'shd_custom.product_info' | t }}</h2>
+            <span class="shd-inline-block shd-w-full shd-h-[0.8px] shd-bg-san-green-dark shd-mb-10 "></span>
+            <h3 class="shd-mb-10">{{ 'shd_custom.product_descr' | t }}</h3>
+            {{ product.description }}
+          </div>
+        {%- endif -%}
 
+    {%- endcase -%}
+  {%- endfor -%}
+</div>
+<div class="shd-mt-20 md:shd-flex ">
+  <div class="md:shd-w-[40%] shd-mb-20 md:shd-mr-20 product__spec">
+    <div class="shd-justify-between shd-items-center shd-flex shd-border-t shd-border-san-green-dark shd-py-2">
+      <span>{{ 'shd_custom.dimensioni' | t }}</span><span>{{ product.metafields.shd.dimensioni }}</span>
+    </div>
+    <div class="shd-justify-between shd-items-center shd-flex shd-border-t shd-border-san-green-dark shd-py-2">
+      <span>{{ 'shd_custom.spessore' | t }}</span><span>{{ product.metafields.shd.spessore.value }} {{ product.metafields.shd.spessore.unit }}</span>
+    </div>
+    <div class="shd-justify-between shd-items-center shd-flex shd-border-t shd-border-san-green-dark shd-py-2">
+      <span>{{ 'shd_custom.peso' | t }}</span><span>{{ product.metafields.shd.peso.value }} {{ product.metafields.shd.peso.unit }}</span>
+    </div>
+    <div class="shd-justify-between shd-items-center shd-flex shd-border-y shd-border-san-green-dark shd-py-2">
+      <span>{{ 'shd_custom.materiale' | t }}</span><span>{{ product.metafields.shd.materiale }}</span>
+    </div>
+  </div>
+  <div class="md:shd-w-[40%] shd-mb-20 ">
+    <div class="shd-justify-between shd-items-center shd-flex shd-border-t shd-border-san-green-dark shd-py-2">
+      <span>{{ 'shd_custom.dimensioni' | t }}</span><span>{{ product.metafields.shd.dimensioni }}</span>
+    </div>
+    <div class="shd-justify-between shd-items-center shd-flex shd-border-t shd-border-san-green-dark shd-py-2">
+      <span>{{ 'shd_custom.spessore' | t }}</span><span>{{ product.metafields.shd.spessore.value }} {{ product.metafields.shd.spessore.unit }}</span>
+    </div>
+    <div class="shd-justify-between shd-items-center shd-flex">
+      <span>{{ 'shd_custom.peso' | t }}</span><span>{{ product.metafields.shd.peso.value }} {{ product.metafields.shd.peso.unit }}</span>
+    </div>
+    <div class="shd-justify-between shd-items-center shd-flex">
+      <span>{{ 'shd_custom.materiale' | t }}</span><span>{{ product.metafields.shd.materiale }}</span>
+    </div>
+  </div>
+</div>
   {% render 'product-media-modal' variant_images: variant_images %}
 
   {% assign popups = section.blocks | where: 'type', 'popup' %}

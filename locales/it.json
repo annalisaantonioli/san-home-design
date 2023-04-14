@@ -464,5 +464,13 @@
       "copy_code_success": "Codice copiato correttamente",
       "print_gift_card": "Stampa"
     }
+  },
+  "shd_custom": {
+    "materiale": "Materiale",
+    "peso": "Peso",
+    "dimensioni": "Dimensioni",
+    "spessore": "Spessore",
+    "product_info": "Informazioni di prodotto",
+    "product_descr": "Descrizione"
   }
 }

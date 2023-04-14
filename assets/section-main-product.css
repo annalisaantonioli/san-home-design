@@ -1533,3 +1533,9 @@ a.product__text {
     display: none;
   }
 }
+
+
+.product__spec {
+  font-size: 13px;
+  font-weight: 600;
+}
