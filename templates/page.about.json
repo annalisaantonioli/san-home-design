@@ -16,17 +16,10 @@
             "heading": "<p>Bonjour<\/p>",
             "heading_size": "h1"
           }
-        },
-        "template--18565947490638__6f77d098-08d4-4911-b3e5-93f4051ea0f5-1681552075c26d5c81-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Dopo quasi 20 anni in agenzia di comunicazione, ho deciso di intraprendere un percorso “mio”,<br\/>dove porto la mia esperienza e il mio gusto in “San Home Design”.<br\/>Mi chiamo Maria Sole e il naming del mio brand nasce dal soprannome “Sun” abbinato all’iniziale di Anna,<br\/>l’amica designer che ha suggerito l’idea per questo progetto, nonché la creatrice di alcune collezioni.<br\/>La passione per il decoro della tavola e la mia personale ricerca di stile mi hanno portata a proporvi<br\/>diverse tipologie di tovagliette e sottopiatti con grafiche originali.<br\/>Grafiche che racchiudono ciò che amo e che spero conquistino anche vo<\/p>"
-          }
         }
       },
       "block_order": [
-        "template--18565947490638__6f77d098-08d4-4911-b3e5-93f4051ea0f5-1681552075c26d5c81-0",
-        "template--18565947490638__6f77d098-08d4-4911-b3e5-93f4051ea0f5-1681552075c26d5c81-1"
+        "template--18565947490638__6f77d098-08d4-4911-b3e5-93f4051ea0f5-1681552075c26d5c81-0"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -35,6 +28,16 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
+      }
+    },
+    "62983cb6-e01a-4bcb-b9a1-083d9c04a5ae": {
+      "type": "page",
+      "settings": {
+        "page": "{{ page }}",
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "061111db-3b6b-4be6-a78b-b9ad03048159": {
@@ -97,6 +100,7 @@
   "order": [
     "main",
     "6f77d098-08d4-4911-b3e5-93f4051ea0f5",
+    "62983cb6-e01a-4bcb-b9a1-083d9c04a5ae",
     "061111db-3b6b-4be6-a78b-b9ad03048159"
   ]
 }
