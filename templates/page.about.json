@@ -13,8 +13,8 @@
         "template--18565947490638__6f77d098-08d4-4911-b3e5-93f4051ea0f5-1681552075c26d5c81-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Bonjour<\/p>",
-            "heading_size": "h1"
+            "heading": "<p>{{ page.metafields.shd.main_title.value }}<\/p>",
+            "heading_size": "h0"
           }
         }
       },
