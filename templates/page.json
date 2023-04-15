@@ -7,49 +7,6 @@
         "padding_bottom": 28
       }
     },
-    "5ab3a2f0-ae66-4f05-8e16-edc3ddd8cb7d": {
-      "type": "rich-text",
-      "blocks": {
-        "template--16067985473709__5ab3a2f0-ae66-4f05-8e16-edc3ddd8cb7d-1681399730cf122d28-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>“Bonjour!”<\/p>",
-            "heading_size": "h1"
-          }
-        },
-        "template--16067985473709__5ab3a2f0-ae66-4f05-8e16-edc3ddd8cb7d-1681399730cf122d28-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Dopo quasi 20 anni in agenzia di comunicazione, ho deciso di intraprendere un percorso “mio”,<br\/>dove porto la mia esperienza e il mio gusto in “San Home Design”.<br\/>Mi chiamo Maria Sole e il naming del mio brand nasce dal soprannome “Sun” abbinato all’iniziale di Anna,<br\/>l’amica designer che ha suggerito l’idea per questo progetto, nonché la creatrice di alcune collezioni.<br\/>La passione per il decoro della tavola e la mia personale ricerca di stile mi hanno portata a proporvi<br\/>diverse tipologie di tovagliette e sottopiatti con grafiche originali.<br\/>Grafiche che racchiudono ciò che amo e che spero conquistino anche voi<\/p>"
-          }
-        },
-        "template--16067985473709__5ab3a2f0-ae66-4f05-8e16-edc3ddd8cb7d-1681399730cf122d28-2": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--16067985473709__5ab3a2f0-ae66-4f05-8e16-edc3ddd8cb7d-1681399730cf122d28-0",
-        "template--16067985473709__5ab3a2f0-ae66-4f05-8e16-edc3ddd8cb7d-1681399730cf122d28-1",
-        "template--16067985473709__5ab3a2f0-ae66-4f05-8e16-edc3ddd8cb7d-1681399730cf122d28-2"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "061111db-3b6b-4be6-a78b-b9ad03048159": {
       "type": "multicolumn",
       "blocks": {
@@ -109,7 +66,6 @@
   },
   "order": [
     "main",
-    "5ab3a2f0-ae66-4f05-8e16-edc3ddd8cb7d",
     "061111db-3b6b-4be6-a78b-b9ad03048159"
   ]
 }
