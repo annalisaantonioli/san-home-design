@@ -126,9 +126,6 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
-    "checkout_body_background_color": "#ffffff",
-    "checkout_accent_color": "#636c45",
-    "checkout_button_color": "#c8b600",
     "header_color_scheme": "background-2",
     "drawer_color_scheme": "background-1",
     "sections": {
