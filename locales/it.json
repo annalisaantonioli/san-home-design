@@ -480,11 +480,11 @@
   "shopify": {
     "checkout": {
       "contact": {
-        "address2_label": "Codice Fiscale"
+        "address2_label": "Codice fiscale \/ Partita iva non è corretto"
       },
       "field_errors": {
-        "address_address2_blank": "Inserisci il codice fiscale",
-        "address_address2_contains_html_tags": "Il campo codice fiscale  non è corretto"
+        "address_address2_blank": "Inserisci Codice fiscale \/ Partita iva ",
+        "address_address2_contains_html_tags": "Codice fiscale \/ Partita iva non è corretto"
       }
     }
   }
