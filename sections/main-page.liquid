@@ -18,14 +18,14 @@
   }
 {%- endstyle -%}
 
-{% comment %} <div class="page-width page-width--narrow section-{{ section.id }}-padding">
+ <div class="page-width page-width--narrow section-{{ section.id }}-padding">
   <h1 class="main-page-title page-title h0 shd-text-center">
-    {{ page.title | escape }}
+    {%- if page.metafields.shd.main_title -%} {{ page.metafields.shd.main_title | escape }}{%- else -%} {{ page.title | escape }} {%- endif -%}
   </h1>
-  <div class="rte">
+  <div class="rte shd-text-center">
     {{ page.content }}
   </div>
-</div> {% endcomment %}
+</div> 
 
 {% schema %}
 {
