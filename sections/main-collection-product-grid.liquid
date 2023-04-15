@@ -1,4 +1,18 @@
-{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+
+  {% include 'rapid-search-foc-wrapper-condition' %}
+  
+{% if  focIsEnabled == true %}
+  {% render 'rapid-search-collection-template' %}
+{% endif %}
+  
+  
+  
+{% if  focIsEnabled == true %}
+  <div id="rps-generated" style="display: none !important;" >
+{% endif %}
+  
+  
+  {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -338,3 +352,10 @@
   ]
 }
 {% endschema %}
+
+   
+  
+{% if  focIsEnabled == true %}
+  <!-- rps-generated-div --></div>
+{% endif %}
+  
