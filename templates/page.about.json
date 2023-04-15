@@ -22,23 +22,11 @@
           "settings": {
             "text": "<p>Dopo quasi 20 anni in agenzia di comunicazione, ho deciso di intraprendere un percorso “mio”,<br\/>dove porto la mia esperienza e il mio gusto in “San Home Design”.<br\/>Mi chiamo Maria Sole e il naming del mio brand nasce dal soprannome “Sun” abbinato all’iniziale di Anna,<br\/>l’amica designer che ha suggerito l’idea per questo progetto, nonché la creatrice di alcune collezioni.<br\/>La passione per il decoro della tavola e la mia personale ricerca di stile mi hanno portata a proporvi<br\/>diverse tipologie di tovagliette e sottopiatti con grafiche originali.<br\/>Grafiche che racchiudono ciò che amo e che spero conquistino anche vo<\/p>"
           }
-        },
-        "template--18565947490638__6f77d098-08d4-4911-b3e5-93f4051ea0f5-1681552075c26d5c81-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
         "template--18565947490638__6f77d098-08d4-4911-b3e5-93f4051ea0f5-1681552075c26d5c81-0",
-        "template--18565947490638__6f77d098-08d4-4911-b3e5-93f4051ea0f5-1681552075c26d5c81-1",
-        "template--18565947490638__6f77d098-08d4-4911-b3e5-93f4051ea0f5-1681552075c26d5c81-2"
+        "template--18565947490638__6f77d098-08d4-4911-b3e5-93f4051ea0f5-1681552075c26d5c81-1"
       ],
       "settings": {
         "desktop_content_position": "center",
