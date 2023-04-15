@@ -365,7 +365,7 @@
       "last_name": "Cognome",
       "company": "Azienda",
       "address1": "Indirizzo - campo 1",
-      "address2": "Indirizzo - campo 2",
+      "address2": "Codice Fiscale",
       "city": "Città",
       "country": "Paese\/Area geografica",
       "province": "Provincia",
@@ -476,5 +476,17 @@
     "antiscivolo": "Antiscivolo",
     "product_info": "Informazioni di prodotto",
     "product_descr": "Descrizione"
+  },
+  "shopify": {
+    "checkout": {
+      "contact": {
+        "address2_label": "Codice Fiscale",
+        "optional_address2_label": "Azienda"
+      },
+      "field_errors": {
+        "address_address2_blank": "Inserisci il codice fiscale",
+        "address_address2_contains_html_tags": "Il campo codice fiscale  non è corretto"
+      }
+    }
   }
 }
