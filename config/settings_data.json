@@ -128,6 +128,8 @@
     "cart_drawer_collection": "",
     "checkout_logo_image": "shopify:\/\/shop_images\/Group_1_1.svg",
     "checkout_logo_size": "large",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_sidebar_background_color": "#f5f5ea",
     "checkout_accent_color": "#636c45",
     "checkout_button_color": "#c8b600",
     "header_color_scheme": "background-2",
