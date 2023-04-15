@@ -3083,5 +3083,5 @@ details-disclosure > details {
 }
 
 .sw-instagram-container {
-  background-color: transparent;
+  background-color: transparent !important;
 }
