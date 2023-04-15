@@ -3085,3 +3085,8 @@ details-disclosure > details {
 .sw-instagram-container {
   background-color: transparent !important;
 }
+
+.sw-instagram-modal-info-watermark {
+  display: none !important;
+
+}
