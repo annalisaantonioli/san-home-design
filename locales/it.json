@@ -480,8 +480,7 @@
   "shopify": {
     "checkout": {
       "contact": {
-        "address2_label": "Codice Fiscale",
-        "optional_address2_label": "Azienda"
+        "address2_label": "Codice Fiscale"
       },
       "field_errors": {
         "address_address2_blank": "Inserisci il codice fiscale",
