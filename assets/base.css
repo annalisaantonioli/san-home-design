@@ -3081,3 +3081,7 @@ details-disclosure > details {
 .shopify-policy__container .rte ol li {
   margin-bottom: 8px;
 }
+
+.sw-instagram-container {
+  background-color: transparent;
+}
