@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@screen md {
+    .field.shd-modal-field {
+      width: 49%
+    }
+  }

@@ -1393,6 +1393,48 @@ if (titles) {
    // }, 1000)
   });
 }
+// opening modal
+const modal = document.querySelector('.modal-newsletter')
+const triggerAnn = document.querySelector('.announcement-bar__message')
+
+if (modal) {
+  if (!localStorage.getItem('opened')) {
+    setTimeout(() => {
+      anime.set(modal, {zIndex: 999})
+    }, 4000)
+    anime({
+      targets: modal,
+      opacity: 1,
+      delay: 4000,
+      complete: () => {
+        localStorage.setItem("opened", 1);
+      }
+    })
+  }
+  if (triggerAnn) {
+    triggerAnn.addEventListener('click', () => {
+      anime.set(modal, {zIndex: 999})
+      anime({
+        targets: modal,
+        opacity: 1,
+      })
+    })
+  }
+const close = modal.querySelector('.icon-close')
+close.addEventListener('click', () => {
+  anime({
+    targets: modal,
+    opacity: 0,
+    duration: 700,
+    complete:() => {
+      anime.set(modal, {zIndex: -1})
+    }
+  })
+})
+
+}
+
 }, false);
+
 
 

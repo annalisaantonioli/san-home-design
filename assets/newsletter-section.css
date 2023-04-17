@@ -10,6 +10,10 @@
   }
 }
 
+.newsletter__wrapper.fixed-modal {
+  padding: 2rem;
+}
+
 .newsletter__wrapper > * {
   margin-top: 0;
   margin-bottom: 0;
@@ -31,6 +35,10 @@
 
 .newsletter__wrapper .newsletter-form__field-wrapper {
   max-width: 36rem;
+}
+
+.newsletter__wrapper.fixed-modal .newsletter-form__field-wrapper {
+  max-width: 100%;
 }
 
 .newsletter-form__field-wrapper .newsletter-form__message {

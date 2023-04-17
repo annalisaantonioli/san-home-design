@@ -549,7 +549,8 @@ blockquote {
 .customer select,
 .field__input,
 .form__label,
-.select__select {
+.select__select,
+.newsletter-form__button-modal {
   font-size: 1.3rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   letter-spacing: 0.04rem;
@@ -1720,6 +1721,20 @@ details[open] > .share-button__fallback {
   border: 0;
 }
 
+.newsletter-form__button-modal {
+  -webkit-appearance: none;
+  display: flex;
+  appearance: none;
+  font-size: 1.6rem;
+  transition: box-shadow var(--duration-short) ease;
+  border-radius: var(--inputs-radius);
+  height: 4.5rem;
+  min-height: calc(var(--inputs-border-width) * 2);
+  width: 200px;
+  background-color: #636C45;
+  color: var(--gradient-background);
+}
+
 .field:before,
 .select:before,
 .customer .field:before,
@@ -1842,6 +1857,10 @@ details[open] > .share-button__fallback {
   transition: box-shadow var(--duration-short) ease;
 }
 
+
+
+
+
 .customer .field {
   display: flex;
 }
@@ -1851,7 +1870,8 @@ details[open] > .share-button__fallback {
 }
 
 .field__input,
-.customer .field input {
+.customer .field input,
+.newsletter-form__button-modal {
   flex-grow: 1;
   text-align: left;
   padding: 1.5rem;
@@ -2280,6 +2300,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
   padding: 1rem 0;
   margin: 0;
   letter-spacing: 0.1rem;
+  cursor: pointer;
 }
 
 /* section-header */
@@ -3089,4 +3110,40 @@ details-disclosure > details {
 .sw-instagram-modal-info-watermark {
   display: none !important;
 
+}
+
+
+.modal-newsletter {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: #c8b600;
+  border: 1.5px solid var(--gradient-background);
+  max-width: 95%;
+  width: 100%;
+  padding: 2rem;
+  height: 80vh;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: -1;
+  /*transition: all 0.3s linear;*/
+}
+
+@media (min-width: 750px) {
+  .modal-newsletter {
+    max-width: 600px;
+    height: 500px;
+  }
+}
+
+.modal-newsletter .icon-close {
+  position: absolute;
+  width: 30px;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
 }

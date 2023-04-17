@@ -520,16 +520,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: 0.5rem;
 }
 
-.shd-mt-20 {
-  margin-top: 5rem;
-}
-
 .shd-mb-10 {
   margin-bottom: 2.5rem;
 }
 
+.shd-mt-20 {
+  margin-top: 5rem;
+}
+
 .shd-mb-20 {
   margin-bottom: 5rem;
+}
+
+.shd-mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .shd-inline-block {
@@ -643,6 +647,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 750px) {
+  .field.shd-modal-field {
+    width: 49%
+  }
+
   .md\:shd-mr-20 {
     margin-right: 5rem;
   }
@@ -653,6 +661,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:shd-w-\[40\%\] {
     width: 40%;
+  }
+
+  .md\:shd-w-\[49\%\] {
+    width: 49%;
+  }
+
+  .md\:shd-flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .md\:shd-items-center {
+    align-items: center;
+  }
+
+  .md\:shd-justify-between {
+    justify-content: space-between;
   }
 }
 
