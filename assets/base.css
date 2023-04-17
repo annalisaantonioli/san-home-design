@@ -3155,3 +3155,7 @@ details-disclosure > details {
   margin-bottom: 20px;
   color: var(--gradient-base-background-1);
 }
+
+.newsletter__wrapper.fixed-modal h2 {
+  color: var(--gradient-base-background-1);
+}
