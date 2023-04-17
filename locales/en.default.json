@@ -60,7 +60,8 @@
   "newsletter": {
     "label": "Email",
     "success": "Thanks for subscribing",
-    "button_label": "Subscribe"
+    "button_label": "Subscribe",
+    "privacy": "I have read and agree to the Terms of Use and Privacy Policy"
   },
   "accessibility": {
     "skip_to_text": "Skip to content",

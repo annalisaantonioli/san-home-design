@@ -60,7 +60,8 @@
   "newsletter": {
     "label": "Indirizzo email",
     "success": "Grazie per l'iscrizione",
-    "button_label": "Iscriviti"
+    "button_label": "Ottieni lo sconto",
+    "privacy": "Ho letto e accetto i Termini e condizioni del servizio e l'Informativa sulla privacy"
   },
   "accessibility": {
     "skip_to_text": "Vai direttamente ai contenuti",

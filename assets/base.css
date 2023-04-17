@@ -3147,3 +3147,11 @@ details-disclosure > details {
   right: 2rem;
   cursor: pointer;
 }
+
+.privacy--nl {
+  text-align: left;
+  font-size: 11px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: var(--gradient-base-background-1);
+}
