@@ -1,8 +1,9 @@
 {{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
 {{ 'newsletter-section.css' | asset_url | stylesheet_tag }}
 
-<div class='newsletter center{% if section.settings.full_width == false %} newsletter--narrow page-width{% endif%}'>
-  <div class='newsletter__wrapper color-{{ section.settings.color_scheme }} gradient'>
+<div class='newsletter center newsletter--narrow modal-newsletter'>
+  {% render 'icon-close' %}
+  <div class='newsletter__wrapper fixed-modal'>
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when '@app' -%}
@@ -15,45 +16,55 @@
           <div {{ block.shopify_attributes }}>
             {% form 'customer', class: 'newsletter-form' %}
               <input type='hidden' name='contact[tags]' value='newsletter'>
-              <div class='newsletter-form__field-wrapper'>
-                <div class="field">
+              <div class='newsletter-form__field-wrapper '>
+                <div class=" md:shd-flex md:shd-items-center md:shd-justify-between md:shd-flex-wrap">
+                <div class="field shd-modal-field  md:shd-w-[49%] shd-mb-5">
                   <input
                     type="text"
                     name="contact[first_name]"
                     id="NewsletterForm---FirstName"
                     value=""
                     autocomplete="given-name"
-                    placeholder="{{ 'contact.register.first_name' | t }}"
+                    placeholder="{{ 'customer.register.first_name' | t }}*"
+                    aria-required='true'
+                    required
+                    class='field__input'
                   >
-                  <label for="NewsletterForm---FirstName">
-                    {{ 'contact.register.first_name' | t }}
+                  <label  class='field__label' for="NewsletterForm---FirstName">
+                    {{ 'customer.register.first_name' | t }}*
                   </label>
                 </div>
-                <div class="field">
+                <div class="field shd-modal-field  md:shd-w-[49%] shd-mb-5">
                   <input
                     type="text"
                     name="contact[last_name]"
                     id="NewsletterForm---LastName"
                     value=""
                     autocomplete="family-name"
-                    placeholder="{{ 'contact.register.last_name' | t }}"
+                    placeholder="{{ 'customer.register.last_name' | t }}*"
+                    aria-required='true'
+                    required
+                    class='field__input'
                   >
-                  <label for="NewsletterForm---LastName">
-                    {{ 'contact.register.last_name' | t }}
+                  <label  class='field__label' for="NewsletterForm---LastName">
+                    {{ 'customer.register.last_name' | t }}*
                   </label>
                 </div>
-                <div class="field">
+                <div class="field shd-modal-field  md:shd-w-[49%] shd-mb-5">
                   <input
                     type="text"
                     id="AddressCityNew"
                     name="address[city]"
                     value="{{ form.city }}"
                     autocomplete="address-level2"
-                    placeholder="{{ 'contact.addresses.city' | t }}"
+                    placeholder="{{ 'customer.addresses.city' | t }}*"
+                    aria-required='true'
+                    required
+                    class='field__input'
                   >
-                  <label for="AddressCityNew">{{ 'contact.addresses.city' | t }}</label>
+                  <label  class='field__label' for="AddressCityNew">{{ 'customer.addresses.city' | t }}*</label>
                 </div>
-                <div class='field'>
+                <div class='field shd-modal-field  md:shd-w-[49%] shd-mb-5'>
                   <input
                     id='NewsletterForm--{{ section.id }}'
                     type='email'
@@ -71,30 +82,32 @@
                     {% elsif form.posted_successfully? %}
                       aria-describedby='Newsletter-success--{{ section.id }}'
                     {% endif %}
-                    placeholder='{{ 'newsletter.label' | t }}'
+                    placeholder='{{ 'newsletter.label' | t }}*'
                     required
                   >
                   <label class='field__label' for='NewsletterForm--{{ section.id }}'>
-                    {{ 'newsletter.label' | t }}
+                    {{ 'newsletter.label' | t }}*
                   </label>
-                  <button
-                    type='submit'
-                    class='newsletter-form__button field__button'
-                    name='commit'
-                    id='Subscribe'
-                    aria-label='{{ 'newsletter.button_label' | t }}'
-                  >
-                    {% render 'icon-arrow' %}
-                  </button>
+                 
                 </div>
-                {%- if form.errors -%}
-                  <small class='newsletter-form__message form__message' id='Newsletter-error--{{ section.id }}'>
-                    {%- render 'icon-error' -%}
-                    {{- form.errors.translated_fields.email | capitalize }}
-                    {{ form.errors.messages.email -}}
-                  </small>
-                {%- endif -%}
               </div>
+                <button
+                  type='submit'
+                  class='newsletter-form__button  newsletter-form__button-modal'
+                  name='commit'
+                  id='Subscribe'
+                  aria-label='{{ 'newsletter.button_label' | t }}'
+                >
+                  {{ 'newsletter.button_label' | t }} {% render 'icon-arrow' %}
+                </button>
+              {%- if form.errors -%}
+                <small class='newsletter-form__message form__message' id='Newsletter-error--{{ section.id }}'>
+                  {%- render 'icon-error' -%}
+                  {{- form.errors.translated_fields.email | capitalize }}
+                  {{ form.errors.messages.email -}}
+                </small>
+              {%- endif -%}
+            </div>
               {%- if form.posted_successfully? -%}
                 <h3
                   class='newsletter-form__message newsletter-form__message--success form__message'
