@@ -37,7 +37,8 @@
         "sections--16067984851117__2f67319e-b8ba-4ccf-a841-f8b1421bb452-168172169243408ec8-0": {
           "type": "heading",
           "settings": {
-            "heading": "Approfitta del 10% di sconto sul tuo primo ordine!"
+            "heading": "Approfitta del 10% di sconto sul tuo primo ordine!",
+            "heading_size": "h2"
           }
         },
         "sections--16067984851117__2f67319e-b8ba-4ccf-a841-f8b1421bb452-168172169243408ec8-2": {
@@ -51,8 +52,10 @@
         "sections--16067984851117__2f67319e-b8ba-4ccf-a841-f8b1421bb452-168172169243408ec8-2"
       ],
       "settings": {
-        "color_scheme": "background-1",
-        "full_width": true
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
