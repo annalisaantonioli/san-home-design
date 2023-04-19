@@ -476,7 +476,10 @@
     "waterproof": "Waterproof",
     "antiscivolo": "Antiscivolo",
     "product_info": "Informazioni di prodotto",
-    "product_descr": "Descrizione"
+    "product_descr": "Descrizione",
+    "gift_wrapping_heading": "Includi confezione regalo",
+    "gift_wrapping_subtitle": "Confezione regalo",
+    "gift_message": "Testo del biglietto di auguri (opzionale)"
   },
   "shopify": {
     "checkout": {

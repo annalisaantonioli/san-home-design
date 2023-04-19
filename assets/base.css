@@ -3159,3 +3159,65 @@ details-disclosure > details {
 .newsletter__wrapper.fixed-modal h2 {
   color: var(--gradient-base-background-1);
 }
+
+.shd-checkbox-custom {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.shd-checkbox-custom input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 15px;
+  width: 100%;
+  top: 3px;
+  left: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border: 1px solid #636C45;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.shd-checkbox-custom input:checked ~ .checkmark {
+  background-color: #fff;
+  border: 1px solid #636C45;
+}
+
+.shd-checkbox-custom input:checked ~ .checkmark::after {
+  display: block;
+  
+}
+
+/* Style the checkmark/indicator */
+.shd-checkbox-custom .checkmark::after {
+  
+  left: 26%;
+    top: 45%;
+    width: 5px;
+    height: 10px;
+    border: solid #636C45;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg) translate(-50%, -50%);
+}
+
+.gift-message {
+  padding-left: 25px;
+}
