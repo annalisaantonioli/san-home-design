@@ -134,6 +134,8 @@
     "checkout_button_color": "#c8b600",
     "header_color_scheme": "background-2",
     "drawer_color_scheme": "background-1",
+    "scm_pl_pisregex": ".card .full-unstyled-link",
+    "scm_pl_lpspath": ".card .card__inner",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
