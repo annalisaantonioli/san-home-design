@@ -206,6 +206,7 @@
   padding: 0 1.75rem 0 0;
   margin-bottom: 1.5rem;
   pointer-events: none;
+  text-transform: uppercase;
 }
 
 .facets__disclosure fieldset {
@@ -213,6 +214,8 @@
   margin: 0;
   border: 0;
 }
+
+
 
 .facets__disclosure[open] .facets__summary,
 .facets__summary:hover {
@@ -281,6 +284,7 @@
 .facets__item {
   display: flex;
   align-items: center;
+  text-transform: none;
 }
 
 .facets__item label,

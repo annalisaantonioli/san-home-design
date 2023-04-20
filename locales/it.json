@@ -484,7 +484,7 @@
   "shopify": {
     "checkout": {
       "contact": {
-        "address2_label": "Codice fiscale \/ Partita iva non è corretto"
+        "address2_label": "Codice fiscale \/ Partita iva"
       },
       "field_errors": {
         "address_address2_blank": "Inserisci Codice fiscale \/ Partita iva ",

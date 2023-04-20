@@ -1398,7 +1398,7 @@ const modal = document.querySelector('.modal-newsletter')
 const triggerAnn = document.querySelector('.announcement-bar__message')
 
 if (modal) {
-  if (!localStorage.getItem('opened')) {
+  if (!sessionStorage.getItem('opened')) {
     setTimeout(() => {
       anime.set(modal, {zIndex: 999})
     }, 4000)
@@ -1407,7 +1407,7 @@ if (modal) {
       opacity: 1,
       delay: 4000,
       complete: () => {
-        localStorage.setItem("opened", 1);
+        sessionStorage.setItem("opened", 1);
       }
     })
   }
