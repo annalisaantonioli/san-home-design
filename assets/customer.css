@@ -363,6 +363,10 @@
   display: none;
 }
 
+#recover {
+  font-size: 32px;
+}
+
 #recover:target {
   display: block;
 }
