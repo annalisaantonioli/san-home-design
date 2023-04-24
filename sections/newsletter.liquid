@@ -28,7 +28,7 @@
             {{ block.settings.heading }}
           </h2>
         {%- when 'paragraph' -%}
-          <div class="newsletter__subheading rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+          <h2 class="inline-richtext h2" {{ block.shopify_attributes }}>{{ block.settings.text }}</h2>
         {%- when 'email_form' -%}
           <div {{ block.shopify_attributes }}>
             {% form 'customer', class: 'newsletter-form' %}
