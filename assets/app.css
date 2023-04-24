@@ -647,6 +647,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
+.shd-font-bold {
+  font-weight: 700;
+}
+
 .shd-font-semibold {
   font-weight: 600;
 }

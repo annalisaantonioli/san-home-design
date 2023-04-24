@@ -114,7 +114,7 @@
               <div class="facets__disclosure-vertical">
                 <div class="facets__summary caption-large focus-offset">
                   <div>
-                    <a href="{{ link.url }}" {% if link.active %}aria-current="page" class="font-bold"{% endif %}>
+                    <a href="{{ link.url }}" {% if link.active %}aria-current="page" class="shd-font-bold"{% endif %}>
                       {{ link.title }}
                     </a>
                   </div>
@@ -128,7 +128,7 @@
                     >
                       {%- for child_link in link.links -%}
                         <li class="list-menu__item facets__item shd-inline-block {% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
-                        <a  class="shd-uppercase" href="{{ child_link.url }}" {% if child_link.active %}aria-current="page" class="font-bold"{% endif %}>
+                        <a  class="shd-uppercase" href="{{ child_link.url }}" {% if child_link.active %}aria-current="page" class="shd-font-bold"{% endif %}>
                           <span>{{ child_link.title }}</span>
                         </a>
                         {%- if child_link.links != blank -%}
@@ -138,7 +138,7 @@
                           >
                             {%- for grandchild_link in child_link.links -%}
                               <li>
-                                <a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page" class="font-bold"{% endif %}>
+                                <a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page" class="shd-font-bold"{% endif %}>
                                   <span>{{ grandchild_link.title }}</span>
                                 </a>
                               </li>
@@ -711,14 +711,14 @@
                       >
                         <div class="mobile-facets__summary focus-inset less-padding">
                           <div class="shd-text-san-green">
-                            <a href="{{link.url}}" {% if link.active %}aria-current="page" class="font-bold"{% endif %}><span>{{ link.title | escape }}</span></a>
+                            <a href="{{link.url}}" {% if link.active %}aria-current="page" class="shd-font-bold"{% endif %}><span>{{ link.title | escape }}</span></a>
                           </div>
                           {%- if link.links != blank -%}
                           
                             <ul class="mobile-facets__list list-unstyled" role="list">
                               {%- for child_link in link.links -%}
                                 <li class="list-menu__item facets__item shd-inline-block {% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
-                                <a  class="shd-uppercase" href="{{ child_link.url }}" {% if child_link.active %}aria-current="page" class="font-bold"{% endif %}>
+                                <a  class="shd-uppercase" href="{{ child_link.url }}" {% if child_link.active %}aria-current="page" class="shd-font-bold"{% endif %}>
                                   <span>{{ child_link.title }}</span>
                                 </a>
                                 {%- if child_link.links != blank -%}
@@ -728,7 +728,7 @@
                                   >
                                     {%- for grandchild_link in child_link.links -%}
                                       <li>
-                                        <a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page" class="font-bold"{% endif %}>
+                                        <a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page" class="shd-font-bold"{% endif %}>
                                           <span>{{ grandchild_link.title }}</span>
                                         </a>
                                       </li>
