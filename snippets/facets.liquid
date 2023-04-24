@@ -128,7 +128,7 @@
                     >
                       {%- for child_link in link.links -%}
                         <li class="list-menu__item facets__item shd-inline-block {% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
-                        <a  class="shd-uppercase" href="{{ child_link.url }}" {% if child_link.active %}aria-current="page" class="shd-font-bold"{% endif %}>
+                        <a class="shd-uppercase {% if child_link.active %}shd-font-bold{% endif %}" href="{{ child_link.url }}" {% if child_link.active %}aria-current="page"{% endif %}>
                           <span>{{ child_link.title }}</span>
                         </a>
                         {%- if child_link.links != blank -%}
@@ -718,7 +718,7 @@
                             <ul class="mobile-facets__list list-unstyled" role="list">
                               {%- for child_link in link.links -%}
                                 <li class="list-menu__item facets__item shd-inline-block {% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
-                                <a  class="shd-uppercase" href="{{ child_link.url }}" {% if child_link.active %}aria-current="page" class="shd-font-bold"{% endif %}>
+                                <a  class="shd-uppercase {% if child_link.active %}shd-font-bold{% endif %}" href="{{ child_link.url }}" {% if child_link.active %}aria-current="page" {% endif %}>
                                   <span>{{ child_link.title }}</span>
                                 </a>
                                 {%- if child_link.links != blank -%}
