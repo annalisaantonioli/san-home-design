@@ -25,3 +25,25 @@
 .list-social__link:hover .icon {
   transform: scale(1.07);
 }
+
+
+
+.list-social-contact .list-social__link {
+  text-decoration: none;
+}
+
+.list-social-contact .list-social__link span {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.list-social-contact .list-social__item .icon {
+  height: 2.8rem;
+  width: 2.8rem;
+}
+
+.list-social-contact .list-social__link {
+ flex-direction: column;
+  padding: 1.3rem 2rem;
+  color: #c8b600;
+}
