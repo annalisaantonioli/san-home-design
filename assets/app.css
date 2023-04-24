@@ -660,14 +660,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(99 108 69 / var(--tw-text-opacity));
 }
 
-.shd-text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .shd-text-san-green {
   --tw-text-opacity: 1;
   color: rgb(200 182 0 / var(--tw-text-opacity));
+}
+
+.shd-text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .shd-opacity-0 {
