@@ -205,8 +205,6 @@
   font-size: 17px;
   padding: 0 1.75rem 0 0;
   margin-bottom: 1.5rem;
-  pointer-events: none;
-  text-transform: uppercase;
 }
 
 .facets__disclosure fieldset {
@@ -285,6 +283,21 @@
   display: flex;
   align-items: center;
   text-transform: none;
+}
+
+.facets__item.shd-inline-block {
+  display: block;
+  padding-bottom: 15px;
+}
+
+
+
+.list-unstyled.shd-pl-5 {
+  padding-left: 15px;
+}
+
+.list-unstyled.shd-pl-5 li {
+  padding-bottom: 8px;
 }
 
 .facets__item label,
@@ -460,6 +473,14 @@ span.active-facets__button-inner:after {
 @media screen and (max-width: 989px) {
   .active-facets {
     margin: 0 -1.2rem -1.2rem;
+  }
+
+  .facets__item.shd-inline-block {
+    padding-bottom: 3px;
+  }
+
+  .mobile-facets__summary.less-padding {
+    padding-top: 0;
   }
 
   .active-facets__button,

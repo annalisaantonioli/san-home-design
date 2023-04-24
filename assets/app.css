@@ -520,6 +520,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: 0.5rem;
 }
 
+.shd-my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .shd-mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -570,6 +575,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .shd-w-full {
   width: 100%;
+}
+
+.shd-transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .shd-items-center {
@@ -630,6 +639,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.75rem;
 }
 
+.shd-pl-5 {
+  padding-left: 1.25rem;
+}
+
 .shd-text-center {
   text-align: center;
 }
@@ -650,6 +663,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .shd-text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.shd-text-san-green {
+  --tw-text-opacity: 1;
+  color: rgb(200 182 0 / var(--tw-text-opacity));
 }
 
 .shd-opacity-0 {

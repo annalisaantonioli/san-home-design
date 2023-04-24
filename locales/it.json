@@ -177,8 +177,8 @@
       "clear": "Cancella",
       "clear_all": "Rimuovi tutto",
       "from": "Da",
-      "filter_and_sort": "Collezioni",
-      "filter_by_label": "Collezioni",
+      "filter_and_sort": "Linee",
+      "filter_by_label": "Linee",
       "filter_button": "Filtra",
       "filters_selected": {
         "one": "{{ count }} selezionata",
@@ -479,7 +479,8 @@
     "product_descr": "Descrizione",
     "gift_wrapping_heading": "Includi confezione regalo",
     "gift_wrapping_subtitle": "Confezione regalo",
-    "gift_message": "Testo del biglietto di auguri (opzionale)"
+    "gift_message": "Testo del biglietto di auguri (opzionale)",
+    "collection_nav_title": "Linee"
   },
   "shopify": {
     "checkout": {

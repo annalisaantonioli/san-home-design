@@ -1,0 +1,39 @@
+<div class="facets-container">
+       
+<nav role="navigation">
+  <h2 class="shd-text-san-green shd-mb-10">
+    <a href="{{ collections.all.url }}">{{ 'shd_custom.collection_nav_title' | t }}</a></h2>
+  <ul class="sidebar-collection__list list-unstyled" role="list">
+    {%- for link in linklists.collezioni.links -%}
+      <li  class="sidebar-collection__item sidebar-collection__item-main shd-mb-10 list-menu__item facets__item">
+        <a class="shd-text-san-green" href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>
+          {{ link.title }}
+        </a> 
+
+        {%- if link.links != blank -%}
+          <ul class="sidebar-collection__sub">
+            {%- for child_link in link.links -%}
+              <li class="sidebar-collection__item shd-mb-5">
+                <a  class="shd-uppercase" href="{{ child_link.url }}" {% if child_link.active %}aria-current="page"{% endif %}>
+                  {{ child_link.title }}
+                </a>
+                {%- if child_link.links != blank -%}
+                  <ul class="sidebar-collection__sub-second shd-pl-5">
+                    {%- for grandchild_link in child_link.links -%}
+                      <li>
+                        <a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page"{% endif %}>
+                          {{ grandchild_link.title }}
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>
+</div>

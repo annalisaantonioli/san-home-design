@@ -46,7 +46,7 @@
           >
             {%- if filter_type == 'horizontal' and results.filters != empty -%}
               <h2 class="facets__heading caption-large text-body" id="verticalTitle" tabindex="-1">
-                {{ 'products.facets.filter_by_label' | t }}
+                <a href="{{collections.all.url}}">{{ 'products.facets.filter_by_label' | t }}</a>
               </h2>
             {%- endif -%}
             {% comment %} Pills are right below the title for filter type vertical {% endcomment %}
@@ -109,6 +109,69 @@
 
             <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
             {% comment %} Filters for both horizontal and vertical filter {% endcomment %}
+            {% if filter_type == 'vertical'%}
+            {%- for link in linklists.collezioni.links -%}
+              <div class="facets__disclosure-vertical">
+                <div class="facets__summary caption-large focus-offset">
+                  <div>
+                    <a href="{{ link.url }}">
+                      {{ link.title }}
+                    </a>
+                  </div>
+                </div>
+                <div class="parent-display facets__display-vertical">
+                  {%- if link.links != blank -%}
+                  <fieldset class="facets-wrap parent-wrap facets-wrap-vertical">
+                    <ul
+                      class="list-unstyled"
+                      role="list"
+                    >
+                      {%- for child_link in link.links -%}
+                        <li class="list-menu__item facets__item shd-inline-block {% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
+                        <a  class="shd-uppercase" href="{{ child_link.url }}">
+                          <span>{{ child_link.title }}</span>
+                        </a>
+                        {%- if child_link.links != blank -%}
+                          <ul
+                            class="list-unstyled sublist shd-my-5 shd-pl-5"
+                            role="list"
+                          >
+                            {%- for grandchild_link in child_link.links -%}
+                              <li>
+                                <a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page"{% endif %}>
+                                  <span>{{ grandchild_link.title }}</span>
+                                </a>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                    {% comment %} No show more for no JS {% endcomment %}
+                  
+                  </fieldset>
+                  {%- endif -%}
+                  {%- if filter.values.size > 10 and filter_type == 'vertical' -%}
+                    <show-more-button>
+                      <button
+                        class="button-show-more link underlined-link no-js-hidden"
+                        id="Show-More-{{ forloop.index }}-{{ section.id }}"
+                        type="button"
+                      >
+                        <span class="label-show-more label-text"
+                          ><span aria-hidden="true">+ </span>{{ 'products.facets.show_more' | t -}}
+                        </span>
+                        <span class="label-show-less label-text hidden"
+                          ><span aria-hidden="true">- </span>{{ 'products.facets.show_less' | t -}}
+                        </span>
+                      </button>
+                    </show-more-button>
+                  {%- endif %}
+                </div>
+              </div>
+            {%- endfor -%} 
+            {%- endif -%}
             {%- for filter in results.filters -%}
               {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}
               {% case filter.type %}
@@ -117,9 +180,7 @@
                     id="Details-{{ forloop.index }}-{{ section.id }}"
                     class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
                     data-index="{{ forloop.index }}"
-                    {% if filter_type == 'vertical'%}
-                      open
-                    {% endif %}
+                  
                   >
                     <summary
                       class="facets__summary caption-large focus-offset"
@@ -134,7 +195,7 @@
                             >
                           {%- endif -%}
                         </span>
-                       {%- unless filter_type == 'vertical' %}  {% render 'icon-caret' %} {%- endunless -%}
+                        {% render 'icon-caret' %}
                       </div>
                     </summary>
                     <div
@@ -640,6 +701,153 @@
               </div>
             </div>
             <div class="mobile-facets__main has-submenu gradient">
+              {% if filter_type == 'vertical'%}
+                {%- for link in linklists.collezioni.links -%}
+                 
+                      <div
+                        id="Details-Mobile-{{ forloop.index }}-{{ section.id }}"
+                        class="mobile-facets__details"
+                        
+                      >
+                        <div class="mobile-facets__summary focus-inset less-padding">
+                          <div class="shd-text-san-green">
+                            <a href="{{link.url}}"><span>{{ link.title | escape }}</span></a>
+                          </div>
+                          {%- if link.links != blank -%}
+                          
+                            <ul class="mobile-facets__list list-unstyled" role="list">
+                              {%- for child_link in link.links -%}
+                                <li class="list-menu__item facets__item shd-inline-block {% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
+                                <a  class="shd-uppercase" href="{{ child_link.url }}">
+                                  <span>{{ child_link.title }}</span>
+                                </a>
+                                {%- if child_link.links != blank -%}
+                                  <ul
+                                    class="list-unstyled sublist shd-my-5 shd-pl-5"
+                                    role="list"
+                                  >
+                                    {%- for grandchild_link in child_link.links -%}
+                                      <li>
+                                        <a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page"{% endif %}>
+                                          <span>{{ grandchild_link.title }}</span>
+                                        </a>
+                                      </li>
+                                    {%- endfor -%}
+                                  </ul>
+                                {%- endif -%}
+                                </li>
+                              {%- endfor -%}
+                            </ul>
+                            {% comment %} No show more for no JS {% endcomment %}
+                          
+                         
+                          {%- endif -%}
+                          {%- if filter.values.size > 10 and filter_type == 'vertical' -%}
+                            <show-more-button>
+                              <button
+                                class="button-show-more link underlined-link no-js-hidden"
+                                id="Show-More-{{ forloop.index }}-{{ section.id }}"
+                                type="button"
+                              >
+                                <span class="label-show-more label-text"
+                                  ><span aria-hidden="true">+ </span>{{ 'products.facets.show_more' | t -}}
+                                </span>
+                                <span class="label-show-less label-text hidden"
+                                  ><span aria-hidden="true">- </span>{{ 'products.facets.show_less' | t -}}
+                                </span>
+                              </button>
+                            </show-more-button>
+                          {%- endif %}
+                        </div>
+                      
+                        <div
+                          class="mobile-facets__submenu gradient"
+                        >
+
+                          <ul class="mobile-facets__list list-unstyled" role="list">
+                            {%- for value in filter.values -%}
+                              <li class="mobile-facets__item list-menu__item">
+                                <label
+                                  for="Filter-{{ filter.param_name | escape }}-mobile-{{ forloop.index }}"
+                                  class="mobile-facets__label{% if value.count == 0 and value.active == false %} mobile-facets__label--disabled{% endif %}"
+                                >
+                                  <input
+                                    class="mobile-facets__checkbox"
+                                    type="checkbox"
+                                    name="{{ value.param_name }}"
+                                    value="{{ value.value }}"
+                                    id="Filter-{{ filter.param_name | escape }}-mobile-{{ forloop.index }}"
+                                    {% if value.active %}
+                                      checked
+                                    {% endif %}
+                                    {% if value.count == 0 and value.active == false %}
+                                      disabled
+                                    {% endif %}
+                                  >
+
+                                  <span class="mobile-facets__highlight"></span>
+
+                                  <svg
+                                    width="1.6rem"
+                                    height="1.6rem"
+                                    viewBox="0 0 16 16"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                  >
+                                    <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                                  </svg>
+
+                                  <svg
+                                    aria-hidden="true"
+                                    class="icon icon-checkmark"
+                                    width="1.1rem"
+                                    height="0.7rem"
+                                    viewBox="0 0 11 7"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                                  </svg>
+
+                                  <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
+                                  <span class="visually-hidden">
+                                    {{- value.label | escape }} (
+                                    {%- if value.count == '1' -%}
+                                      {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
+                                    {%- else -%}
+                                      {{- 'products.facets.product_count_simple.other' | t: count: value.count -}}
+                                    {%- endif -%}
+                                    )</span
+                                  >
+                                </label>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+
+                          <div class="no-js-hidden mobile-facets__footer gradient">
+                            <facet-remove class="mobile-facets__clear-wrapper">
+                              <a href="{{ filter.url_to_remove }}" class="mobile-facets__clear underlined-link">
+                                {{- 'products.facets.clear' | t -}}
+                              </a>
+                            </facet-remove>
+                            <button
+                              type="button"
+                              class="no-js-hidden button button--primary"
+                              onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
+                            >
+                              {{ 'products.facets.apply' | t }}
+                            </button>
+                            <noscript
+                              ><button class="button button--primary">
+                                {{ 'products.facets.apply' | t }}
+                              </button></noscript
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+              {%- endfor -%}
+              {%- endif -%}
               {%- if enable_filtering -%}
                 {%- for filter in results.filters -%}
                   {% case filter.type %}
