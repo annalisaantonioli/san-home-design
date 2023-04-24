@@ -23,69 +23,13 @@
         "padding_bottom": 100
       }
     },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Il mio mondo<\/p>",
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "accent-2",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 20
-      }
-    },
-    "240917ae-efc6-43da-9750-aad5d8ce8320": {
-      "type": "fancy-grid-images",
-      "blocks": {
-        "template--16067985408173__240917ae-efc6-43da-9750-aad5d8ce8320-168079430155e2eb72-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/dummy_600x800_ffffff_cccccc.png"
-          }
-        },
-        "template--16067985408173__240917ae-efc6-43da-9750-aad5d8ce8320-168079430155e2eb72-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/dummy_600x800_ffffff_cccccc.png"
-          }
-        },
-        "template--16067985408173__240917ae-efc6-43da-9750-aad5d8ce8320-168079430155e2eb72-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/dummy_600x800_ffffff_cccccc.png"
-          }
-        }
-      },
-      "block_order": [
-        "template--16067985408173__240917ae-efc6-43da-9750-aad5d8ce8320-168079430155e2eb72-0",
-        "template--16067985408173__240917ae-efc6-43da-9750-aad5d8ce8320-168079430155e2eb72-1",
-        "template--16067985408173__240917ae-efc6-43da-9750-aad5d8ce8320-168079430155e2eb72-2"
-      ],
-      "settings": {
-        "full_width": false,
-        "padding_top": 40,
-        "padding_bottom": 44
-      }
-    },
     "44040203-4d71-4ed9-8f14-511f32250d69": {
       "type": "collection-list",
       "blocks": {
-        "template--16067985408173__44040203-4d71-4ed9-8f14-511f32250d69-1681306805be8f56fb-0": {
+        "9ad54dd2-c77b-4c6e-875b-6c5114edb1b0": {
           "type": "featured_collection",
           "settings": {
-            "collection": "flower"
+            "collection": "kids"
           }
         },
         "template--16067985408173__44040203-4d71-4ed9-8f14-511f32250d69-1681306805be8f56fb-1": {
@@ -93,30 +37,35 @@
           "settings": {
             "collection": "rettangolari"
           }
+        },
+        "template--16067985408173__44040203-4d71-4ed9-8f14-511f32250d69-1681306805be8f56fb-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "flower"
+          }
         }
       },
       "block_order": [
-        "template--16067985408173__44040203-4d71-4ed9-8f14-511f32250d69-1681306805be8f56fb-0",
-        "template--16067985408173__44040203-4d71-4ed9-8f14-511f32250d69-1681306805be8f56fb-1"
+        "9ad54dd2-c77b-4c6e-875b-6c5114edb1b0",
+        "template--16067985408173__44040203-4d71-4ed9-8f14-511f32250d69-1681306805be8f56fb-1",
+        "template--16067985408173__44040203-4d71-4ed9-8f14-511f32250d69-1681306805be8f56fb-0"
       ],
       "settings": {
         "title": "Linee",
         "heading_size": "h1",
         "image_ratio": "square",
-        "columns_desktop": 2,
+        "columns_desktop": 3,
         "color_scheme": "accent-2",
         "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 80,
+        "padding_top": 0,
         "padding_bottom": 80
       }
     }
   },
   "order": [
     "1d4499b9-0881-4a4f-a775-7ad9f8d491c4",
-    "rich_text",
-    "240917ae-efc6-43da-9750-aad5d8ce8320",
     "44040203-4d71-4ed9-8f14-511f32250d69"
   ]
 }
