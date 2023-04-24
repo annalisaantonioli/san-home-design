@@ -5,29 +5,21 @@
     "2f67319e-b8ba-4ccf-a841-f8b1421bb452": {
       "type": "newsletter",
       "blocks": {
-        "sections--16067984851117__2f67319e-b8ba-4ccf-a841-f8b1421bb452-168172169243408ec8-0": {
-          "type": "heading",
+        "afe9a8b2-0895-4dff-865d-b59a809952d4": {
+          "type": "paragraph",
           "settings": {
-            "heading": "",
-            "heading_size": "h1"
+            "text": "<p>Approfitta del 10% di sconto<\/p><p>sul tuo primo ordine!<\/p>"
           }
         },
         "sections--16067984851117__2f67319e-b8ba-4ccf-a841-f8b1421bb452-168172169243408ec8-2": {
           "type": "email_form",
           "settings": {
           }
-        },
-        "afe9a8b2-0895-4dff-865d-b59a809952d4": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Approfitta del 10% di sconto<\/p><p>sul tuo primo ordine!<\/p>"
-          }
         }
       },
       "block_order": [
-        "sections--16067984851117__2f67319e-b8ba-4ccf-a841-f8b1421bb452-168172169243408ec8-0",
-        "sections--16067984851117__2f67319e-b8ba-4ccf-a841-f8b1421bb452-168172169243408ec8-2",
-        "afe9a8b2-0895-4dff-865d-b59a809952d4"
+        "afe9a8b2-0895-4dff-865d-b59a809952d4",
+        "sections--16067984851117__2f67319e-b8ba-4ccf-a841-f8b1421bb452-168172169243408ec8-2"
       ],
       "settings": {
         "color_scheme": "background-1",
