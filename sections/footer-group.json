@@ -8,8 +8,14 @@
         "sections--16067984851117__2f67319e-b8ba-4ccf-a841-f8b1421bb452-168172169243408ec8-0": {
           "type": "heading",
           "settings": {
-            "heading": "Approfitta del 10% di sconto\nsul tuo primo ordine!",
+            "heading": "Approfitta del 10% di sconto",
             "heading_size": "h1"
+          }
+        },
+        "3ca43848-6fc6-44af-9c88-d475aa3ba0cf": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>sul tuo primo ordine!<\/p><p><\/p>"
           }
         },
         "sections--16067984851117__2f67319e-b8ba-4ccf-a841-f8b1421bb452-168172169243408ec8-2": {
@@ -20,6 +26,7 @@
       },
       "block_order": [
         "sections--16067984851117__2f67319e-b8ba-4ccf-a841-f8b1421bb452-168172169243408ec8-0",
+        "3ca43848-6fc6-44af-9c88-d475aa3ba0cf",
         "sections--16067984851117__2f67319e-b8ba-4ccf-a841-f8b1421bb452-168172169243408ec8-2"
       ],
       "settings": {
