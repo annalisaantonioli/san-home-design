@@ -744,3 +744,18 @@ Ensure the default browser behavior of the `hidden` attribute.
     justify-content: space-between;
   }
 }
+
+
+@font-face {
+  font-family: "lambresia" ;
+  src: url("lambresia.otf") format("otf"),
+  url("lambresia.otf") format("otf");
+  }
+
+  .lambresia {
+    font-family: "lambresia" !important;
+    font-size: 16px !important;
+    margin-bottom: 20px !important;
+  }
+
+  
