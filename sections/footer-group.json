@@ -31,6 +31,14 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "abfbb19a-0c82-4bac-ac81-439d0160aa9c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_2_b983ca11-097a-40df-99bf-86a98297a82e.png",
+            "image_width": 100,
+            "alignment": "center"
+          }
+        },
         "footer-2": {
           "type": "text",
           "settings": {
@@ -40,6 +48,7 @@
         }
       },
       "block_order": [
+        "abfbb19a-0c82-4bac-ac81-439d0160aa9c",
         "footer-2"
       ],
       "settings": {
