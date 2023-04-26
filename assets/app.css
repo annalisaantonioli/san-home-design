@@ -520,6 +520,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: 0.5rem;
 }
 
+.shd-mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .shd-my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;

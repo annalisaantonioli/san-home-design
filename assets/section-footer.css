@@ -10,6 +10,9 @@
   padding-bottom: 5rem;
   display: block;
 }
+.footer-block.grid__item {
+  width: 100%;
+}
 
 @media screen and (max-width: 749px) {
   .footer .grid {
@@ -18,8 +21,8 @@
 
   .footer-block.grid__item {
     padding: 0;
-    margin: 4rem 0;
     width: 100%;
+    max-width: 98%;
   }
 
   .footer-block.grid__item:first-child {
@@ -532,6 +535,7 @@ noscript .localization-selector.link {
     rgba(var(--color-shadow), var(--media-shadow-opacity));
   margin-bottom: max(calc(2rem + var(--media-shadow-vertical-offset) * var(--media-shadow-visible)), 2rem);
   overflow: hidden !important;
+  border: none;
 }
 
 .footer-block__image-wrapper img {
