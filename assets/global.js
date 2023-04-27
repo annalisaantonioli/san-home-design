@@ -1416,7 +1416,7 @@ if (svg) {
   }).add({
     targets: parent,
     opacity: 0,
-    duration: 300
+    duration: 300,
     easing: 'linear'
   }).add({
     targets: parent,
