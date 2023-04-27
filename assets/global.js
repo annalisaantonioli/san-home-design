@@ -1421,7 +1421,7 @@ if (svg) {
   }).add({
     targets: parent,
     height: 0,
-  duration: 300,
+  duration: 700,
     easing: 'easeOutQuad'
   })
 }
