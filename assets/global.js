@@ -1399,6 +1399,7 @@ if (titles) {
 const svg = document.querySelector('.animation-svg-text')
 
 if (svg) {
+   const nextSection = title.closest('.section').nextElementSibling
   let tl = anime.timeline({
     easing: 'linear',
     complete: () => {
@@ -1415,7 +1416,12 @@ if (svg) {
     targets: '.animation-svg-text',
     opacity: 0,
     easing: 'linear'
-  })
+  }).add({
+              targets: nextSection,
+              marginTop: 0,
+              opacity: 1,
+              easing: 'easeOutExpo', 
+            }, '-=140')
 }
 
 // opening modal
