@@ -2,6 +2,7 @@
   "sections": {
     "1d4499b9-0881-4a4f-a775-7ad9f8d491c4": {
       "type": "animated-title",
+      "disabled": true,
       "blocks": {
         "template--16067985408173__1d4499b9-0881-4a4f-a775-7ad9f8d491c4-16813112809e9e1179-0": {
           "type": "heading",
