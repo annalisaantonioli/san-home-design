@@ -1416,13 +1416,9 @@ if (svg) {
   }).add({
     targets: parent,
     opacity: 0,
+    height: 0,
     easing: 'linear'
-  }).add({
-              targets: nextSection,
-              transformY: [0, '-80vh'],
-              opacity: 1,
-              easing: 'easeOutExpo', 
-            }, '-=140')
+  })
 }
 
 // opening modal
