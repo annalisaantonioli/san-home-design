@@ -1399,7 +1399,7 @@ if (titles) {
 const svg = document.querySelector('.animation-svg-text')
 
 if (svg) {
-   const nextSection = title.closest('.section').nextElementSibling
+   const nextSection = svg.closest('.section').nextElementSibling
   let tl = anime.timeline({
     easing: 'linear',
     complete: () => {
