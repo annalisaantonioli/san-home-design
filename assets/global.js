@@ -1399,11 +1399,12 @@ if (titles) {
 const svg = document.querySelector('.animation-svg-text')
 
 if (svg) {
+  const parent = svg.closest('.section')
    const nextSection = svg.closest('.section').nextElementSibling
   let tl = anime.timeline({
     easing: 'linear',
     complete: () => {
-        anime.set('.animation-svg-text', { display: 'none'})
+        anime.set(parent, { display: 'none'})
     }
   })
   tl.add({
@@ -1413,7 +1414,7 @@ if (svg) {
   duration: 2500,
     delay: function(el, i) { return i * 300 },
   }).add({
-    targets: '.animation-svg-text',
+    targets: parent,
     opacity: 0,
     easing: 'linear'
   }).add({
