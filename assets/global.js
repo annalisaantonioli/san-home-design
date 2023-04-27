@@ -1419,7 +1419,7 @@ if (svg) {
     easing: 'linear'
   }).add({
               targets: nextSection,
-              transformY:[0, -80vh],
+              transformY: [0, '-80vh'],
               opacity: 1,
               easing: 'easeOutExpo', 
             }, '-=140')
