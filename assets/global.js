@@ -1417,12 +1417,12 @@ if (svg) {
     targets: parent,
     opacity: 0,
     duration: 300,
-    easing: 'linear'
+    easing: 'easeOutQuad'
   }).add({
     targets: parent,
     height: 0,
   duration: 300,
-    easing: 'linear'
+    easing: 'easeOutQuad'
   })
 }
 
