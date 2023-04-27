@@ -1393,6 +1393,31 @@ if (titles) {
    // }, 1000)
   });
 }
+
+
+
+const svg = document.querySelector('.animation-svg-text')
+
+if (svg) {
+  let tl = anime.timeline({
+    easing: 'linear',
+    complete: () => {
+        anime.set('.animation-svg-text', { display: 'none'})
+    }
+  })
+  tl.add({
+    targets: '.animation-svg-text path',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'easeInOutSine',
+  duration: 2300,
+    delay: function(el, i) { return i * 250 },
+  }).add({
+    targets: '.animation-svg-text',
+    opacity: 0,
+    easing: 'linear'
+  })
+}
+
 // opening modal
 const modal = document.querySelector('.modal-newsletter')
 const triggerAnn = document.querySelector('.announcement-bar__message')
