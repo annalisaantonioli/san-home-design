@@ -3226,11 +3226,15 @@ details-disclosure > details {
 
 .anim-container {
   width: 100%;
+  height: 80vh;
   max-width: 600px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-items: center
 }
 
 .anim-container svg {
