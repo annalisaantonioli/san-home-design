@@ -1408,9 +1408,9 @@ if (svg) {
   tl.add({
     targets: '.animation-svg-text path',
     strokeDashoffset: [anime.setDashoffset, 0],
-    easing: 'easeInOutSine',
-  duration: 2300,
-    delay: function(el, i) { return i * 250 },
+    easing: 'easeInOutCirc',
+  duration: 2500,
+    delay: function(el, i) { return i * 300 },
   }).add({
     targets: '.animation-svg-text',
     opacity: 0,
