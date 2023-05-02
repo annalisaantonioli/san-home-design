@@ -472,6 +472,7 @@
     "gift_message": "Testo del biglietto di auguri (opzionale)",
     "collection_nav_title": "Linee",
     "effetti": "Effetti",
+    "gift_wrapping_format": "Select gift wrapping type",
     "gift_wrapping_format_rect": "Rettangolare",
     "gift_wrapping_format_sq": "Quadrata"
   }
