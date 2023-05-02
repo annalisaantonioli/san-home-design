@@ -3241,3 +3241,7 @@ details-disclosure > details {
 .anim-container svg {
   width: 100%;
 }
+
+.button, .shopify-challenge__button, .customer button {
+  color: #fff !important
+}
