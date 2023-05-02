@@ -479,7 +479,7 @@
     "product_descr": "Descrizione",
     "gift_wrapping_heading": "Includi confezione regalo",
     "gift_wrapping_subtitle": "Confezione regalo",
-    "gift_message": "Testo del biglietto di auguri (opzionale)",
+    "gift_message": "Testo del biglietto di auguri (facoltativo)",
     "collection_nav_title": "Linee",
     "effetti": "Effetti",
     "gift_wrapping_format": "Scegli il formato",
@@ -492,8 +492,8 @@
         "address2_label": "Interno, scala, ecc. (facoltativo)"
       },
       "field_errors": {
-        "address_address2_blank": "Inserisci interno, scala, ecc. (facoltativo)",
-        "address_address2_contains_html_tags": "Interno, scala, ecc. (facoltativo) non è corretto"
+        "address_address2_blank": "Inserisci interno, scala, ecc. ",
+        "address_address2_contains_html_tags": "Interno, scala, ecc. non è corretto"
       }
     }
   }
