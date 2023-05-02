@@ -481,7 +481,9 @@
     "gift_wrapping_subtitle": "Confezione regalo",
     "gift_message": "Testo del biglietto di auguri (opzionale)",
     "collection_nav_title": "Linee",
-    "effetti": "Effetti"
+    "effetti": "Effetti",
+    "gift_wrapping_format_rect": "Rettangolare",
+    "gift_wrapping_format_sq": "Quadrata"
   },
   "shopify": {
     "checkout": {
