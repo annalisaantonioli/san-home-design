@@ -3178,6 +3178,7 @@ details-disclosure > details {
   width: 100%;
   top: 3px;
   left: 0;
+  z-index: 2
 }
 
 .checkmark {
