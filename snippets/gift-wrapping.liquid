@@ -31,6 +31,20 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
  
    
   <div class="gift-message shd-mt-10 {% if cart.attributes.gift-wrapping %}shd-opacity-1 {% else %}  shd-opacity-0{% endif %}">
+  <fieldset>
+    <legend>Tipo di confezione</legend>
+
+    <div>
+      <input type="radio" id="quadrata" name="gift_wrapping_type" value="quadrata"
+             checked>
+      <label for="quadrata">Quadrata</label>
+    </div>
+
+    <div>
+      <input type="radio" id="rettangolare" name="gift_wrapping_type" value="rettangolare">
+      <label for="rettangolare">Rettangolare</label>
+    </div>
+</fieldset>
      <div class="gift-message--text-area">
       <label class="shd-mb-5 shd-block" for="gift-note">{{ 'shd_custom.gift_message' | t }}</label>
     <textarea name="attributes[gift-note]" id="gift-note" class="shd-w-full lg:shd-w-1/2">
