@@ -3242,6 +3242,6 @@ details-disclosure > details {
   width: 100%;
 }
 
-.shopify-challenge__button, .shopify-payment-button__button--unbranded {
+.shopify-challenge__button, .shopify-payment-button__button--unbranded, .button:not(.button--secondary) {
   color: #fff !important
 }
