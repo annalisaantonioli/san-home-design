@@ -3223,6 +3223,9 @@ details-disclosure > details {
   padding-top: 15px;
 }
 
+.gift-message--text-area {
+  margin-top: 10px
+}
 
 
 .anim-container {
