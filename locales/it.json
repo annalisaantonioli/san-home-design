@@ -364,7 +364,7 @@
       "edit_address": "Modifica indirizzo",
       "first_name": "Nome",
       "last_name": "Cognome",
-      "company": "Azienda",
+      "company": "Codice Fiscale \/ Partita Iva",
       "address1": "Indirizzo - campo 1",
       "address2": "Codice Fiscale",
       "city": "Città",
@@ -485,5 +485,24 @@
     "gift_wrapping_format": "Scegli il formato",
     "gift_wrapping_format_rect": "Rettangolare",
     "gift_wrapping_format_sq": "Quadrato"
+  },
+  "shopify": {
+    "checkout": {
+      "contact": {
+        "company_label": "Codice Fiscale \/ Partita Iva",
+        "optional_company_label": "Codice Fiscale \/ Partita Iva"
+      },
+      "field_errors": {
+        "address_company_blank": "Inserisci il Codice Fiscale \/ Partita Iva",
+        "address_company_too_long": "Codice Fiscale \/ Partita Iva non è corretto",
+        "address_company_contains_html_tags": "Inserisci il Codice Fiscale \/ Partita Iva non può contenere tag HTML",
+        "address_company_contains_emojis": "Codice Fiscale \/ Partita Iva non può contenere emoji"
+      }
+    }
+  },
+  "customer_accounts": {
+    "order_details": {
+      "company": "Codice Fiscale \/ Partita Iva"
+    }
   }
 }
