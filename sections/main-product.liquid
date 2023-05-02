@@ -488,6 +488,11 @@
       <span>{{ 'shd_custom.materiale' | t }}</span><span>{{ product.metafields.shd.materiale }}</span>
     </div>
   {%- endif -%}
+  {%- if product.metafields.shd.effetti -%}
+    <div class="shd-justify-between shd-items-center shd-flex shd-border-y shd-border-san-green-dark shd-py-2">
+      <span>{{ product.metafields.shd.effetti }}</span><span>{{ product.metafields.shd.effetti }}</span>
+    </div>
+  {%- endif -%}
 
   </div>
   <div class="md:shd-w-[40%] shd-mb-20 ">
