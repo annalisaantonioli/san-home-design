@@ -480,7 +480,8 @@
     "gift_wrapping_heading": "Includi confezione regalo",
     "gift_wrapping_subtitle": "Confezione regalo",
     "gift_message": "Testo del biglietto di auguri (opzionale)",
-    "collection_nav_title": "Linee"
+    "collection_nav_title": "Linee",
+    "effetti": "Effetti"
   },
   "shopify": {
     "checkout": {
