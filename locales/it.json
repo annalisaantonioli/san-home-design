@@ -8,7 +8,7 @@
       "login_form_error": "Password errata!",
       "login_form_submit": "Accedi",
       "admin_link_html": "Sei il proprietario del negozio? <a href=\"\/admin\" class=\"link underlined-link\">Accedi qui<\/a>",
-      "powered_by_shopify_html": "Questo negozio sarà ospitato su {{ shopify }}"
+      "powered_by_shopify_html": ""
     },
     "social": {
       "alt_text": {
