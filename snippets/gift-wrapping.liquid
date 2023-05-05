@@ -44,10 +44,10 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
       <label for="rettangolare">{{ 'shd_custom.gift_wrapping_format_rect' | t }} (47x37cm) </label>
     </div>
 </fieldset>
-     <div class="gift-message--text-area">
+     <!--<div class="gift-message--text-area">
       <label class="shd-mb-5 shd-block" for="gift-note">{{ 'shd_custom.gift_message' | t }}</label>
     <textarea name="attributes[gift-note]" id="gift-note" class="shd-w-full lg:shd-w-1/2">
-        {{ cart.attributes.gift-note }}</textarea></div>
+        {{ cart.attributes.gift-note }}</textarea></div>-->
   </div>
 
 </div>
@@ -87,7 +87,7 @@ item.id == id %} {% assign gift_wraps_in_cart = item.quantity %} {% endif %}
     var request = {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ updates: { {{ id }}: 0 }, attributes: { 'gift-wrapping': '', 'gift-note': '', 'gift-wrapping-type': '' }})
+      body: JSON.stringify({ updates: { {{ id }}: 0 }, attributes: { 'gift-wrapping': '', 'gift-wrapping-type': '' }})
     };
     fetch('/cart/update.js', request)
     .then(function() {
@@ -131,7 +131,7 @@ item.id == id %} {% assign gift_wraps_in_cart = item.quantity %} {% endif %}
 
     });
 
-    document.querySelector('#gift-note').addEventListener("change", function(evt) {
+   /* document.querySelector('#gift-note').addEventListener("change", function(evt) {
       var note = evt.target.value;
       var headers = new Headers({ 'Content-Type': 'application/json' });
 
@@ -142,7 +142,7 @@ item.id == id %} {% assign gift_wraps_in_cart = item.quantity %} {% endif %}
       };
 
       fetch('/cart/update.js', request);
-    });
+    });*/
   });
 
 
