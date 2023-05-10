@@ -92,7 +92,7 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
 
     
     const asArray = Object.entries(attrs);
-    const filtered = asArray.filter(([key, value]) => typeof value === 'yes');
+    const filtered = asArray.filter(([key, value]) => value === 'yes');
     console.log(filtered)
     
     var request = {
