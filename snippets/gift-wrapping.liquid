@@ -45,14 +45,15 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
   
 
     {% for item in cart.items %}
-      {% if item.object.id == id %} 
+          {% for id in ids %}
+   {% if item.object.id == id %} 
         {% assign gift_wraps_in_cart = gift_wraps_in_cart | plus: item.quantity %} 
       {% endif %}
-  {% endfor %}
-     {% for id in ids %}
-   {{ id }}
     {% endfor %} 
-ciaoooo
+     
+  {% endfor %}
+ 
+
 <style>
   #updates_{{ id }} { display: none; }
 </style>
