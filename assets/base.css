@@ -3250,5 +3250,6 @@ details-disclosure > details {
 }
 
 .contact__button .button {
-  background-color: #C8B600
+  background-color: #C8B600;
+  border-color: #C8B600
 }
