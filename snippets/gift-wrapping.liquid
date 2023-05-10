@@ -100,7 +100,7 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
 
   console.log('cart.items.size', {{ cart.items.size }})
   console.log('gift_wraps_in_cart', {{ gift_wraps_in_cart }})
-  console.log('cart.attributes.gift-wrapping', {{cart.attributes.gift-wrapping}})
+  console.log('cart.attributes.gift-wrapping', {{cart.attributes.gift-wrapping-id_1}})
 
   // If we have nothing but gift-wrap items in the cart.
   {% if cart.items.size == 1 and gift_wraps_in_cart > 0 %}
