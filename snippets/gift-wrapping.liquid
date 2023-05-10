@@ -18,9 +18,10 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
     {% assign checked = false  %}
     {% assign name = 'gift-wrapping-' | append: item.object.variants.first.id %}
     {% for x in cart.items %}
-      {% if x.id == item.object.variants.first.id %}  
-        {{ x.id }}
+       {{ x.id }}
         {{ item.object.variants.first.id }}
+      {% if x.id == item.object.variants.first.id %}  
+       
         {% assign checked = true  %} 
         {% else %}
         {% assign checked = false  %}
