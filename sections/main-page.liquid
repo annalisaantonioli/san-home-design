@@ -19,9 +19,13 @@
 {%- endstyle -%}
 
  <div class="page-width page-width--narrow section-{{ section.id }}-padding">
+    {%- if page.metafields.shd.main_title -%}
   <h1 class="main-page-title page-title h0 shd-text-center lambresia-heading">
-    {%- if page.metafields.shd.main_title -%} {{ page.metafields.shd.main_title | escape }}{%- else -%} {{ page.title | escape }} {%- endif -%}
+    {{ page.metafields.shd.main_title | escape }}{%- else -%} 
   </h1>
+      <h1 class="main-page-title page-title h0 shd-text-center lambresia-heading">
+   {{ page.title | escape }} {%- endif -%}
+    </h1>
   <div class="rte shd-text-center">
     {{ page.content }}
   </div>
