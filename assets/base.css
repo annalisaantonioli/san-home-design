@@ -3248,3 +3248,7 @@ details-disclosure > details {
 .shopify-challenge__button, .shopify-payment-button__button--unbranded, .button:not(.button--secondary):not(.button--tertiary) {
   color: #fff !important
 }
+
+.contact__button .button {
+  background-color: #C8B600
+}
