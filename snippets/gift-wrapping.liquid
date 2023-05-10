@@ -2,6 +2,7 @@
 linklists.gift-wrapping.links.first.type == 'product_link' %}
   {% assign gift_wraps_in_cart = 0 %}
       {% assign ids= "" | split: ',' %}
+  
 
   {% for item in linklists.gift-wrapping.links %}
     {% assign theid = item.object.id | split: ',' %}
@@ -43,16 +44,21 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
 
 {% endfor %}
   
-
+     {% assign giftInCart = "" | split: ',' %}
     {% for item in cart.items %}
-          {% for itemid in ids %}
-   {% if itemid == id %} 
-        {% assign gift_wraps_in_cart = gift_wraps_in_cart | plus: item.quantity %} 
-      {% endif %}
-    {% endfor %} 
+      {% assign giftInCartId = item.object.id  | split: ',' %}
+       {% assign giftInCart = giftInCart | concat: giftInCartId %}
      
   {% endfor %}
- 
+  {% for el in giftInCart %}
+    el
+    {% endfor %}
+  {% assign counting = giftInCart | where: ids %}
+  testing
+     {% for id in counting %}
+   {{ id }}
+    {% endfor %} 
+
 
 <style>
   #updates_{{ id }} { display: none; }
