@@ -71,10 +71,10 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
       headers: headers,
       body: JSON.stringify({ updates: { {{ id }}: 0 }, attributes: { 'gift-wrapping': '' }})
     };
-  /*  fetch('/cart/update.js', request)
+   fetch('/cart/update.js', request)
     .then(function() {
       location.href = '/cart';
-    });*/
+    });
   }
 
   // If we have nothing but gift-wrap items in the cart.
