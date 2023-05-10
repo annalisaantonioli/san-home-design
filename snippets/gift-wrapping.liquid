@@ -148,14 +148,15 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
   itemsChdk.forEach(item => {
     const id = item.id
     item.addEventListener("change", function(event) {
-      if (event.target.checked) {
+      Shopify.Cart.GiftWrap.set()
+     /* if (event.target.checked) {
         Shopify.Cart.GiftWrap.set();
         
 
       } else {
         Shopify.Cart.GiftWrap.remove();
        
-      }
+      }*/
   })
   })
    /* document.querySelector('#gift-note').addEventListener("change", function(evt) {
