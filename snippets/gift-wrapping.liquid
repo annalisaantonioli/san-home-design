@@ -88,6 +88,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
 
   console.log('cart.items.size', {{ cart.items.size }})
   console.log('gift_wraps_in_cart', {{ gift_wraps_in_cart }})
+  console.log('cart.attributes.gift-wrapping', {{cart.attributes.gift-wrapping}})
 
   // If we have nothing but gift-wrap items in the cart.
   {% if cart.items.size == 1 and gift_wraps_in_cart > 0 %}
