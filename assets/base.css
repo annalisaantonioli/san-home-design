@@ -3288,3 +3288,8 @@ form.search.search-modal__form .search__input.field__input{
 .cart-count-bubble {
   background-color: #fff
 }
+
+.customer button {
+    margin: 4rem 0 1.5rem;
+    color: #fff !important;
+}
