@@ -3,7 +3,9 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
   {% assign gift_wraps_in_cart = 0 %}
       {% assign ids= "" | split: ',' %}
   
-
+{% for el in cart.attributes %}
+  {{ el }}
+  {% endfor %}
   {% for item in linklists.gift-wrapping.links %}
     {% assign theid = item.object.id | split: ',' %}
       {% assign ids = ids | concat: theid %}
