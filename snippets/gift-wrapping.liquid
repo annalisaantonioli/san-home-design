@@ -22,7 +22,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
       type="checkbox"
       name="attributes[gift-wrapping]"
       value="yes"
-     {% if cart.attributes.gift-wrapping-{{ item.object.variants.first.id }} %}
+     {% if cart.attributes.gift-wrapping-item.object.variants.first.id %}
       checked="checked"
       {% endif %}
       style="float: none"
