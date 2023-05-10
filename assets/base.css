@@ -3284,3 +3284,7 @@ form.search.search-modal__form .search__input.field__input{
 .header__active-menu-item {
   color: #C8B600;
 }
+
+.cart-count-bubble {
+  background-color: #fff
+}
