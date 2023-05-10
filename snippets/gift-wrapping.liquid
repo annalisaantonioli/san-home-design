@@ -45,14 +45,12 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
 {% endfor %}
   
      {% assign giftInCart = "" | split: ',' %}
-    {% for item in cart.items %} {{ item.id }}
+    {% for item in cart.items %} 
       {% assign giftInCartId = item.id  | split: ',' %}
        {% assign giftInCart = giftInCart | concat: giftInCartId %}
      
   {% endfor %}
-  {% for el in giftInCart %}
-    {{  el }}
-    {% endfor %}
+  
   {% assign counting = giftInCart | where: ids %}
   testing
      {% for id in counting %}
