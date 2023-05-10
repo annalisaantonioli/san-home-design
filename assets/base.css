@@ -3280,3 +3280,7 @@ form.search.search-modal__form .search__input.field__input{
   font-size: 3.5rem;
   color:  #C8B600;
 }
+
+.header__active-menu-item {
+  color: #C8B600;
+}
