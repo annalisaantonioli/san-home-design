@@ -1,9 +1,11 @@
 {% if linklists.gift-wrapping.links.size > 0 and
 linklists.gift-wrapping.links.first.type == 'product_link' %}
   {% assign gift_wraps_in_cart = 0 %}
+    {% assign ids = '' | split: ',' %}
 
   {% for item in linklists.gift-wrapping.links %}
-  
+
+    {% assign ids = ids | concat: item.object.id %}
     
 
 <div
@@ -37,15 +39,15 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
 
 </div>
 
-{% assign id = item.object.id %}
+
+
+{% endfor %}
+  {{ ids }}
     {% for item in cart.items %}
       {% if item.object.id == id %} 
         {% assign gift_wraps_in_cart = gift_wraps_in_cart | plus: item.quantity %} 
       {% endif %}
   {% endfor %}
-
-{% endfor %}
-  
     
 
 <style>
