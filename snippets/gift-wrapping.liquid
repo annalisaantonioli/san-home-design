@@ -76,7 +76,7 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
     var request = {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ updates: { el: 1 }, attributes: { 'gift-wrapping-' + el : true } })
+      body: JSON.stringify({ updates: { el: 1 }, attributes: {  `gift-wrapping-${el}`: true} })
     };
      fetch('/cart/update.js', request)
     .then(function() {
@@ -90,7 +90,7 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
     var request = {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ updates: { el: 0 }, attributes: { 'gift-wrapping-' + el: '' }})
+      body: JSON.stringify({ updates: { el: 0 }, attributes: { `gift-wrapping-${el}`: '' }})
     };
   fetch('/cart/update.js', request)
     .then(function() {
