@@ -106,22 +106,30 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
   {% if cart.items.size == 1 and gift_wraps_in_cart > 0 %}
     
   document.addEventListener("DOMContentLoaded", function(){
-    Shopify.Cart.GiftWrap.remove();
+    Shopify.Cart.GiftWrap.remove({{id_1}});
+     Shopify.Cart.GiftWrap.remove({{id_2}});
   });
   // If we have more than one gift-wrap item in the cart.
-  {% elsif gift_wraps_in_cart > 1 %}
+  /*{% elsif gift_wraps_in_cart > 1 %}
   document.addEventListener("DOMContentLoaded", function(){
     Shopify.Cart.GiftWrap.set();
-  });
+  });*/
   // If we have a gift-wrap item in the cart but our gift-wrapping cart attribute has not been set.
   {% elsif gift_wraps_in_cart > 0 and cart.attributes.gift-wrapping == blank  %}
   document.addEventListener("DOMContentLoaded", function(){
-    Shopify.Cart.GiftWrap.set();
+    Shopify.Cart.GiftWrap.set({{id_1}});
+       Shopify.Cart.GiftWrap.set({{id_2}});
   });
   // If we have no gift-wrap item in the cart but our gift-wrapping cart attribute has been set.
 {% elsif gift_wraps_in_cart == 0 and cart.attributes.gift-wrapping-id_1 != blank or gift_wraps_in_cart == 0 and cart.attributes.gift-wrapping-id_2 != blank %}
   document.addEventListener("DOMContentLoaded", function(){
-    Shopify.Cart.GiftWrap.set();
+     Shopify.Cart.GiftWrap.set({{id_1}});
+  ì
+  });
+    {% elsif gift_wraps_in_cart == 0 and cart.attributes.gift-wrapping-id_2 != blank %}
+  document.addEventListener("DOMContentLoaded", function(){
+   
+       Shopify.Cart.GiftWrap.set({{id_2}});
   });
   {% endif %}
 
