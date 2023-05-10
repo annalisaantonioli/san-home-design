@@ -74,18 +74,18 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
   Shopify.Cart.GiftWrap.set = function(el) {
     var headers = new Headers({ 'Content-Type': 'application/json' });
     const items = document.querySelectorAll('[name="attributes[gift-wrapping]"]')
-    const content = []
-    const attrs = []
+    const content = {}
+    const attrs = {}
     items.forEach((item, i) => {
       const el = {}
-      el[item.id] = item.checked ? 1 : 0
-      content.push(el)
-      const att = {}
-      att[item.id] =  item.checked ? true : ''
+      el[item.id] = 
+      content[el[item.id]] = item.checked ? 1 : 0
+      
+      attrs[item.id] =  item.checked ? true : ''
     attrs.push(att)
       
     })
-  
+   
     
     var request = {
       method: 'POST',
