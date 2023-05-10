@@ -141,7 +141,7 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
 
   // When the gift-wrapping checkbox is checked or unchecked.
   document.addEventListener("DOMContentLoaded", function(){
-  
+    console.log({{cart.items.size }}-{{ gift_wraps_in_cart}}-{{cart.attributes.gift-wrapping}})
     const itemsChdk =  document.querySelectorAll('[name="attributes[gift-wrapping]"]')
  
    
