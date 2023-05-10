@@ -53,7 +53,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
      
   {% endfor %}
 
-  {% assign counting = giftInCart | where: ids %}
+  {% assign counting = giftInCart | where: id_1, id_2 %}
    {% assign gift_wraps_in_cart =  counting.count %}
   zono un test
     {% for el in giftInCart %}
