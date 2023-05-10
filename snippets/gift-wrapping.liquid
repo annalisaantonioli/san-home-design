@@ -60,7 +60,8 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
       {% assign id_1 = linklists.gift-wrapping.links.first.object.variants.first.id %} 
      {% assign id_2 = linklists.gift-wrapping.links.last.object.variants.first.id %} 
  
-
+{% assign name_1 = 'gift-wrapping-' | append: id_1 %}
+  {% assign name_2 = 'gift-wrapping-' | append: id_2 %}
 
 {% for item in cart.items %} {% if
 item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps_in_cart| plus: item.quantity %} {% endif %}
@@ -130,9 +131,7 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
     });
   }
 
-  console.log('cart.items.size', {{ cart.items.size }})
-  console.log('gift_wraps_in_cart', {{ gift_wraps_in_cart }})
-  console.log('cart.attributes.gift-wrapping', {{cart.attributes.gift-wrapping-id_1}})
+/*
 
   // If we have nothing but gift-wrap items in the cart.
   {% if cart.items.size == 1 and gift_wraps_in_cart > 0 %}
@@ -164,7 +163,11 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
        Shopify.Cart.GiftWrap.set();
   });
   {% endif %}
-
+  */
+  document.addEventListener("DOMContentLoaded", function(){
+   
+       Shopify.Cart.GiftWrap.set();
+  });
   // When the gift-wrapping checkbox is checked or unchecked.
   document.addEventListener("DOMContentLoaded", function(){
     const itemsChdk =  document.querySelectorAll('[name="attributes[gift-wrapping]"]')
