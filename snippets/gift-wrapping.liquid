@@ -85,28 +85,37 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
     attrs.push(att)
       
     })
-    console.log(content)
-  console.log(attrs)
+  
     
     var request = {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ updates: content, attributes: {  minchia: true} })
+      body: JSON.stringify({ updates: content, attributes: attrs })
     };
-   /*  fetch('/cart/update.js', request)
+   fetch('/cart/update.js', request)
     .then(function() {
       location.href = '/cart';
-    });*/
+    });
   }
 
   Shopify.Cart.GiftWrap.remove = function(el) {
     var headers = new Headers({ 'Content-Type': 'application/json' });
-  var minchia =  `gift-wrapping-${el}`
-  console.log(minchia)
+     const items = document.querySelectorAll('[name="attributes[gift-wrapping]"]')
+    const content = []
+    const attrs = []
+    items.forEach((item, i) => {
+      const el = {}
+      el[item.id] = item.checked ? 1 : 0
+      content.push(el)
+      const att = {}
+      att[item.id] =  item.checked ? true : ''
+    attrs.push(att)
+      
+    })
     var request = {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ updates: { el: 0 }, attributes: { minchia: '' }})
+      body: JSON.stringify({ updates: content, attributes: attrs })
     };
   fetch('/cart/update.js', request)
     .then(function() {
@@ -122,31 +131,30 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
   {% if cart.items.size == 1 and gift_wraps_in_cart > 0 %}
     
   document.addEventListener("DOMContentLoaded", function(){
-    Shopify.Cart.GiftWrap.remove({{id_1}});
-     Shopify.Cart.GiftWrap.remove({{id_2}});
+    Shopify.Cart.GiftWrap.remove();
+    
   });
   // If we have more than one gift-wrap item in the cart.
   /*{% elsif gift_wraps_in_cart > 1 %}
   document.addEventListener("DOMContentLoaded", function(){
-     Shopify.Cart.GiftWrap.set({{id_1}});
-       Shopify.Cart.GiftWrap.set({{id_2}});
+     Shopify.Cart.GiftWrap.set();
+
   });*/
   // If we have a gift-wrap item in the cart but our gift-wrapping cart attribute has not been set.
   {% elsif gift_wraps_in_cart > 0 and cart.attributes.gift-wrapping == blank  %}
   document.addEventListener("DOMContentLoaded", function(){
-    Shopify.Cart.GiftWrap.set({{id_1}});
-       Shopify.Cart.GiftWrap.set({{id_2}});
+    Shopify.Cart.GiftWrap.set();
   });
   // If we have no gift-wrap item in the cart but our gift-wrapping cart attribute has been set.
 {% elsif gift_wraps_in_cart == 0 and cart.attributes.gift-wrapping-id_1 != blank or gift_wraps_in_cart == 0 and cart.attributes.gift-wrapping-id_2 != blank %}
   document.addEventListener("DOMContentLoaded", function(){
-     Shopify.Cart.GiftWrap.set({{id_1}});
+     Shopify.Cart.GiftWrap.set();
   ì
   });
     {% elsif gift_wraps_in_cart == 0 and cart.attributes.gift-wrapping-id_2 != blank %}
   document.addEventListener("DOMContentLoaded", function(){
    
-       Shopify.Cart.GiftWrap.set({{id_2}});
+       Shopify.Cart.GiftWrap.set();
   });
   {% endif %}
 
@@ -159,11 +167,11 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
     const id = item.id
     item.addEventListener("change", function(event) {
       if (event.target.checked) {
-        Shopify.Cart.GiftWrap.set(id);
+        Shopify.Cart.GiftWrap.set();
         
 
       } else {
-        Shopify.Cart.GiftWrap.remove(id);
+        Shopify.Cart.GiftWrap.remove();
        
       }
   })
