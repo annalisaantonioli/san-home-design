@@ -64,7 +64,7 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
 </style>
 
 <script>
-console.log(cart.attributes.gift-wrapping)
+console.log({{cart.attributes.gift-wrapping}})
   Shopify.Cart = Shopify.Cart || {};
 
   Shopify.Cart.GiftWrap = {};
