@@ -46,21 +46,16 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
 {% endfor %}
       {% assign id_1 = linklists.gift-wrapping.links.first.object.variants.first.id %} 
      {% assign id_2 = linklists.gift-wrapping.links.last.object.variants.first.id %} 
-     {% assign giftInCart = "" | split: ',' %}
-    {% for item in cart.items %} 
-      {% assign giftInCartId = item.id  | split: ',' %}
-       {% assign giftInCart = giftInCart | concat: giftInCartId %}
-     
-  {% endfor %}
+ 
 
-  {% assign counting = giftInCart | where: id_1, id_2 %}
-   {% assign gift_wraps_in_cart =  counting.count %}
-  zono un test
-    {% for el in counting %}
-      {{ el }}
-      {% endfor %}
 
-{{ id_1 }}
+
+
+
+{% for item in cart.items %} {% if
+item.id == id_1 || item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps_in_cart| plus: item.quantity %} {% endif %}
+{% endfor %}
+  count {{ gift_wraps_in_cart }}
 <style>
   #updates_{{ id_1 }} { display: none; }
     #updates_{{ id_2 }} { display: none; }
