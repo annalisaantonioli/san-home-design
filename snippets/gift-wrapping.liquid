@@ -17,7 +17,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
     
   <p class="shd-checkbox-custom">
     <input
-      id="gift-wrapping-{{ item.object.id }}"
+      id="gift-wrapping-{{ item.object.variants.first.id }}"
       type="checkbox"
       name="attributes[gift-wrapping]"
       value="yes"
@@ -43,8 +43,8 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
 
 
 {% endfor %}
-      {% assign id_1 = linklists.gift-wrapping.links.first.object.id %} 
-     {% assign id_2 = linklists.gift-wrapping.links.last.object.id %} 
+      {% assign id_1 = linklists.gift-wrapping.links.first.object.variants.first.id %} 
+     {% assign id_2 = linklists.gift-wrapping.links.last.object.variants.first.id %} 
      {% assign giftInCart = "" | split: ',' %}
     {% for item in cart.items %} 
       {% assign giftInCartId = item.id  | split: ',' %}
