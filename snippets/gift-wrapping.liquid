@@ -51,7 +51,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
      
   {% endfor %}
   {% for el in giftInCart %}
-    el
+    {{  el }}
     {% endfor %}
   {% assign counting = giftInCart | where: ids %}
   testing
