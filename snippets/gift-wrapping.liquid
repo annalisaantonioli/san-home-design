@@ -17,7 +17,9 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
       type="checkbox"
       name="attributes[gift-wrapping]"
       value="yes"
-   
+      {% if cart.attributes.gift-wrapping %}
+      checked="checked"
+      {% endif %}
       style="float: none"
     />
     <span class="checkmark"></span>
@@ -123,20 +125,7 @@ item.object.id == id %} {% assign gift_wraps_in_cart = item.quantity %} {% endif
   // When the gift-wrapping checkbox is checked or unchecked.
   document.addEventListener("DOMContentLoaded", function(){
     const itemsChdk =  document.querySelectorAll('[name="attributes[gift-wrapping]"]')
-  itemsChdk.forEach((item) => {
-   item.addEventListener("change", function(event) {
-      if (event.target.checked) {
-        Shopify.Cart.GiftWrap.set();
-        document.querySelector('.gift-message').classList.remove('shd-opacity-0')
-
-      } else {
-        Shopify.Cart.GiftWrap.remove();
-        document.querySelector('.gift-message').classList.add('shd-opacity-0')
-      }
-  })
-   
-
-    });
+ 
 
    /* document.querySelector('#gift-note').addEventListener("change", function(evt) {
       var note = evt.target.value;
