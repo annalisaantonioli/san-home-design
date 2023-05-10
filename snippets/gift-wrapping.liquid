@@ -7,10 +7,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
   {% for item in linklists.gift-wrapping.links %}
     {% assign theid = item.object.id | split: ',' %}
       {% assign ids = ids | concat: theid %}
-    zono un test
-    {% for el in ids %}
-      {{ el }}
-      {% endfor %}
+  
     
 
 <div
@@ -58,7 +55,10 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
 
   {% assign counting = giftInCart | where: ids %}
    {% assign gift_wraps_in_cart =  counting.count %}
-
+  zono un test
+    {% for el in giftInCart %}
+      {{ el }}
+      {% endfor %}
 
 {{ id_1 }}
 <style>
