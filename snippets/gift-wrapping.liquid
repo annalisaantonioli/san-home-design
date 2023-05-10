@@ -22,7 +22,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
       type="checkbox"
       name="attributes[gift-wrapping]"
       value="yes"
- {% if cart.attributes.gift-wrapping %}
+     {% if cart.attributes.gift-wrapping-{{ item.object.variants.first.id }} %}
       checked="checked"
       {% endif %}
       style="float: none"
@@ -64,21 +64,19 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
 </style>
 
 <script>
-console.log({{cart.attributes}})
+
   Shopify.Cart = Shopify.Cart || {};
 
   Shopify.Cart.GiftWrap = {};
 
-  Shopify.Cart.GiftWrap.set = function() {
+  Shopify.Cart.GiftWrap.set = function(el) {
     var headers = new Headers({ 'Content-Type': 'application/json' });
-    const rect = document.getElementById('gift-wrapping-{{ id_1 }}').checked ? 1: 0
-   const square = document.getElementById('gift-wrapping-{{ id_2 }}').checked ? 1 : 0
-  console.log(rect, square)
+  
 
     var request = {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ updates: { {{ id_1 }}: rect, {{ id_2 }}: square }, attributes: { 'gift-wrapping': true } })
+      body: JSON.stringify({ updates: { el: 1 }, attributes: { 'gift-wrapping-' + el : true } })
     };
      fetch('/cart/update.js', request)
     .then(function() {
@@ -86,14 +84,13 @@ console.log({{cart.attributes}})
     });
   }
 
-  Shopify.Cart.GiftWrap.remove = function() {
+  Shopify.Cart.GiftWrap.remove = function(el) {
     var headers = new Headers({ 'Content-Type': 'application/json' });
-   const rect = document.getElementById('gift-wrapping-{{ id_1 }}').checked ? 1 : 0
-   const square = document.getElementById('gift-wrapping-{{ id_2 }}').checked ? 1 : 0
+  
     var request = {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ updates: { {{ id_1 }}: rect, {{ id_2 }}: square }, attributes: { 'gift-wrapping': '' }})
+      body: JSON.stringify({ updates: { el: 0 }, attributes: { 'gift-wrapping-' + el: '' }})
     };
   fetch('/cart/update.js', request)
     .then(function() {
@@ -122,7 +119,10 @@ console.log({{cart.attributes}})
     Shopify.Cart.GiftWrap.set();
   });
   // If we have no gift-wrap item in the cart but our gift-wrapping cart attribute has been set.
-
+{% elsif gift_wraps_in_cart == 0 and ( cart.attributes.gift-wrapping-{{id_1}} != blank || cart.attributes.gift-wrapping-{{id_2}} != blank ) %}
+  document.addEventListener("DOMContentLoaded", function(){
+    Shopify.Cart.GiftWrap.set();
+  });
   {% endif %}
 
   // When the gift-wrapping checkbox is checked or unchecked.
@@ -131,14 +131,14 @@ console.log({{cart.attributes}})
  
    
   itemsChdk.forEach(item => {
-    
+    const id = item.id
     item.addEventListener("change", function(event) {
       if (event.target.checked) {
-        Shopify.Cart.GiftWrap.set();
+        Shopify.Cart.GiftWrap.set(id);
         
 
       } else {
-        Shopify.Cart.GiftWrap.remove();
+        Shopify.Cart.GiftWrap.remove(id);
        
       }
   })
