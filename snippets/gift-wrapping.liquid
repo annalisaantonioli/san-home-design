@@ -32,29 +32,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
       <span class="shd-block shd-mt-8">{{ item.object.description }}</span>
     </label>
   </p>
-  
- 
-   
- <!-- <div class="gift-message shd-mt-10 {% if cart.attributes.gift-wrapping %}shd-opacity-1 {% else %}  shd-opacity-0{% endif %}">
-  <fieldset>
-    <legend>{{ 'shd_custom.gift_wrapping_format' | t }}</legend>
 
-    <div>
-      <input type="radio" id="quadrata" name="attributes[gift-wrapping-type]" value="quadrata" checked>
-      <label for="quadrata">{{ 'shd_custom.gift_wrapping_format_sq' | t }} (37x37cm) </label>
-    </div>
-
-    <div>
-      <input type="radio" id="rettangolare" name="attributes[gift-wrapping-type]" value="rettangolare">
-      <label for="rettangolare">{{ 'shd_custom.gift_wrapping_format_rect' | t }} (47x37cm) </label>
-    </div>
-</fieldset>
-     <div class="gift-message--text-area">
-      <label class="shd-mb-5 shd-block" for="gift-note">{{ 'shd_custom.gift_message' | t }}</label>
-    <textarea name="attributes[gift-note]" id="gift-note" class="shd-w-full lg:shd-w-1/2">
-        {{ cart.attributes.gift-note }}</textarea></div>
-  </div>
--->
 </div>
 
 {% assign id = item.object.id
