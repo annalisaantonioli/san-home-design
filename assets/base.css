@@ -3258,3 +3258,9 @@ details-disclosure > details {
 .contact__button .button::before{
   box-shadow: none
 }
+
+form.search.search-modal__form label, 
+form.search.search-modal__form .search__input.field__input{
+  color: #fff
+}
+
