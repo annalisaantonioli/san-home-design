@@ -45,8 +45,8 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
   
 
     {% for item in cart.items %}
-          {% for id in ids %}
-   {% if item.object.id == id %} 
+          {% for itemid in ids %}
+   {% if itemid == id %} 
         {% assign gift_wraps_in_cart = gift_wraps_in_cart | plus: item.quantity %} 
       {% endif %}
     {% endfor %} 
