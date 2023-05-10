@@ -75,6 +75,8 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
     var headers = new Headers({ 'Content-Type': 'application/json' });
   
   var minchia =  `gift-wrapping-${el}`
+
+  console.log(minchia)
     var request = {
       method: 'POST',
       headers: headers,
@@ -89,6 +91,7 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
   Shopify.Cart.GiftWrap.remove = function(el) {
     var headers = new Headers({ 'Content-Type': 'application/json' });
   var minchia =  `gift-wrapping-${el}`
+  console.log(minchia)
     var request = {
       method: 'POST',
       headers: headers,
@@ -114,7 +117,8 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
   // If we have more than one gift-wrap item in the cart.
   /*{% elsif gift_wraps_in_cart > 1 %}
   document.addEventListener("DOMContentLoaded", function(){
-    Shopify.Cart.GiftWrap.set();
+     Shopify.Cart.GiftWrap.set({{id_1}});
+       Shopify.Cart.GiftWrap.set({{id_2}});
   });*/
   // If we have a gift-wrap item in the cart but our gift-wrapping cart attribute has not been set.
   {% elsif gift_wraps_in_cart > 0 and cart.attributes.gift-wrapping == blank  %}
