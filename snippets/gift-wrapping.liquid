@@ -21,7 +21,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
      {% for el in cart.attributes %}
        {% assign k = el | first %} 
          {% assign v = el | last %} 
-      {% if k == name and v == 'yes' %}
+      {% if k == name and v != blank %}
         {% assign checked = true %}
         {% endif %}
   {% endfor %}
@@ -86,24 +86,24 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
     const attrs = {}
     items.forEach((item, i) => {
       const el = {}
-
       content[item.dataset.id] = item.checked ? 1 : 0
-      
       attrs[item.id] =  item.checked ? 'yes' : ''
-   
-      
     })
 
+    
+    const asArray = Object.entries(attrs);
+    const filtered = asArray.filter(([key, value]) => typeof value === 'yes');
+    console.log(filtered)
     
     var request = {
       method: 'POST',
       headers: headers,
       body: JSON.stringify({ updates: content, attributes: attrs })
     };
-    fetch('/cart/update.js', request)
+   /* fetch('/cart/update.js', request)
     .then(function() {
       location.href = '/cart';
-    });
+    });*/
   }
 
   Shopify.Cart.GiftWrap.remove = function(el) {
@@ -117,7 +117,7 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
       content[item.dataset.id] = item.checked ? 1 : 0
       
       attrs[item.id] =  item.checked ? 'yes': ''
-   
+      attrs['gift-wrapping'] = item.checked ? 'true' : ''
       
     })
 
@@ -143,7 +143,16 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
   document.addEventListener("DOMContentLoaded", function(){
     Shopify.Cart.GiftWrap.set();
   });
-
+  // If we have a gift-wrap item in the cart but our gift-wrapping cart attribute has not been set.
+  {% elsif gift_wraps_in_cart > 0 and cart.attributes.gift-wrapping == blank  %}
+  document.addEventListener("DOMContentLoaded", function(){
+    Shopify.Cart.GiftWrap.set();
+  });
+  // If we have no gift-wrap item in the cart but our gift-wrapping cart attribute has been set.
+  {% elsif gift_wraps_in_cart == 0 and cart.attributes.gift-wrapping != blank  %}
+  document.addEventListener("DOMContentLoaded", function(){
+    Shopify.Cart.GiftWrap.set();
+  });
   {% endif %}
 
 
