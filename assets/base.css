@@ -3251,5 +3251,10 @@ details-disclosure > details {
 
 .contact__button .button {
   background-color: #C8B600;
-  border-color: #C8B600 !important
+  
+}
+
+.contact__button .button::after,
+.contact__button .button::before{
+  box-shadow: none
 }
