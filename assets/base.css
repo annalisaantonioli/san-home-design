@@ -3273,5 +3273,5 @@ form.search.search-modal__form .search__input.field__input{
 }
 
 .predictive-search__results-groups-wrapper *, .predictive-search__heading {
-  color: #fff
+  color: #fff !important
 }
