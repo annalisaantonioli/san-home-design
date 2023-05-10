@@ -17,7 +17,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
 >
     {% assign name = 'gift-wrapping-' | append: item.object.variants.first.id %}
   {% assign current = cart.items | where: 'id', item.object.variants.first.id %}
-    current {{ current[0] }}
+    current {{ current.id }}
     {% assign checked = false  %}
      {% for el in cart.attributes %}
        {% assign k = el | first %} 
