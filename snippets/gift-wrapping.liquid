@@ -56,7 +56,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
 -->
 </div>
 
-{% assign id = item.object.variants.first.id
+{% assign id = item.id
 %} {% assign gift_wraps_in_cart = 0 %} {% for item in cart.items %} {% if
 item.id == id %} {% assign gift_wraps_in_cart = item.quantity %} {% endif %}
 {% endfor %}
