@@ -3,9 +3,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
   {% assign gift_wraps_in_cart = 0 %}
       {% assign ids= "" | split: ',' %}
   
-{% for el in cart.attributes %}
-  {{ el }}
-  {% endfor %}
+
   {% for item in linklists.gift-wrapping.links %}
     {% assign theid = item.object.id | split: ',' %}
       {% assign ids = ids | concat: theid %}
@@ -17,9 +15,13 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
   style="clear: left; margin: 30px 0"
   class="clearfix rte"
 >
-    {% assign gift-wrapping-el = 'gift-wrapping-'| append: item.object.variants.first.id   %}
-   test {{ gift-wrapping-el  }}
- res: {{ cart.attributes.gift-wrapping-el }}
+    {% assign checked = false  %}
+     {% for el in cart.attributes %}
+      {% if el == gift-wrapping-{{ item.object.variants.first.id }} && el == true %}
+        {% assign checked = true %}
+        {% endif %}
+  {% endfor %}
+   check    {{ checked }}
   <p class="shd-checkbox-custom">
     <input
       id="gift-wrapping-{{ item.object.variants.first.id }}"
@@ -27,7 +29,8 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
       type="checkbox"
       name="attributes[gift-wrapping]"
       value="yes"
-     {% if cart.attributes.gift-wrapping-el %}
+    
+     {% if checked %}
       checked="checked"
       {% endif %}
       style="float: none"
