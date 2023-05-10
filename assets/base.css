@@ -3264,7 +3264,7 @@ form.search.search-modal__form .search__input.field__input{
   color: #fff
 }
 
-.predictive-search__item--term {
+.predictive-search__item--term, .predictive-search__item--term:hover {
   color: #fff;
 }
 
