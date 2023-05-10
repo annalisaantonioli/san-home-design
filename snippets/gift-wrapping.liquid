@@ -51,7 +51,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
        {% assign giftInCart = giftInCart | concat: giftInCartId %}
      
   {% endfor %}
-  {{ id_2 }}
+
   {% assign counting = giftInCart | where: ids %}
    {% assign gift_wraps_in_cart =  counting.count %}
   testing
@@ -61,7 +61,8 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
 
 
 <style>
-  #updates_{{ id }} { display: none; }
+  #updates_{{ id_1 }} { display: none; }
+    #updates_{{ id_2 }} { display: none; }
 </style>
 
 <script>
@@ -76,7 +77,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
     var request = {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ updates: { {{ id }}: 1 }, attributes: { 'gift-wrapping': true } })
+      body: JSON.stringify({ updates: { {{ id_1 }}: 1, {{ id_2 }}: 1 }, attributes: { 'gift-wrapping': true } })
     };
      fetch('/cart/update.js', request)
     .then(function() {
@@ -90,7 +91,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
     var request = {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ updates: { {{ id }}: 0 }, attributes: { 'gift-wrapping': '' }})
+      body: JSON.stringify({ updates: { {{ id_1 }}: 0, {{ id_2 }}: 0 }, attributes: { 'gift-wrapping': '' }})
     };
   fetch('/cart/update.js', request)
     .then(function() {
