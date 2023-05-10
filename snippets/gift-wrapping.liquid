@@ -15,21 +15,16 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
   style="clear: left; margin: 30px 0"
   class="clearfix rte"
 >
-    {% assign checked = false  %}
+  
     {% assign name = 'gift-wrapping-' | append: item.object.variants.first.id %}
-    {% for x in cart.items %}
-       {{ x.id }}
-        {{ item.object.variants.first.id }}
-
-      {% if x.id == item.object.variants.first.id %}  
-       vero
-        {% assign checked = true  %} 
-        {% else %}
-        falos
-        {% assign checked = false  %}
+     {% assign checked = false  %}
+     {% for el in cart.attributes %}
+       {% assign k = el | first %} 
+         {% assign v = el | last %} 
+      {% if k == name and v != blank %}
+        {% assign checked = true %}
         {% endif %}
-      {% endfor %}
-checked {{ checked }}
+  {% endfor %}
 
   <p class="shd-checkbox-custom">
     <input
