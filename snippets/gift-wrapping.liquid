@@ -17,7 +17,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
 >
     {% assign checked = false  %}
      {% for el in cart.attributes %}
-      {% if el == gift-wrapping-item.object.variants.first.id && el == true %}
+      {% if el == gift-wrapping-item.object.variants.first.id and el == true %}
         {% assign checked = true %}
         {% endif %}
   {% endfor %}
