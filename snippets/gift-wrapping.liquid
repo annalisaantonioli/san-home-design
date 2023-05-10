@@ -50,10 +50,10 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
 
 
 
-
+{{ id_1 }} ---- {{ id_2 }}
 
 {% for item in cart.items %} {% if
-item.id == id_1 || item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps_in_cart| plus: item.quantity %} {% endif %}
+item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps_in_cart| plus: item.quantity %} {% endif %}
 {% endfor %}
   count {{ gift_wraps_in_cart }}
 <style>
