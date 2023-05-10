@@ -106,10 +106,7 @@ item.object.id == id %} {% assign gift_wraps_in_cart = item.quantity %} {% endif
     Shopify.Cart.GiftWrap.remove();
   });
   // If we have more than one gift-wrap item in the cart.
-  {% elsif gift_wraps_in_cart > 1 %}
-  document.addEventListener("DOMContentLoaded", function(){
-    Shopify.Cart.GiftWrap.set();
-  });
+
   // If we have a gift-wrap item in the cart but our gift-wrapping cart attribute has not been set.
   {% elsif gift_wraps_in_cart > 0 and cart.attributes.gift-wrapping == blank  %}
   document.addEventListener("DOMContentLoaded", function(){
