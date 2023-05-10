@@ -19,7 +19,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
     {{ name }} 
     {% assign checked = false  %}
      {% for el in cart.attributes %}
-       {{ name == el }}
+       {{ el }}
       {% if el == name and el == true %}
         {% assign checked = true %}
         {% endif %}
