@@ -70,8 +70,8 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
 
   Shopify.Cart.GiftWrap.set = function() {
     var headers = new Headers({ 'Content-Type': 'application/json' });
-    const rect = document.getElementById('gift-wrapping-{{ id_1 }}').checked
-   const square = document.getElementById('gift-wrapping-{{ id_2 }}').checked
+    const rect = document.getElementById('gift-wrapping-{{ id_1 }}').checked ? 1: 0
+   const square = document.getElementById('gift-wrapping-{{ id_2 }}').checked ? 1 : 0
   console.log(rect, square)
 
     var request = {
@@ -87,11 +87,12 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
 
   Shopify.Cart.GiftWrap.remove = function() {
     var headers = new Headers({ 'Content-Type': 'application/json' });
-
+   const rect = document.getElementById('gift-wrapping-{{ id_1 }}').checked ? 1 : 0
+   const square = document.getElementById('gift-wrapping-{{ id_2 }}').checked ? 1 : 0
     var request = {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ updates: { {{ id_1 }}: 0, {{ id_2 }}: 0 }, attributes: { 'gift-wrapping': '' }})
+      body: JSON.stringify({ updates: { {{ id_1 }}: rect, {{ id_2 }}: square }, attributes: { 'gift-wrapping': '' }})
     };
   fetch('/cart/update.js', request)
     .then(function() {
