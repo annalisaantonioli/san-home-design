@@ -22,7 +22,9 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
       type="checkbox"
       name="attributes[gift-wrapping]"
       value="yes"
-
+ {% if cart.attributes.gift-wrapping %}
+      checked="checked"
+      {% endif %}
       style="float: none"
     />
     <span class="checkmark"></span>
@@ -62,7 +64,7 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
 </style>
 
 <script>
-
+console.log(cart.attributes.gift-wrapping)
   Shopify.Cart = Shopify.Cart || {};
 
   Shopify.Cart.GiftWrap = {};
