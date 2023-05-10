@@ -16,6 +16,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
   class="clearfix rte"
 >
     {% assign gift-wrapping-el = 'gift-wrapping-'| append: item.object.variants.first.id   %}
+   test {{ gift-wrapping-el  }}
   <p class="shd-checkbox-custom">
     <input
       id="gift-wrapping-{{ item.object.variants.first.id }}"
