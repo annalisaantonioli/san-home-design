@@ -3275,3 +3275,6 @@ form.search.search-modal__form .search__input.field__input{
 .predictive-search__results-groups-wrapper *, .predictive-search__heading {
   color: #fff !important
 }
+h1.lambresia {
+  font-size: 30px
+}
