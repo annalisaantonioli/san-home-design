@@ -16,10 +16,11 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
   class="clearfix rte"
 >
     {% assign name = 'gift-wrapping-' | append: item.object.variants.first.id %}
-    {{ name }}
+    {{ name }} 
     {% assign checked = false  %}
      {% for el in cart.attributes %}
-      {% if el ==  name and el == true %}
+       {{ name == el }}
+      {% if el == name and el == true %}
         {% assign checked = true %}
         {% endif %}
   {% endfor %}
