@@ -92,26 +92,27 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
       headers: headers,
       body: JSON.stringify({ updates: content, attributes: attrs })
     };
-   /*fetch('/cart/update.js', request)
+    fetch('/cart/update.js', request)
     .then(function() {
       location.href = '/cart';
-    });*/
+    });
   }
 
   Shopify.Cart.GiftWrap.remove = function(el) {
     var headers = new Headers({ 'Content-Type': 'application/json' });
      const items = document.querySelectorAll('[name="attributes[gift-wrapping]"]')
-    const content = []
-    const attrs = []
+    const content = {}
+    const attrs = {}
     items.forEach((item, i) => {
       const el = {}
-      el[item.id] = item.checked ? 1 : 0
-      content.push(el)
-      const att = {}
-      att[item.id] =  item.checked ? true : ''
-    attrs.push(att)
+
+      content[item.id] = item.checked ? 1 : 0
+      
+      attrs[item.id] =  item.checked ? true : ''
+   
       
     })
+   console.log(content, attrs)
     var request = {
       method: 'POST',
       headers: headers,
@@ -123,9 +124,7 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
     });
   }
 
-  console.log('cart.items.size', {{ cart.items.size }})
-  console.log('gift_wraps_in_cart', {{ gift_wraps_in_cart }})
-  console.log('cart.attributes.gift-wrapping', {{cart.attributes.gift-wrapping-id_1}})
+
 
   // If we have nothing but gift-wrap items in the cart.
   {% if cart.items.size == 1 and gift_wraps_in_cart > 0 %}
