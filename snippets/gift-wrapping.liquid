@@ -1,5 +1,6 @@
 {% if linklists.gift-wrapping.links.size > 0 and
 linklists.gift-wrapping.links.first.type == 'product_link' %}
+  {% assign gift_wraps_in_cart = 0 %}
 
   {% for item in linklists.gift-wrapping.links %}
   
@@ -37,7 +38,17 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
    
 
 </div>
-    {% endfor %}
+
+{% assign id = item.object.id %}
+    {% for item in cart.items %}
+      {% if item.object.id == id %} 
+        {% assign gift_wraps_in_cart = item.quantity %} 
+      {% endif %}
+  {% endfor %}
+
+{% endfor %}
+  
+    
 
 <style>
   #updates_{{ id }} { display: none; }
@@ -57,10 +68,10 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
       headers: headers,
       body: JSON.stringify({ updates: { {{ id }}: 1 }, attributes: { 'gift-wrapping': true } })
     };
-   fetch('/cart/update.js', request)
+   /* fetch('/cart/update.js', request)
     .then(function() {
       location.href = '/cart';
-    });
+    });*/
   }
 
   Shopify.Cart.GiftWrap.remove = function() {
@@ -71,10 +82,10 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
       headers: headers,
       body: JSON.stringify({ updates: { {{ id }}: 0 }, attributes: { 'gift-wrapping': '' }})
     };
-   fetch('/cart/update.js', request)
+  /*  fetch('/cart/update.js', request)
     .then(function() {
       location.href = '/cart';
-    });
+    });*/
   }
 
   // If we have nothing but gift-wrap items in the cart.
