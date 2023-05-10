@@ -3271,3 +3271,7 @@ form.search.search-modal__form .search__input.field__input{
 .predictive-search__item--term .icon-arrow {
   color: #fff  !important;
 }
+
+.predictive-search__results-groups-wrapper * {
+  color: #fff
+}
