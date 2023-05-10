@@ -25,7 +25,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
         {% assign checked = true %}
         {% endif %}
   {% endfor %}
- qunt {{ item.object.quantity }}
+ qunt {{ item.object.variants.first }}
   <p class="shd-checkbox-custom">
     <input
       id="gift-wrapping-{{ item.object.variants.first.id }}"
