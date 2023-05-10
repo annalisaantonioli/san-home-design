@@ -93,17 +93,17 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
     
     const asArray = Object.entries(attrs);
     const filtered = asArray.filter(([key, value]) => value === 'yes');
-    console.log(filtered)
+    attrs['gift-wrapping'] = filtered.length > 0 ? 'true' : ''
     
     var request = {
       method: 'POST',
       headers: headers,
       body: JSON.stringify({ updates: content, attributes: attrs })
     };
-   /* fetch('/cart/update.js', request)
+    fetch('/cart/update.js', request)
     .then(function() {
       location.href = '/cart';
-    });*/
+    });
   }
 
   Shopify.Cart.GiftWrap.remove = function(el) {
@@ -120,6 +120,10 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
       attrs['gift-wrapping'] = item.checked ? 'true' : ''
       
     })
+
+    const asArray = Object.entries(attrs);
+    const filtered = asArray.filter(([key, value]) => value === 'yes');
+    attrs['gift-wrapping'] = filtered.length > 0 ? 'true' : ''
 
     var request = {
       method: 'POST',
