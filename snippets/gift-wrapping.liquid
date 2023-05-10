@@ -91,7 +91,7 @@ item.id == id %} {% assign gift_wraps_in_cart = item.quantity %} {% endif %}
     var request = {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ updates: { {{ id }}: 0 }, attributes: { 'gift-wrapping': '', 'gift-wrapping-type': '' }})
+      body: JSON.stringify({ updates: { {{ id }}: 0 }, attributes: { 'gift-wrapping': ''}})
     };
     fetch('/cart/update.js', request)
     .then(function() {
