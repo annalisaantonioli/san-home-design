@@ -101,12 +101,15 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
   Shopify.Cart.GiftWrap.remove = function(el) {
     var headers = new Headers({ 'Content-Type': 'application/json' });
      const items = document.querySelectorAll('[name="attributes[gift-wrapping]"]')
-    const content = {}
+    const content = []
     const attrs = {}
     items.forEach((item, i) => {
-      const el = {}
+      const el = {
+        'id': item.id,
+        'quantity': item.checked ? 1 : 0
+      }
 
-      content[item.id] = item.checked ? 1 : 0
+      content.push(el)
       
       attrs[item.id] =  item.checked ? true : ''
    
