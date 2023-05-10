@@ -88,10 +88,10 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
       headers: headers,
       body: JSON.stringify({ updates: { el: 1 }, attributes: {  minchia: true} })
     };
-     fetch('/cart/update.js', request)
+   /*  fetch('/cart/update.js', request)
     .then(function() {
       location.href = '/cart';
-    });
+    });*/
   }
 
   Shopify.Cart.GiftWrap.remove = function(el) {
