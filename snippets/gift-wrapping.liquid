@@ -35,33 +35,10 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
   
  
    
- <!-- <div class="gift-message shd-mt-10 {% if cart.attributes.gift-wrapping %}shd-opacity-1 {% else %}  shd-opacity-0{% endif %}">
-  <fieldset>
-    <legend>{{ 'shd_custom.gift_wrapping_format' | t }}</legend>
 
-    <div>
-      <input type="radio" id="quadrata" name="attributes[gift-wrapping-type]" value="quadrata" checked>
-      <label for="quadrata">{{ 'shd_custom.gift_wrapping_format_sq' | t }} (37x37cm) </label>
-    </div>
-
-    <div>
-      <input type="radio" id="rettangolare" name="attributes[gift-wrapping-type]" value="rettangolare">
-      <label for="rettangolare">{{ 'shd_custom.gift_wrapping_format_rect' | t }} (47x37cm) </label>
-    </div>
-</fieldset>
-     <div class="gift-message--text-area">
-      <label class="shd-mb-5 shd-block" for="gift-note">{{ 'shd_custom.gift_message' | t }}</label>
-    <textarea name="attributes[gift-note]" id="gift-note" class="shd-w-full lg:shd-w-1/2">
-        {{ cart.attributes.gift-note }}</textarea></div>
-  </div>
--->
 </div>
+    {% endfor %}
 
-{% assign id = item.object.id
-%} {% assign gift_wraps_in_cart = 0 %} {% for item in cart.items %} {% if
-item.object.id == id %} {% assign gift_wraps_in_cart = item.quantity %} {% endif %}
-{% endfor %}
-{% endfor %}
 <style>
   #updates_{{ id }} { display: none; }
 </style>
@@ -80,7 +57,10 @@ item.object.id == id %} {% assign gift_wraps_in_cart = item.quantity %} {% endif
       headers: headers,
       body: JSON.stringify({ updates: { {{ id }}: 1 }, attributes: { 'gift-wrapping': true } })
     };
-  
+   fetch('/cart/update.js', request)
+    .then(function() {
+      location.href = '/cart';
+    });
   }
 
   Shopify.Cart.GiftWrap.remove = function() {
@@ -91,10 +71,10 @@ item.object.id == id %} {% assign gift_wraps_in_cart = item.quantity %} {% endif
       headers: headers,
       body: JSON.stringify({ updates: { {{ id }}: 0 }, attributes: { 'gift-wrapping': '' }})
     };
-    fetch('/cart/update.js', request)
+  /*  fetch('/cart/update.js', request)
     .then(function() {
       location.href = '/cart';
-    });
+    });*/
   }
 
   // If we have nothing but gift-wrap items in the cart.
