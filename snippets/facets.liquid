@@ -114,7 +114,7 @@
               <div class="facets__disclosure-vertical">
                 <div class="facets__summary caption-large focus-offset">
                   <div>
-                    <a href="{{ link.url }}" {% if link.active %}aria-current="page" class="shd-font-bold" style="color:#C1CAB0"{% endif %}>
+                    <a href="{{ link.url }}" {% if link.active %}aria-current="page" class="shd-font-bold" {% endif %}>
                       {{ link.title }}
                     </a>
                   </div>
@@ -128,7 +128,7 @@
                     >
                       {%- for child_link in link.links -%}
                         <li class="list-menu__item facets__item shd-inline-block {% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
-                        <a class="shd-uppercase {% if child_link.active %}shd-font-bold{% endif %}" href="{{ child_link.url }}" {% if child_link.active %}aria-current="page"{% endif %}>
+                        <a class="shd-uppercase {% if child_link.active %}shd-font-bold{% endif %}" {% if child_link.active %}style="color:#C1CAB0"{% endif %} href="{{ child_link.url }}" {% if child_link.active %}aria-current="page"{% endif %}>
                           <span>{{ child_link.title }}</span>
                         </a>
                         {%- if child_link.links != blank -%}
