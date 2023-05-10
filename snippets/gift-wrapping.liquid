@@ -20,6 +20,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
     {% for x in cart.items %}
        {{ x.id }}
         {{ item.object.variants.first.id }}
+  v?    {{ x.id == item.object.variants.first.id }}
       {% if x.id == item.object.variants.first.id %}  
        
         {% assign checked = true  %} 
