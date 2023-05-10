@@ -16,7 +16,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
   class="clearfix rte"
 >
     {% assign name = 'gift-wrapping-' | append: item.object.variants.first.id %}
-    {{ name }} 
+  
     {% assign checked = false  %}
      {% for el in cart.attributes %}
        {{ el }}
@@ -24,7 +24,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
         {% assign checked = true %}
         {% endif %}
   {% endfor %}
-   check    {{ checked }}
+  
   <p class="shd-checkbox-custom">
     <input
       id="gift-wrapping-{{ item.object.variants.first.id }}"
