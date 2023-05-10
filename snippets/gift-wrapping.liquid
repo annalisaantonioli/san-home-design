@@ -62,7 +62,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
      {% assign id_2 = linklists.gift-wrapping.links.last.object.variants.first.id %} 
  
 {% assign name_1 = 'gift-wrapping-' | append: id_1 %}
-  {% assign name_2 = 'gift-wrapping-' | append: id_1 %}
+  {% assign name_2 = 'gift-wrapping-' | append: id_2 %}
 
 {% for item in cart.items %} {% if
 item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps_in_cart| plus: item.quantity %} {% endif %}
@@ -143,16 +143,7 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
   document.addEventListener("DOMContentLoaded", function(){
     Shopify.Cart.GiftWrap.set();
   });
-  // If we have a gift-wrap item in the cart but our gift-wrapping cart attribute has not been set.
-  {% elsif gift_wraps_in_cart > 0 and cart.attributes.gift-wrapping == blank  %}
-  document.addEventListener("DOMContentLoaded", function(){
-    Shopify.Cart.GiftWrap.set();
-  });
-  // If we have no gift-wrap item in the cart but our gift-wrapping cart attribute has been set.
-  {% elsif gift_wraps_in_cart == 0 and cart.attributes.gift-wrapping != blank  %}
-  document.addEventListener("DOMContentLoaded", function(){
-    Shopify.Cart.GiftWrap.set();
-  });
+
   {% endif %}
 
 
