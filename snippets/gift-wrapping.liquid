@@ -20,11 +20,12 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
     {% for x in cart.items %}
        {{ x.id }}
         {{ item.object.variants.first.id }}
-  v?    {{ x.id == item.object.variants.first.id }}
+
       {% if x.id == item.object.variants.first.id %}  
-       
+       vero
         {% assign checked = true  %} 
         {% else %}
+        falos
         {% assign checked = false  %}
         {% endif %}
       {% endfor %}
