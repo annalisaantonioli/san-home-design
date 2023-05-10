@@ -21,7 +21,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
   <p class="shd-checkbox-custom">
     <input
       id="gift-wrapping-{{ item.object.variants.first.id }}"
-      gfid="{{ item.object.variants.first.id }}"
+      data-id="{{ item.object.variants.first.id }}"
       type="checkbox"
       name="attributes[gift-wrapping]"
       value="yes"
@@ -80,7 +80,7 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
     items.forEach((item, i) => {
       const el = {}
 
-      content[item.gfid] = item.checked ? 1 : 0
+      content[item.dataset.id] = item.checked ? 1 : 0
       
       attrs[item.id] =  item.checked ? true : ''
    
