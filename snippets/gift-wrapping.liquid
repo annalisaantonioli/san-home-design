@@ -126,11 +126,11 @@ item.id == id %} {% assign gift_wraps_in_cart = item.quantity %} {% endif %}
     document.querySelector('[name="attributes[gift-wrapping]"]').addEventListener("change", function(event) {
       if (event.target.checked) {
         Shopify.Cart.GiftWrap.set();
-        document.querySelector('.gift-message').classList.remove('shd-opacity-0')
+        
 
       } else {
         Shopify.Cart.GiftWrap.remove();
-        document.querySelector('.gift-message').classList.add('shd-opacity-0')
+  
       }
 
     });
