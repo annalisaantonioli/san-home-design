@@ -2,8 +2,8 @@
 linklists.gift-wrapping.links.first.type == 'product_link' %}
 
   {% for item in linklists.gift-wrapping.links %}
-    {{ item.title}}
-    {% endfor %}
+  
+    
 
 <div
   id="is-a-gift"
@@ -26,9 +26,9 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
       for="gift-wrapping"
       style="display:inline; padding-left: 5px; float: none;"
     >
-      <span class="shd-uppercase shd-font-semibold">{{ 'shd_custom.gift_wrapping_heading' | t }} - {{ linklists.gift-wrapping.links.first.object.price | money }}</span>
+      <span class="shd-uppercase shd-font-semibold">{{ item.title }} - {{ item.object.price | money }}</span>
      
-      <span class="shd-block shd-mt-8">{{ linklists.gift-wrapping.links.first.object.description }}</span>
+      <span class="shd-block shd-mt-8">{{ item.object.description }}</span>
     </label>
   </p>
   
@@ -56,11 +56,11 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
 
 </div>
 
-{% assign id = linklists.gift-wrapping.links.first.object.variants.first.id
+{% assign id = item.object.variants.first.id
 %} {% assign gift_wraps_in_cart = 0 %} {% for item in cart.items %} {% if
 item.id == id %} {% assign gift_wraps_in_cart = item.quantity %} {% endif %}
 {% endfor %}
-
+{% endfor %}
 <style>
   #updates_{{ id }} { display: none; }
 </style>
