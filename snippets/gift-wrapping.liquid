@@ -4,7 +4,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
       {% assign ids= "" | split: ',' %}
 
   {% for item in linklists.gift-wrapping.links %}
-    {% assign theid = item.object.id %}
+    {% assign theid = item.object.id | split: ',' %}
       {% assign ids = ids | concat: theid %}
     
 
