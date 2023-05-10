@@ -45,7 +45,7 @@ linklists.gift-wrapping.links.first.type == 'product_link' %}
 {% endfor %}
   
      {% assign giftInCart = "" | split: ',' %}
-    {% for item in cart.items %}
+    {% for item in cart.items %} {{ item.object.id }}
       {% assign giftInCartId = item.object.id  | split: ',' %}
        {% assign giftInCart = giftInCart | concat: giftInCartId %}
      
