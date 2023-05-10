@@ -119,7 +119,7 @@ item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps
     Shopify.Cart.GiftWrap.set();
   });
   // If we have no gift-wrap item in the cart but our gift-wrapping cart attribute has been set.
-{% elsif gift_wraps_in_cart == 0 and ( cart.attributes.gift-wrapping-id_1 != blank || cart.attributes.gift-wrapping-id_2 != blank ) %}
+{% elsif gift_wraps_in_cart == 0 and ( cart.attributes.gift-wrapping-id_1 != blank or cart.attributes.gift-wrapping-id_2 != blank ) %}
   document.addEventListener("DOMContentLoaded", function(){
     Shopify.Cart.GiftWrap.set();
   });
