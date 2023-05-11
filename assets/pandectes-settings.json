@@ -1,0 +1,470 @@
+{
+  "store": {
+    "plan": "basic",
+    "theme": "san-home-design\/main",
+    "primaryLocale": "it",
+    "adminMode": false
+  },
+  "tsPublished": 1683819077,
+  "declaration": {
+    "showPurpose": false,
+    "showProvider": false,
+    "showDateGenerated": true
+  },
+  "language": {
+    "languageMode": "Single",
+    "fallbackLanguage": "it",
+    "languageDetection": "browser",
+    "languagesSupported": [
+
+    ]
+  },
+  "texts": {
+    "managed": {
+      "headerText": {
+        "it": "Rispettiamo la tua privacy"
+      },
+      "consentText": {
+        "it": "Questo sito web utilizza i cookie per assicurarti la migliore esperienza."
+      },
+      "dismissButtonText": {
+        "it": "Ok"
+      },
+      "linkText": {
+        "it": "Scopri di più"
+      },
+      "imprintText": {
+        "it": "Impronta"
+      },
+      "preferencesButtonText": {
+        "it": "Preferenze"
+      },
+      "allowButtonText": {
+        "it": "Accettare"
+      },
+      "denyButtonText": {
+        "it": "Declino"
+      },
+      "leaveSiteButtonText": {
+        "it": "Lascia questo sito"
+      },
+      "cookiePolicyText": {
+        "it": "Gestione dei Cookie"
+      },
+      "preferencesPopupTitleText": {
+        "it": "Gestire le preferenze di consenso"
+      },
+      "preferencesPopupIntroText": {
+        "it": "Utilizziamo i cookie per ottimizzare la funzionalità del sito Web, analizzare le prestazioni e fornire un'esperienza personalizzata all'utente. Alcuni cookie sono essenziali per il funzionamento e il corretto funzionamento del sito web. Questi cookie non possono essere disabilitati. In questa finestra puoi gestire le tue preferenze sui cookie."
+      },
+      "preferencesPopupCloseButtonText": {
+        "it": "Chiudere"
+      },
+      "preferencesPopupAcceptAllButtonText": {
+        "it": "Accettare tutti"
+      },
+      "preferencesPopupRejectAllButtonText": {
+        "it": "Rifiuta tutto"
+      },
+      "preferencesPopupSaveButtonText": {
+        "it": "Salva preferenze"
+      },
+      "accessSectionTitleText": {
+        "it": "Portabilità dei dati"
+      },
+      "accessSectionParagraphText": {
+        "it": "Hai il diritto di poter accedere ai tuoi dati in qualsiasi momento."
+      },
+      "rectificationSectionTitleText": {
+        "it": "Rettifica dei dati"
+      },
+      "rectificationSectionParagraphText": {
+        "it": "Hai il diritto di richiedere l'aggiornamento dei tuoi dati ogni volta che lo ritieni opportuno."
+      },
+      "erasureSectionTitleText": {
+        "it": "Diritto all'oblio"
+      },
+      "erasureSectionParagraphText": {
+        "it": "Hai il diritto di chiedere la cancellazione di tutti i tuoi dati. Dopodiché, non sarai più in grado di accedere al tuo account."
+      }
+    },
+    "categories": {
+      "strictlyNecessaryCookiesTitleText": {
+        "it": "Cookie strettamente necessari"
+      },
+      "functionalityCookiesTitleText": {
+        "it": "Cookie funzionali"
+      },
+      "performanceCookiesTitleText": {
+        "it": "Cookie di prestazione"
+      },
+      "targetingCookiesTitleText": {
+        "it": "Cookie mirati"
+      },
+      "unclassifiedCookiesTitleText": {
+        "it": "Cookie non classificati"
+      },
+      "strictlyNecessaryCookiesDescriptionText": {
+        "it": "Questi cookie sono essenziali per consentirti di spostarti all'interno del sito Web e utilizzare le sue funzionalità, come l'accesso alle aree sicure del sito Web. Il sito web non può funzionare correttamente senza questi cookie."
+      },
+      "functionalityCookiesDescriptionText": {
+        "it": "Questi cookie consentono al sito di fornire funzionalità e personalizzazione avanzate. Possono essere impostati da noi o da fornitori di terze parti i cui servizi abbiamo aggiunto alle nostre pagine. Se non consenti questi cookie, alcuni o tutti questi servizi potrebbero non funzionare correttamente."
+      },
+      "performanceCookiesDescriptionText": {
+        "it": "Questi cookie ci consentono di monitorare e migliorare le prestazioni del nostro sito web. Ad esempio, ci consentono di contare le visite, identificare le sorgenti di traffico e vedere quali parti del sito sono più popolari."
+      },
+      "targetingCookiesDescriptionText": {
+        "it": "Questi cookie possono essere impostati attraverso il nostro sito dai nostri partner pubblicitari. Possono essere utilizzati da tali società per creare un profilo dei tuoi interessi e mostrarti annunci pertinenti su altri siti. Non memorizzano direttamente informazioni personali, ma si basano sull'identificazione univoca del browser e del dispositivo Internet. Se non consenti questi cookie, sperimenterai pubblicità meno mirata."
+      },
+      "unclassifiedCookiesDescriptionText": {
+        "it": "I cookie non classificati sono cookie che stiamo classificando insieme ai fornitori di cookie individuali."
+      }
+    },
+    "auto": {
+      "declName": {
+        "it": "Nome"
+      },
+      "declPath": {
+        "it": "Il percorso"
+      },
+      "declType": {
+        "it": "Tipo"
+      },
+      "declDomain": {
+        "it": "Dominio"
+      },
+      "declPurpose": {
+        "it": "Scopo"
+      },
+      "declProvider": {
+        "it": "Fornitore"
+      },
+      "declRetention": {
+        "it": "Ritenzione"
+      },
+      "declFirstParty": {
+        "it": "First-party"
+      },
+      "declThirdParty": {
+        "it": "Terzo"
+      },
+      "declSeconds": {
+        "it": "secondi"
+      },
+      "declMinutes": {
+        "it": "minuti"
+      },
+      "declHours": {
+        "it": "ore"
+      },
+      "declDays": {
+        "it": "giorni"
+      },
+      "declMonths": {
+        "it": "mesi"
+      },
+      "declYears": {
+        "it": "anni"
+      },
+      "declSession": {
+        "it": "Sessione"
+      },
+      "cookiesDetailsText": {
+        "it": "Dettagli sui cookie"
+      },
+      "preferencesPopupAlwaysAllowedText": {
+        "it": "sempre permesso"
+      },
+      "submitButton": {
+        "it": "Invia"
+      },
+      "submittingButton": {
+        "it": "Invio in corso..."
+      },
+      "cancelButton": {
+        "it": "Annulla"
+      },
+      "guestsSupportInfoText": {
+        "it": "Effettua il login con il tuo account cliente per procedere ulteriormente."
+      },
+      "guestsSupportEmailPlaceholder": {
+        "it": "Indirizzo email"
+      },
+      "guestsSupportEmailValidationError": {
+        "it": "L'email non è valida"
+      },
+      "guestsSupportEmailSuccessTitle": {
+        "it": "Grazie per la vostra richiesta"
+      },
+      "guestsSupportEmailFailureTitle": {
+        "it": "Si è verificato un problema"
+      },
+      "guestsSupportEmailSuccessMessage": {
+        "it": "Se sei registrato come cliente di questo negozio, riceverai presto un'e-mail con le istruzioni su come procedere."
+      },
+      "guestsSupportEmailFailureMessage": {
+        "it": "La tua richiesta non è stata inviata. Riprova e se il problema persiste, contatta il proprietario del negozio per assistenza."
+      },
+      "confirmationSuccessTitle": {
+        "it": "La tua richiesta è verificata"
+      },
+      "confirmationFailureTitle": {
+        "it": "Si è verificato un problema"
+      },
+      "confirmationSuccessMessage": {
+        "it": "Ti risponderemo presto in merito alla tua richiesta."
+      },
+      "confirmationFailureMessage": {
+        "it": "La tua richiesta non è stata verificata. Riprova e se il problema persiste, contatta il proprietario del negozio per assistenza"
+      },
+      "consentSectionTitleText": {
+        "it": "Il tuo consenso ai cookie"
+      },
+      "consentSectionNoConsentText": {
+        "it": "Non hai acconsentito alla politica sui cookie di questo sito."
+      },
+      "consentSectionConsentedText": {
+        "it": "Hai acconsentito alla politica sui cookie di questo sito web su"
+      },
+      "consentStatus": {
+        "it": "Preferenza di consenso"
+      },
+      "consentDate": {
+        "it": "Data del consenso"
+      },
+      "consentId": {
+        "it": "ID di consenso"
+      },
+      "consentSectionChangeConsentActionText": {
+        "it": "Modifica la preferenza per il consenso"
+      },
+      "accessSectionGDPRRequestsActionText": {
+        "it": "Richieste dell'interessato"
+      },
+      "accessSectionAccountInfoActionText": {
+        "it": "Dati personali"
+      },
+      "accessSectionOrdersRecordsActionText": {
+        "it": "Ordini"
+      },
+      "accessSectionDownloadReportActionText": {
+        "it": "Scarica tutto"
+      },
+      "rectificationCommentPlaceholder": {
+        "it": "Descrivi cosa vuoi che venga aggiornato"
+      },
+      "rectificationCommentValidationError": {
+        "it": "Il commento è obbligatorio"
+      },
+      "rectificationSectionEditAccountActionText": {
+        "it": "Richiedi un aggiornamento"
+      },
+      "erasureSectionRequestDeletionActionText": {
+        "it": "Richiedi la cancellazione dei dati personali"
+      }
+    }
+  },
+  "library": {
+    "previewMode": false,
+    "fadeInTimeout": 0,
+    "defaultBlocked": 7,
+    "showLink": true,
+    "showImprintLink": false,
+    "enabled": true,
+    "cookie": {
+      "name": "_pandectes_gdpr",
+      "expiryDays": 365,
+      "secure": true
+    },
+    "dismissOnScroll": false,
+    "dismissOnWindowClick": false,
+    "dismissOnTimeout": false,
+    "palette": {
+      "popup": {
+        "background": "#FFFFFF",
+        "backgroundForCalculations": {
+          "a": 1,
+          "b": 255,
+          "g": 255,
+          "r": 255
+        },
+        "text": "#000000"
+      },
+      "button": {
+        "background": "transparent",
+        "backgroundForCalculations": {
+          "a": 1,
+          "b": 255,
+          "g": 255,
+          "r": 255
+        },
+        "text": "#000000",
+        "textForCalculation": {
+          "a": 1,
+          "b": 0,
+          "g": 0,
+          "r": 0
+        },
+        "border": "#000000"
+      }
+    },
+    "content": {
+      "href": "https:\/\/san-home-design.myshopify.com\/policies\/privacy-policy",
+      "imprintHref": "\/",
+      "close": "&#10005;",
+      "target": "",
+      "logo": "<img class=\"cc-banner-logo\" height=\"40\" width=\"40\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0628\/1966\/4045\/t\/6\/assets\/pandectes-logo.png?v=1683819073\" alt=\"San home design\" \/>"
+    },
+    "window": "<div role=\"dialog\" aria-live=\"polite\" aria-label=\"cookieconsent\" aria-describedby=\"cookieconsent:desc\" id=\"pandectes-banner\" class=\"cc-window-wrapper cc-top-wrapper\"><div class=\"pd-cookie-banner-window cc-window {{classes}}\"><!--googleoff: all-->{{children}}<!--googleon: all--><\/div><\/div>",
+    "compliance": {
+      "opt-both": "<div class=\"cc-compliance cc-highlight\">{{deny}}{{allow}}<\/div>"
+    },
+    "type": "opt-both",
+    "layouts": {
+      "basic": "{{logo}}{{messagelink}}{{compliance}}{{close}}"
+    },
+    "position": "top",
+    "theme": "wired",
+    "revokable": true,
+    "animateRevokable": false,
+    "revokableReset": false,
+    "revokableLogoUrl": "https:\/\/cdn.shopify.com\/s\/files\/1\/0628\/1966\/4045\/t\/6\/assets\/pandectes-reopen-logo.png?v=1683819075",
+    "revokablePlacement": "bottom-left",
+    "revokableMarginHorizontal": 15,
+    "revokableMarginVertical": 15,
+    "static": false,
+    "autoAttach": true,
+    "hasTransition": true,
+    "blacklistPage": [
+      ""
+    ]
+  },
+  "geolocation": {
+    "brOnly": false,
+    "caOnly": false,
+    "euOnly": false,
+    "jpOnly": false,
+    "thOnly": false,
+    "canadaOnly": false,
+    "globalVisibility": true
+  },
+  "dsr": {
+    "guestsSupport": false,
+    "accessSectionDownloadReportAuto": false
+  },
+  "banner": {
+    "resetTs": 1683819071,
+    "extraCss": "        .cc-banner-logo {max-width: 24em!important;}    @media(min-width: 768px) {.cc-window.cc-floating{max-width: 24em!important;width: 24em!important;}}    .cc-message, .cc-header, .cc-logo {text-align: left}    .cc-window-wrapper{z-index: 2147483647;}    .cc-window{z-index: 2147483647;font-family: inherit;}    .cc-header{font-family: inherit;}    .pd-cp-ui{font-family: inherit; background-color: #FFFFFF;color:#000000;}    .pd-cp-btn{}    input + .pd-cp-preferences-slider{background-color: rgba(0, 0, 0, 0.3)}    .pd-cp-scrolling-section::-webkit-scrollbar{background-color: rgba(0, 0, 0, 0.3)}    input:checked + .pd-cp-preferences-slider{background-color: rgba(0, 0, 0, 1)}    .pd-cp-scrolling-section::-webkit-scrollbar-thumb {background-color: rgba(0, 0, 0, 1)}    .pd-cp-ui-close{color:#000000;}    .pd-cp-preferences-slider:before{background-color: #FFFFFF}    .pd-cp-title:before {border-color: #000000!important}    .pd-cp-preferences-slider{background-color:#000000}    .pd-cp-toggle{color:#000000!important}    @media(max-width:699px) {.pd-cp-ui-close-top svg {fill: #000000}}    .pd-cp-toggle:hover,.pd-cp-toggle:visited,.pd-cp-toggle:active{color:#000000!important}    .pd-cookie-banner-window {box-shadow: 0 0 18px rgb(0 0 0 \/ 20%);}  ",
+    "customJavascript": null,
+    "showPoweredBy": false,
+    "isActive": false,
+    "implicitSavePreferences": false,
+    "cookieIcon": false,
+    "blockBots": false,
+    "showCookiesDetails": true,
+    "cookiesBlockedByDefault": "7",
+    "hasTransition": true,
+    "blockingPage": false,
+    "showOnlyLandingPage": false,
+    "leaveSiteUrl": "https:\/\/www.google.com",
+    "linkRespectStoreLang": false
+  },
+  "cookies": {
+    "0": [
+
+    ],
+    "1": [
+
+    ],
+    "2": [
+
+    ],
+    "4": [
+
+    ],
+    "8": [
+
+    ]
+  },
+  "blocker": {
+    "isActive": false,
+    "googleConsentMode": {
+      "id": "",
+      "analyticsId": "",
+      "isActive": false,
+      "adStorageCategory": 4,
+      "analyticsStorageCategory": 2,
+      "personalizationStorageCategory": 1,
+      "functionalityStorageCategory": 1,
+      "customEvent": true,
+      "securityStorageCategory": 0,
+      "redactData": true,
+      "urlPassthrough": false
+    },
+    "facebookPixel": {
+      "id": "",
+      "isActive": false,
+      "ldu": false
+    },
+    "rakuten": {
+      "isActive": false,
+      "cmp": false,
+      "ccpa": false
+    },
+    "gpcIsActive": false,
+    "defaultBlocked": 7,
+    "patterns": {
+      "whiteList": [
+
+      ],
+      "blackList": {
+        "1": [
+
+        ],
+        "2": [
+
+        ],
+        "4": [
+
+        ],
+        "8": [
+
+        ]
+      },
+      "iframesWhiteList": [
+
+      ],
+      "iframesBlackList": {
+        "1": [
+
+        ],
+        "2": [
+
+        ],
+        "4": [
+
+        ],
+        "8": [
+
+        ]
+      },
+      "beaconsWhiteList": [
+
+      ],
+      "beaconsBlackList": {
+        "1": [
+
+        ],
+        "2": [
+
+        ],
+        "4": [
+
+        ],
+        "8": [
+
+        ]
+      }
+    }
+  }
+}
