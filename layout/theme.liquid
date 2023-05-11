@@ -218,6 +218,12 @@
           font-size: 1.6rem;
         }
       }
+      @font-face {
+font-family: 'lambresia';
+src: url('{{ 'lambresia.otf' | asset_url }}');
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: antialiased;
+}
     {% endstyle %}
 
     {{ 'app.css' | asset_url | stylesheet_tag }}
