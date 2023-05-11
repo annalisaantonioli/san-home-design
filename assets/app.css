@@ -746,11 +746,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 
-@font-face {
-  font-family: "lambresia" ;
-  src: url("lambresia.otf") format("otf"),
-  src:  url('{{ 'lambresia.otf' | asset_url }}')
-  }
+
   .lambresia {
     font-family: "lambresia" !important;
     font-size: 16px !important;
