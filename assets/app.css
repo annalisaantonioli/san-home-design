@@ -753,4 +753,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-bottom: 20px !important;
   }
 
+.cc-banner-logo img {
+  margin: auto !important
+}
+
   
