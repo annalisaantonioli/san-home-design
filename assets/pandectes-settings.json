@@ -5,7 +5,7 @@
     "primaryLocale": "it",
     "adminMode": false
   },
-  "tsPublished": 1683819077,
+  "tsPublished": 1683819090,
   "declaration": {
     "showPurpose": false,
     "showProvider": false,
@@ -371,13 +371,205 @@
   },
   "cookies": {
     "0": [
-
+      {
+        "name": "secure_customer_sig",
+        "domain": "sanhomedesign.com",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "1 year(s)",
+        "expires": 1,
+        "unit": "declYears",
+        "purpose": {
+          "it": "Used in connection with customer login."
+        }
+      },
+      {
+        "name": "localization",
+        "domain": "sanhomedesign.com",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "1 year(s)",
+        "expires": 1,
+        "unit": "declYears",
+        "purpose": {
+          "it": "Shopify store localization"
+        }
+      },
+      {
+        "name": "cart_currency",
+        "domain": "sanhomedesign.com",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "14 day(s)",
+        "expires": 14,
+        "unit": "declSession",
+        "purpose": {
+          "it": "Used in connection with shopping cart."
+        }
+      },
+      {
+        "name": "_cmp_a",
+        "domain": ".sanhomedesign.com",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "24 hour(s)",
+        "expires": 24,
+        "unit": "declHours",
+        "purpose": {
+          "it": "Used for managing customer privacy settings."
+        }
+      },
+      {
+        "name": "_secure_session_id",
+        "domain": "sanhomedesign.com",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "24 hour(s)",
+        "expires": 24,
+        "unit": "declHours",
+        "purpose": {
+          "it": "Used in connection with navigation through a storefront."
+        }
+      },
+      {
+        "name": "keep_alive",
+        "domain": "sanhomedesign.com",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "30 minute(s)",
+        "expires": 30,
+        "unit": "declMinutes",
+        "purpose": {
+          "it": "Used in connection with buyer localization."
+        }
+      }
     ],
     "1": [
-
+      {
+        "name": "locale_bar_accepted",
+        "domain": "sanhomedesign.com",
+        "path": "\/",
+        "provider": "GrizzlyAppsSRL",
+        "firstParty": true,
+        "retention": "Session",
+        "expires": -1683819088,
+        "unit": "declSeconds",
+        "purpose": {
+          "it": "This cookie is provided by the app (BEST Currency Converter) and is used to secure the currency chosen by the customer."
+        }
+      }
     ],
     "2": [
-
+      {
+        "name": "_y",
+        "domain": ".sanhomedesign.com",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "1 year(s)",
+        "expires": 1,
+        "unit": "declYears",
+        "purpose": {
+          "it": "Shopify analytics."
+        }
+      },
+      {
+        "name": "_shopify_y",
+        "domain": ".sanhomedesign.com",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "1 year(s)",
+        "expires": 1,
+        "unit": "declYears",
+        "purpose": {
+          "it": "Shopify analytics."
+        }
+      },
+      {
+        "name": "_s",
+        "domain": ".sanhomedesign.com",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "30 minute(s)",
+        "expires": 30,
+        "unit": "declMinutes",
+        "purpose": {
+          "it": "Shopify analytics."
+        }
+      },
+      {
+        "name": "_orig_referrer",
+        "domain": ".sanhomedesign.com",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "14 day(s)",
+        "expires": 14,
+        "unit": "declSession",
+        "purpose": {
+          "it": "Tracks landing pages."
+        }
+      },
+      {
+        "name": "_shopify_s",
+        "domain": ".sanhomedesign.com",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "30 minute(s)",
+        "expires": 30,
+        "unit": "declMinutes",
+        "purpose": {
+          "it": "Shopify analytics."
+        }
+      },
+      {
+        "name": "_landing_page",
+        "domain": ".sanhomedesign.com",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "14 day(s)",
+        "expires": 14,
+        "unit": "declSession",
+        "purpose": {
+          "it": "Tracks landing pages."
+        }
+      },
+      {
+        "name": "_shopify_sa_t",
+        "domain": ".sanhomedesign.com",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "30 minute(s)",
+        "expires": 30,
+        "unit": "declMinutes",
+        "purpose": {
+          "it": "Shopify analytics relating to marketing & referrals."
+        }
+      },
+      {
+        "name": "_shopify_sa_p",
+        "domain": ".sanhomedesign.com",
+        "path": "\/",
+        "provider": "Shopify",
+        "firstParty": true,
+        "retention": "30 minute(s)",
+        "expires": 30,
+        "unit": "declMinutes",
+        "purpose": {
+          "it": "Shopify analytics relating to marketing & referrals."
+        }
+      }
     ],
     "4": [
 
