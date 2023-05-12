@@ -78,13 +78,13 @@ Shopify.Cart.GiftWrap.remove = function(obj) {
 {% endif %}
 
 // When the gift-wrapping checkbox is checked or unchecked.
-    function createObjectQuntity(element, index, array) {
+    function createObjectQuntity(element, index, array, selectedItem) {
       if( element == selectedItem) {
         giftObj[element] = 1;
       } else {
         giftObj[element] = 0;
       }
-      console.log('esegye createObgQnt')
+      console.log('esegye createObgQnt', element)
     }
     document.addEventListener("DOMContentLoaded", function(){
       const items = document.querySelectorAll('[name="attributes[gift-wrapping]"]')
@@ -94,7 +94,7 @@ Shopify.Cart.GiftWrap.remove = function(obj) {
               console.log('current sele', selectedItem)
 
     if (item.checked) {
-      variantList.forEach(createObjectQuntity);
+      variantList.forEach(createObjectQuntity(selectedItem));
       Shopify.Cart.GiftWrap.set(giftObj, selectedItem);
     }
     else {
