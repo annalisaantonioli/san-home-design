@@ -42,11 +42,17 @@ Shopify.Cart = Shopify.Cart || {};
 Shopify.Cart.GiftWrap = {};
 
 Shopify.Cart.GiftWrap.set = function(obj) {
+    const hasWrapping = ''
+    if (obj.length > 0 && Object.entries(obj).filter(([key, value]) => value > 0) ) {
+      console.log('ha wrapping')
+    } else {
+      console.log('nonha wrapping')
+    }
     var headers = new Headers({ 'Content-Type': 'application/json' });
       var request = {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ updates: obj  })
+      body: JSON.stringify({ updates: obj, attributes: {'has-wrapping': hasWrapping}  })
     };
    fetch('/cart/update.js', request)
     .then(function() {
@@ -61,7 +67,7 @@ Shopify.Cart.GiftWrap.remove = function() {
       var request = {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ updates: ''  })
+      body: JSON.stringify({ updates: '', attributes: {'has-wrapping': ''} })
     };
     fetch('/cart/update.js', request)
     .then(function() {
