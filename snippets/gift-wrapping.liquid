@@ -3,8 +3,8 @@
     {% for item in linklists.gift-wrapping.links %}
       {% assign variant = item.object %}
     <p>
-      <input type="hidden" name="attributes[gift-wrapping]" data-variantId="{{ variant.id }}" value="" />
-      <input id="gift-wrapping" type="checkbox" name="attributes[gift-wrapping]" data-variantId="{{ variant.id }}" value="yes" {% for item in cart.items %}{% if item.id == variant.id %} checked="checked"{% endif %}{% endfor %} style="float: none" />
+      <input type="hidden" name="attributes[gift-wrapping]" data-variantId="{{ variant.variants.first.id }}" value="" />
+      <input id="gift-wrapping" type="checkbox" name="attributes[gift-wrapping]" data-variantId="{{ variant.variants.first.id }}" value="yes" {% for item in cart.items %}{% if item.id == variant.variants.first.id %} checked="checked"{% endif %}{% endfor %} style="float: none" />
       {{ variant.image.src }}
       <label for="gift-wrapping" style="display:inline; padding-left: 5px; float: none;">
         <span class="shd-uppercase shd-font-semibold">{{ item.title }} - {{ item.object.price | money }}</span>
