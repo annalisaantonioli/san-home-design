@@ -49,7 +49,7 @@ Shopify.Cart.GiftWrap.set = function(obj) {
       var request = {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ updates: obj, attributes: {'has-wrapping': hasWrapping}  })
+      body: JSON.stringify({ updates: obj  })
     };
    fetch('/cart/update.js', request)
     /*.then(function() {
