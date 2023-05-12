@@ -19,7 +19,7 @@
 {% assign gift_wraps_in_cart = 0 %}
 {% for item in cart.items %}
   {% if item.id == id %}
-    {% assign gift_wraps_in_cart = item.quantity %}
+    {% assign gift_wraps_in_cart = gift_wraps_in_cart| plus: item.quantity %}
   {% endif %}
 {% endfor %}
 
