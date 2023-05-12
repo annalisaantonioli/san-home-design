@@ -8,14 +8,13 @@
       {{ variant.image.src }}
       <label for="gift-wrapping" style="display:inline; padding-left: 5px; float: none;">
         <span class="shd-uppercase shd-font-semibold">{{ item.title }} - {{ item.object.price | money }}</span>
-     
-      <span class="shd-block shd-mt-8">{{ item.object.description }}</span>
+        <span class="shd-block shd-mt-8">{{ item.object.description }}</span>
       </label>
     </p>
     {% endfor %}
   </div>
 
-{% assign id = linklists.gift-wrapping.links.first.object.variants.first.id %}
+{% assign id = item.object.variants.first.id %}
 
 {% assign gift_wraps_in_cart = 0 %}
 {% for item in cart.items %}
