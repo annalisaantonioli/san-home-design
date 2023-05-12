@@ -1,6 +1,6 @@
 {% if linklists.gift-wrapping.links.size > 0 and linklists.gift-wrapping.links.first.type == 'product_link' %}
   <div id="is-a-gift" class="clearfix rte">
-    {% for variant in linklists.gift-wrapping.links.first.object.variants %}
+    {% for variant in linklists.gift-wrapping.links %}
     <p>
       <input type="hidden" name="attributes[gift-wrapping]" data-variantId="{{ variant.id }}" value="" />
       <input id="gift-wrapping" type="checkbox" name="attributes[gift-wrapping]" data-variantId="{{ variant.id }}" value="yes" {% for item in cart.items %}{% if item.id == variant.id %} checked="checked"{% endif %}{% endfor %} style="float: none" />
@@ -53,23 +53,11 @@ Shopify.Cart.GiftWrap.set = function(obj, selectedItem) {
     .then(function() {
       location.href = '/cart';
     });
-  /*jQuery.ajax({
-    type: 'POST',
-    url: '/cart/update.js',
-    data: { updates: obj },
-    dataType: 'json',
-    success: function() { location.href = '/cart'; }
-  });*/
+
 }
 
 Shopify.Cart.GiftWrap.remove = function(obj) {
- /* jQuery.ajax({
-    type: 'POST',
-    url: '/cart/update.js',
-    data: { updates: obj },
-    dataType: 'json',
-    success: function() { location.href = '/cart'; }
-  });*/
+
     var headers = new Headers({ 'Content-Type': 'application/json' });
       var request = {
       method: 'POST',
