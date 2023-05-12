@@ -43,36 +43,58 @@ Shopify.Cart = Shopify.Cart || {};
 Shopify.Cart.GiftWrap = {};
 
 Shopify.Cart.GiftWrap.set = function(obj, selectedItem) {
-  jQuery.ajax({
+    var headers = new Headers({ 'Content-Type': 'application/json' });
+      var request = {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify({ updates: obj  })
+    };
+    fetch('/cart/update.js', request)
+    .then(function() {
+      location.href = '/cart';
+    });
+  /*jQuery.ajax({
     type: 'POST',
     url: '/cart/update.js',
     data: { updates: obj },
     dataType: 'json',
     success: function() { location.href = '/cart'; }
-  });
+  });*/
 }
 
 Shopify.Cart.GiftWrap.remove = function(obj) {
-  jQuery.ajax({
+ /* jQuery.ajax({
     type: 'POST',
     url: '/cart/update.js',
     data: { updates: obj },
     dataType: 'json',
     success: function() { location.href = '/cart'; }
-  });
+  });*/
+    var headers = new Headers({ 'Content-Type': 'application/json' });
+      var request = {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify({ updates: obj  })
+    };
+    fetch('/cart/update.js', request)
+    .then(function() {
+      location.href = '/cart';
+    });
 }
 
 {% if cart.items.size == 1 and gift_wraps_in_cart > 0 %}
-jQuery(function() {
-  Shopify.Cart.GiftWrap.remove();
+    document.addEventListener("DOMContentLoaded", function(){
+       Shopify.Cart.GiftWrap.remove();
 });
 {% endif %}
 
 // When the gift-wrapping checkbox is checked or unchecked.
-jQuery(function() {
-
-  jQuery('[name="attributes\[gift-wrapping\]"]').change(function() {
-    var selectedItem = jQuery(this).attr("data-variantId");
+  
+    document.addEventListener("DOMContentLoaded", function(){
+      const items = document.querySelectorAll('[name="attributes[gift-wrapping]"]')
+      items.forEach(item => {(
+            item.addEventListener("change", function() {
+    var selectedItem = item.getAttribute("data-variantId");
 
     function createObjectQuntity(element, index, array) {
       if( element == selectedItem) {
@@ -82,7 +104,9 @@ jQuery(function() {
       }
     }
 
-    if (jQuery(this).is(':checked')) {
+              
+
+    if (item.checked) {
       variantList.forEach(createObjectQuntity);
       Shopify.Cart.GiftWrap.set(giftObj, selectedItem);
     }
@@ -92,6 +116,9 @@ jQuery(function() {
       Shopify.Cart.GiftWrap.remove(giftObj);
     }
   });
+      )})
+
+
 });
 
 </script>
