@@ -70,12 +70,7 @@ Shopify.Cart.GiftWrap.remove = function(obj) {
     });
 }
 
-{% if cart.items.size == 1 and gift_wraps_in_cart > 0 %}
-    document.addEventListener("DOMContentLoaded", function(){
-      console.log('condizione di remove')
-       Shopify.Cart.GiftWrap.remove();
-});
-{% endif %}
+
 
 // When the gift-wrapping checkbox is checked or unchecked.
     function createObjectQuntity(element, index, array, selectedItem) {
