@@ -56,9 +56,9 @@ Shopify.Cart.GiftWrap.set = function(obj) {
       body: JSON.stringify({ updates: obj, attributes: {'has-wrapping': hasWrapping}  })
     };
    fetch('/cart/update.js', request)
-    .then(function() {
+    /*.then(function() {
       location.href = '/cart';
-    });
+    });*/
 
 }
 
