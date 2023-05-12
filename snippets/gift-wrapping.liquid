@@ -65,9 +65,9 @@ Shopify.Cart.GiftWrap.remove = function(obj) {
       body: JSON.stringify({ updates: obj  })
     };
     fetch('/cart/update.js', request)
-    .then(function() {
+   /* .then(function() {
       location.href = '/cart';
-    });
+    });*/
 }
 
 
