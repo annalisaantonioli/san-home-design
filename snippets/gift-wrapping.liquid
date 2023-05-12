@@ -44,7 +44,6 @@ Shopify.Cart.GiftWrap = {};
 Shopify.Cart.GiftWrap.set = function(obj) {
     const hasWrapping = ''
     const count = Object.entries(obj).filter(([key, value]) => value > 0)
-  console.log(count.length > 0)
     count.length > 0 ? hasWrapping = 'yes' : hasWrapping = ''
     var headers = new Headers({ 'Content-Type': 'application/json' });
       var request = {
@@ -74,7 +73,11 @@ Shopify.Cart.GiftWrap.remove = function() {
 }
 
 
+{% if cart.items.size == 1 and cart.attributes.has-wrapping != 'blank' %}
 
+  Shopify.Cart.GiftWrap.remove();
+});
+{% endif %}
 // When the gift-wrapping checkbox is checked or unchecked.
  
     document.addEventListener("DOMContentLoaded", function(){
