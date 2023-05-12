@@ -42,9 +42,7 @@ Shopify.Cart = Shopify.Cart || {};
 Shopify.Cart.GiftWrap = {};
 
 Shopify.Cart.GiftWrap.set = function(obj) {
-   /* let hasWrapping = ''
-    const count = Object.entries(obj).filter(([key, value]) => value > 0)
-    count.length > 0 ? hasWrapping = 'yes' : hasWrapping = ''*/
+
     var headers = new Headers({ 'Content-Type': 'application/json' });
       var request = {
       method: 'POST',
@@ -64,7 +62,7 @@ Shopify.Cart.GiftWrap.remove = function() {
       var request = {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ updates: '', attributes: {'has-wrapping': ''} })
+      body: JSON.stringify({ updates: '' })
     };
     fetch('/cart/update.js', request)
     .then(function() {
