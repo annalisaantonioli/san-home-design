@@ -35,7 +35,7 @@ var variantList = [],
 {% for item in linklists.gift-wrapping.links %}
     variantList.push({{item.object.id}});
 {% endfor %}
-
+console.log(variantList)
 Shopify.Cart = Shopify.Cart || {};
 
 Shopify.Cart.GiftWrap = {};
