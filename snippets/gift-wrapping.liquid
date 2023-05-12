@@ -50,9 +50,9 @@ Shopify.Cart.GiftWrap.set = function(obj) {
       body: JSON.stringify({ updates: obj  })
     };
    fetch('/cart/update.js', request)
-    /*.then(function() {
+    .then(function() {
       location.href = '/cart';
-    });*/
+    });
 
 }
 
@@ -82,9 +82,7 @@ Shopify.Cart.GiftWrap.remove = function(obj) {
             item.checked ?  giftObj[selectedItem] = 1 : giftObj[selectedItem] = 0
             console.log(giftObj)
             Shopify.Cart.GiftWrap.set(giftObj); 
-
-             
-  })
+          })
       )})
 
 
