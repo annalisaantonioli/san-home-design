@@ -42,15 +42,14 @@ Shopify.Cart = Shopify.Cart || {};
 Shopify.Cart.GiftWrap = {};
 
 Shopify.Cart.GiftWrap.set = function(obj) {
-    let hasWrapping = ''
+   /* let hasWrapping = ''
     const count = Object.entries(obj).filter(([key, value]) => value > 0)
-  console.log(count.length > 0)
-    count.length > 0 ? hasWrapping = 'yes' : hasWrapping = ''
+    count.length > 0 ? hasWrapping = 'yes' : hasWrapping = ''*/
     var headers = new Headers({ 'Content-Type': 'application/json' });
       var request = {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ updates: obj, attributes: {'has-wrapping': hasWrapping}  })
+      body: JSON.stringify({ updates: obj })
     };
    fetch('/cart/update.js', request)
     /*.then(function() {
