@@ -14,11 +14,12 @@
     {% endfor %}
   </div>
 
-{% assign id = item.object.variants.first.id %}
+      {% assign id_1 = linklists.gift-wrapping.links.first.object.variants.first.id %} 
+     {% assign id_2 = linklists.gift-wrapping.links.last.object.variants.first.id %} 
 
 {% assign gift_wraps_in_cart = 0 %}
 {% for item in cart.items %}
-  {% if item.id == id %}
+   {% if item.id == id_1 or item.id == id_2 %}
     {% assign gift_wraps_in_cart = gift_wraps_in_cart| plus: item.quantity %}
   {% endif %}
 {% endfor %}
