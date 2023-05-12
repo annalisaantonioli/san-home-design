@@ -1,196 +1,108 @@
-{% if linklists.gift-wrapping.links.size > 0 and
-linklists.gift-wrapping.links.first.type == 'product_link' %}
-  {% assign gift_wraps_in_cart = 0 %}
-      {% assign ids= "" | split: ',' %}
-  
+{% if linklists.gift-wrapping.links.size > 0 and linklists.gift-wrapping.links.first.type == 'product_link' %}
+  <div id="is-a-gift" class="clearfix rte">
+    {% for variant in linklists.gift-wrapping.links.first.object.variants %}
+    <p>
+      <input type="hidden" name="attributes[gift-wrapping]" data-variantId="{{ variant.id }}" value="" />
+      <input id="gift-wrapping" type="checkbox" name="attributes[gift-wrapping]" data-variantId="{{ variant.id }}" value="yes" {% for item in cart.items %}{% if item.id == variant.id %} checked="checked"{% endif %}{% endfor %} style="float: none" />
+      {{ variant.image.src }}
+      <label for="gift-wrapping" style="display:inline; padding-left: 5px; float: none;">
+      For {{ variant.price | money }} please wrap the products in this order.
+      </label>
+    </p>
+    {% endfor %}
+    <p>
+      <label style="display:block" for="gift-note">Gift message (free and optional):</label>
+      <textarea name="attributes[gift-note]" id="gift-note">{{ cart.attributes.gift-note }}</textarea>
+    </p>
+  </div>
 
-  {% for item in linklists.gift-wrapping.links %}
-    {% assign theid = item.object.id | split: ',' %}
-      {% assign ids = ids | concat: theid %}
-  
-    
+{% assign id = linklists.gift-wrapping.links.first.object.variants.first.id %}
 
-<div
-  id="is-a-gift-{{ item.object.id }}"
-  style="clear: left; margin: 30px 0"
-  class="clearfix rte"
->
-  
-    {% assign name = 'gift-wrapping-' | append: item.object.variants.first.id %}
-     {% assign checked = false  %}
-     {% for el in cart.attributes %}
-       {% assign k = el | first %} 
-         {% assign v = el | last %} 
-      {% if k == name and v != blank %}
-        {% assign checked = true %}
-        {% endif %}
-  {% endfor %}
-
-  <p class="shd-checkbox-custom">
-    <input
-      id="gift-wrapping-{{ item.object.variants.first.id }}"
-      data-id="{{ item.object.variants.first.id }}"
-      type="checkbox"
-      name="attributes[gift-wrapping]"
-      value="yes"
-    
-     {% if checked %}
-      checked="checked"
-      {% endif %}
-      style="float: none"
-    />
-    <span class="checkmark"></span>
-    <label
-      for="gift-wrapping"
-      style="display:inline; padding-left: 5px; float: none;"
-    >
-      <span class="shd-uppercase shd-font-semibold">{{ item.title }} - {{ item.object.price | money }}</span>
-     
-      <span class="shd-block shd-mt-8">{{ item.object.description }}</span>
-    </label>
-  </p>
-  
- 
-   
-
-</div>
-
-
-
+{% assign gift_wraps_in_cart = 0 %}
+{% for item in cart.items %}
+  {% if item.id == id %}
+    {% assign gift_wraps_in_cart = item.quantity %}
+  {% endif %}
 {% endfor %}
-      {% assign id_1 = linklists.gift-wrapping.links.first.object.variants.first.id %} 
-     {% assign id_2 = linklists.gift-wrapping.links.last.object.variants.first.id %} 
- 
-{% assign name_1 = 'gift-wrapping-' | append: id_1 %}
-  {% assign name_2 = 'gift-wrapping-' | append: id_2 %}
 
-{% for item in cart.items %} {% if
-item.id == id_1 or item.id == id_2 %} {% assign gift_wraps_in_cart =  gift_wraps_in_cart| plus: item.quantity %} {% endif %}
-{% endfor %}
- 
 <style>
-  #updates_{{ id_1 }} { display: none; }
-    #updates_{{ id_2 }} { display: none; }
+  #updates_{{ id }} { display: none; }
 </style>
 
 <script>
 
-  Shopify.Cart = Shopify.Cart || {};
+var variantList = [],
+    giftObj = {};
 
-  Shopify.Cart.GiftWrap = {};
+{% for variant in linklists.gift-wrapping.links.first.object.variants %}
+    variantList.push({{variant.id}});
+{% endfor %}
 
-  Shopify.Cart.GiftWrap.set = function() {
-    var headers = new Headers({ 'Content-Type': 'application/json' });
-    const items = document.querySelectorAll('[name="attributes[gift-wrapping]"]')
-    const content = {}
-    const attrs = {}
-    items.forEach((item, i) => {
-      const el = {}
-      content[item.dataset.id] = item.checked ? 1 : 0
-      attrs[item.id] =  item.checked ? 'yes' : ''
-    })
+Shopify.Cart = Shopify.Cart || {};
 
-    
-    const asArray = Object.entries(attrs);
-    const filtered = asArray.filter(([key, value]) => value === 'yes');
-    attrs['gift-wrapping'] = filtered.length > 0 ? 'true' : ''
-    
-    var request = {
-      method: 'POST',
-      headers: headers,
-      body: JSON.stringify({ updates: content, attributes: attrs })
-    };
-    fetch('/cart/update.js', request)
-    .then(function() {
-      location.href = '/cart';
-    });
-  }
+Shopify.Cart.GiftWrap = {};
 
-  Shopify.Cart.GiftWrap.remove = function(el) {
-    var headers = new Headers({ 'Content-Type': 'application/json' });
-     const items = document.querySelectorAll('[name="attributes[gift-wrapping]"]')
-     const content = {}
-    const attrs = {}
-    items.forEach((item, i) => {
-      const el = {}
-
-      content[item.dataset.id] = item.checked ? 1 : 0
-      
-      attrs[item.id] =  item.checked ? 'yes': ''
-      attrs['gift-wrapping'] = item.checked ? 'true' : ''
-      
-    })
-
-    const asArray = Object.entries(attrs);
-    const filtered = asArray.filter(([key, value]) => value === 'yes');
-    attrs['gift-wrapping'] = filtered.length > 0 ? 'true' : ''
-
-    var request = {
-      method: 'POST',
-      headers: headers,
-      body: JSON.stringify({ updates: content, attributes: attrs })
-    };
-  fetch('/cart/update.js', request)
-    .then(function() {
-      location.href = '/cart';
-    });
-  }
-
-
-
-
-  // When the gift-wrapping checkbox is checked or unchecked.
-  document.addEventListener("DOMContentLoaded", function(){
-    console.log('aaaaaaa',{{cart.items.size }},{{ gift_wraps_in_cart}},{{cart.attributes.gift-wrapping}})
-
-    const itemsChdk =  document.querySelectorAll('[name="attributes[gift-wrapping]"]')
- 
-   
-  itemsChdk.forEach(item => {
-    const id = item.id
-    item.addEventListener("change", function(event) {
-      Shopify.Cart.GiftWrap.set()
-     /* if (event.target.checked) {
-        Shopify.Cart.GiftWrap.set();
-        
-
-      } else {
-        Shopify.Cart.GiftWrap.remove();
-       
-      }*/
-  })
-  })
-   /* document.querySelector('#gift-note').addEventListener("change", function(evt) {
-      var note = evt.target.value;
-      var headers = new Headers({ 'Content-Type': 'application/json' });
-
-      var request = {
-        method: 'POST',
-        headers: headers,
-        body: JSON.stringify({ attributes: { 'gift-note': note } })
-      };
-
-      fetch('/cart/update.js', request);
-    });*/
+Shopify.Cart.GiftWrap.set = function(obj, selectedItem) {
+  jQuery.ajax({
+    type: 'POST',
+    url: '/cart/update.js',
+    data: { updates: obj },
+    dataType: 'json',
+    success: function() { location.href = '/cart'; }
   });
+}
 
+Shopify.Cart.GiftWrap.remove = function(obj) {
+  jQuery.ajax({
+    type: 'POST',
+    url: '/cart/update.js',
+    data: { updates: obj },
+    dataType: 'json',
+    success: function() { location.href = '/cart'; }
+  });
+}
+
+{% if cart.items.size == 1 and gift_wraps_in_cart > 0 %}
+jQuery(function() {
+  Shopify.Cart.GiftWrap.remove();
+});
+{% endif %}
+
+// When the gift-wrapping checkbox is checked or unchecked.
+jQuery(function() {
+
+  jQuery('[name="attributes\[gift-wrapping\]"]').change(function() {
+    var selectedItem = jQuery(this).attr("data-variantId");
+
+    function createObjectQuntity(element, index, array) {
+      if( element == selectedItem) {
+        giftObj[element] = 1;
+      } else {
+        giftObj[element] = 0;
+      }
+    }
+
+    if (jQuery(this).is(':checked')) {
+      variantList.forEach(createObjectQuntity);
+      Shopify.Cart.GiftWrap.set(giftObj, selectedItem);
+    }
+    else {
+      selectedItem = 0;
+      variantList.forEach(createObjectQuntity);
+      Shopify.Cart.GiftWrap.remove(giftObj);
+    }
+  });
+});
 
 </script>
 
 {% else %}
 
 <p style="clear: left; margin: 30px 0" class="rte">
-  You attempted to add a gift-wrapping script to your shopping cart, but it
-  won't work because you don't have a link list with handle
-  <code>gift-wrapping</code> which, in turn, contains a link to your
-  gift-wrapping product. Please review the steps outlined
-  <a
-    href="https://help.shopify.com/manual/online-store/themes/os/customize/add-gift-wrap-option"
-    target="_blank"
-    rel="noopener noreferrer nofollow"
-    >here</a
-  >.
+  You attempted to add a gift-wrapping script to your shopping cart, but it won't work because you don't have
+  a link list with handle <code>gift-wrapping</code> which, in turn, contains a link
+  to your gift-wrapping product. Please review the steps outlined
+  <a href="http://docs.shopify.com/manual/configuration/store-customization/page-specific/cart-page/add-a-gift-wrap-option">here</a>.
 </p>
 
 {% endif %}
-
