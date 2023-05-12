@@ -1,6 +1,7 @@
 {% if linklists.gift-wrapping.links.size > 0 and linklists.gift-wrapping.links.first.type == 'product_link' %}
   <div id="is-a-gift" class="clearfix rte">
-    {% for variant in linklists.gift-wrapping.links %}
+    {% for item in linklists.gift-wrapping.links %}
+      {% assign variant = item.object %}
     <p>
       <input type="hidden" name="attributes[gift-wrapping]" data-variantId="{{ variant.id }}" value="" />
       <input id="gift-wrapping" type="checkbox" name="attributes[gift-wrapping]" data-variantId="{{ variant.id }}" value="yes" {% for item in cart.items %}{% if item.id == variant.id %} checked="checked"{% endif %}{% endfor %} style="float: none" />
@@ -10,10 +11,6 @@
       </label>
     </p>
     {% endfor %}
-    <p>
-      <label style="display:block" for="gift-note">Gift message (free and optional):</label>
-      <textarea name="attributes[gift-note]" id="gift-note">{{ cart.attributes.gift-note }}</textarea>
-    </p>
   </div>
 
 {% assign id = linklists.gift-wrapping.links.first.object.variants.first.id %}
