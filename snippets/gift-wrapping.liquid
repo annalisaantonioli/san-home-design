@@ -95,7 +95,7 @@ Shopify.Cart.GiftWrap.remove = function(obj) {
 
     if (item.checked) {
       variantList.forEach(el => {
-        if (el == selectedItem ?  giftObj[el] = 1) {
+        if (el == selectedItem) {
           giftObj[el] = 1
         }
       });
@@ -104,7 +104,7 @@ Shopify.Cart.GiftWrap.remove = function(obj) {
     else {
      
           variantList.forEach(el => {
-        if (el == selectedItem ?  giftObj[el] = 1) {
+        if (el == selectedItem ) {
           giftObj[el] = 0
         }
       });
