@@ -73,11 +73,7 @@ Shopify.Cart.GiftWrap.remove = function() {
 }
 
 
-{% if cart.items.size == 1 and cart.attributes.has-wrapping != 'blank' %}
 
-  Shopify.Cart.GiftWrap.remove();
-});
-{% endif %}
 // When the gift-wrapping checkbox is checked or unchecked.
  
     document.addEventListener("DOMContentLoaded", function(){
