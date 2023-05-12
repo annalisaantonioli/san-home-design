@@ -7,7 +7,9 @@
       <input id="gift-wrapping" type="checkbox" name="attributes[gift-wrapping]" data-variantId="{{ variant.id }}" value="yes" {% for item in cart.items %}{% if item.id == variant.id %} checked="checked"{% endif %}{% endfor %} style="float: none" />
       {{ variant.image.src }}
       <label for="gift-wrapping" style="display:inline; padding-left: 5px; float: none;">
-      For {{ variant.price | money }} please wrap the products in this order.
+        <span class="shd-uppercase shd-font-semibold">{{ item.title }} - {{ item.object.price | money }}</span>
+     
+      <span class="shd-block shd-mt-8">{{ item.object.description }}</span>
       </label>
     </p>
     {% endfor %}
