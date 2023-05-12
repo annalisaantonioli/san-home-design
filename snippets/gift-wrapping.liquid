@@ -79,7 +79,9 @@ Shopify.Cart.GiftWrap.remove = function(obj) {
       items.forEach(item => {(
             item.addEventListener("change", function() {
             var selectedItem = item.getAttribute("data-variantId");
-            item.checked ?  giftObj[selectedItem] = 1 : ftObj[selectedItem] = 0
+            item.checked ?  giftObj[selectedItem] = 1 : giftObj[selectedItem] = 0
+            console.log(giftObj)
+            Shopify.Cart.GiftWrap.set(giftObj); 
 
              
   })
