@@ -41,9 +41,8 @@ Shopify.Cart = Shopify.Cart || {};
 
 Shopify.Cart.GiftWrap = {};
 
-Shopify.Cart.GiftWrap.set = function(obj, selectedItem) {
+Shopify.Cart.GiftWrap.set = function(obj) {
   console.log('ojb on set', obj)
-  console.log('selected item on set', selectedItem)
     var headers = new Headers({ 'Content-Type': 'application/json' });
       var request = {
       method: 'POST',
@@ -74,39 +73,15 @@ Shopify.Cart.GiftWrap.remove = function(obj) {
 
 
 // When the gift-wrapping checkbox is checked or unchecked.
-    function createObjectQuntity(element, index, array, selectedItem) {
-      if( element == selectedItem) {
-        giftObj[element] = 1;
-      } else {
-        giftObj[element] = 0;
-      }
-      console.log('esegye createObgQnt', element)
-    }
+ 
     document.addEventListener("DOMContentLoaded", function(){
       const items = document.querySelectorAll('[name="attributes[gift-wrapping]"]')
       items.forEach(item => {(
             item.addEventListener("change", function() {
             var selectedItem = item.getAttribute("data-variantId");
-              console.log('current sele', selectedItem)
+            item.checked ?  giftObj[selectedItem] = 1 : ftObj[selectedItem] = 0
 
-    if (item.checked) {
-      variantList.forEach(el => {
-        if (el == selectedItem) {
-          giftObj[el] = 1
-        }
-      });
-      Shopify.Cart.GiftWrap.set(giftObj, selectedItem);
-    }
-    else {
-     
-          variantList.forEach(el => {
-        if (el == selectedItem ) {
-          giftObj[el] = 0
-        }
-      });
-      Shopify.Cart.GiftWrap.remove(giftObj);
-    }
-              console.log('giftObej',giftObj)
+             
   })
       )})
 
