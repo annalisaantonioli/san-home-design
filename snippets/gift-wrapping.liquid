@@ -32,8 +32,8 @@
 var variantList = [],
     giftObj = {};
 
-{% for variant in linklists.gift-wrapping.links.first.object.variants %}
-    variantList.push({{variant.id}});
+{% for item in linklists.gift-wrapping.links %}
+    variantList.push({{item.object.id}});
 {% endfor %}
 
 Shopify.Cart = Shopify.Cart || {};
