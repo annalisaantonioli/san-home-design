@@ -43,6 +43,7 @@ Shopify.Cart.GiftWrap = {};
 
 Shopify.Cart.GiftWrap.set = function(obj) {
     const hasWrapping = ''
+  console.log(Object.entries(obj).filter(([key, value]) => value > 0)
     if (obj.length > 0 && Object.entries(obj).filter(([key, value]) => value > 0) ) {
       console.log('ha wrapping')
     } else {
