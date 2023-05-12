@@ -72,27 +72,26 @@ Shopify.Cart.GiftWrap.remove = function(obj) {
 
 {% if cart.items.size == 1 and gift_wraps_in_cart > 0 %}
     document.addEventListener("DOMContentLoaded", function(){
+      console.log('condizione di remove')
        Shopify.Cart.GiftWrap.remove();
 });
 {% endif %}
 
 // When the gift-wrapping checkbox is checked or unchecked.
-  
-    document.addEventListener("DOMContentLoaded", function(){
-      const items = document.querySelectorAll('[name="attributes[gift-wrapping]"]')
-      items.forEach(item => {(
-            item.addEventListener("change", function() {
-    var selectedItem = item.getAttribute("data-variantId");
-
     function createObjectQuntity(element, index, array) {
       if( element == selectedItem) {
         giftObj[element] = 1;
       } else {
         giftObj[element] = 0;
       }
+      console.log('esegye createObgQnt')
     }
-
-              
+    document.addEventListener("DOMContentLoaded", function(){
+      const items = document.querySelectorAll('[name="attributes[gift-wrapping]"]')
+      items.forEach(item => {(
+            item.addEventListener("change", function() {
+            var selectedItem = item.getAttribute("data-variantId");
+              console.log('current sele', selectedItem)
 
     if (item.checked) {
       variantList.forEach(createObjectQuntity);
