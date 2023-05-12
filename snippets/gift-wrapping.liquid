@@ -35,12 +35,14 @@ var variantList = [],
 {% for item in linklists.gift-wrapping.links %}
     variantList.push({{item.object.id}});
 {% endfor %}
-console.log(variantList)
+console.log('variant list', variantList)
 Shopify.Cart = Shopify.Cart || {};
 
 Shopify.Cart.GiftWrap = {};
 
 Shopify.Cart.GiftWrap.set = function(obj, selectedItem) {
+  console.log('ojb', obj)
+  console.log('selected item', selectedItem)
     var headers = new Headers({ 'Content-Type': 'application/json' });
       var request = {
       method: 'POST',
