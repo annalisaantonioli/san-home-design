@@ -42,7 +42,6 @@ Shopify.Cart = Shopify.Cart || {};
 Shopify.Cart.GiftWrap = {};
 
 Shopify.Cart.GiftWrap.set = function(obj) {
-  console.log('ojb on set', obj)
     var headers = new Headers({ 'Content-Type': 'application/json' });
       var request = {
       method: 'POST',
@@ -56,13 +55,13 @@ Shopify.Cart.GiftWrap.set = function(obj) {
 
 }
 
-Shopify.Cart.GiftWrap.remove = function(obj) {
+Shopify.Cart.GiftWrap.remove = function() {
 
     var headers = new Headers({ 'Content-Type': 'application/json' });
       var request = {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ updates: obj  })
+      body: JSON.stringify({ updates: ''  })
     };
     fetch('/cart/update.js', request)
     .then(function() {
