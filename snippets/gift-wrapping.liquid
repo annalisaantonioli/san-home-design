@@ -7,7 +7,7 @@
 >
     {% for item in linklists.gift-wrapping.links %}
       {% assign variant = item.object %}
-     <p class="shd-checkbox-custom">
+     <p class="shd-checkbox-custom" style="margin-bottom: 20px">
       
       <input type="hidden" name="attributes[gift-wrapping]" data-variantId="{{ variant.variants.first.id }}" value="" />
       <input id="gift-wrapping-{{ variant.variants.first.id }}" type="checkbox" name="attributes[gift-wrapping]" data-variantId="{{ variant.variants.first.id }}" value="yes" {% for item in cart.items %}{% if item.id == variant.variants.first.id %} checked="checked"{% endif %}{% endfor %} style="float: none" />
