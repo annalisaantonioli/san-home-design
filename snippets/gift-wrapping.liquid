@@ -1,5 +1,10 @@
 {% if linklists.gift-wrapping.links.size > 0 and linklists.gift-wrapping.links.first.type == 'product_link' %}
-  <div id="is-a-gift" class="clearfix rte">
+
+<div
+  id="is-a-gift-{{ item.object.id }}"
+  style="clear: left; margin: 30px 0"
+  class="clearfix rte"
+>
     {% for item in linklists.gift-wrapping.links %}
       {% assign variant = item.object %}
      <p class="shd-checkbox-custom">
