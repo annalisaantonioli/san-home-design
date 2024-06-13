@@ -7,8 +7,9 @@
       "blocks": {
         "afe9a8b2-0895-4dff-865d-b59a809952d4": {
           "type": "paragraph",
+          "disabled": true,
           "settings": {
-            "text": "<p>Approfitta del 10% di sconto<\/p><p>sul tuo primo ordine!<\/p>"
+            "text": "<p>Approfitta della SUMMER PROMO! applicazione dei soggetti gratuita<\/p>"
           }
         },
         "sections--16067984851117__2f67319e-b8ba-4ccf-a841-f8b1421bb452-168172169243408ec8-2": {
@@ -21,6 +22,7 @@
         "afe9a8b2-0895-4dff-865d-b59a809952d4",
         "sections--16067984851117__2f67319e-b8ba-4ccf-a841-f8b1421bb452-168172169243408ec8-2"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "background-1",
         "full_width": true,
