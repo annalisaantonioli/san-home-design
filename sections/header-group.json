@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -8,7 +17,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "SUMMER PROMO con SPEDIZIONE GRATUITA - ordine minimo 40 €",
+            "text": "SUMMER PROMO: SPEDIZIONE GRATUITA con codice SPEFREE24 - ordine minimo 40 €",
             "text_alignment": "center",
             "color_scheme": "background-1",
             "link": ""
