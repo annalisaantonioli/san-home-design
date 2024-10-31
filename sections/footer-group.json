@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -7,9 +16,8 @@
       "blocks": {
         "afe9a8b2-0895-4dff-865d-b59a809952d4": {
           "type": "paragraph",
-          "disabled": true,
           "settings": {
-            "text": "<p>Approfitta della SUMMER PROMO! applicazione dei soggetti gratuita<\/p>"
+            "text": "<p>É tempo di BLACK FRIDAY!</p><p>Approfitta delle offerte esclusive (fino a - 40%) per dare<br/>un nuovo stile alla tua tavola </p><p>Non lasciartelo sfuggire: l’offerta dura <strong>solo oggi</strong>!</p>"
           }
         },
         "sections--16067984851117__2f67319e-b8ba-4ccf-a841-f8b1421bb452-168172169243408ec8-2": {
@@ -22,7 +30,6 @@
         "afe9a8b2-0895-4dff-865d-b59a809952d4",
         "sections--16067984851117__2f67319e-b8ba-4ccf-a841-f8b1421bb452-168172169243408ec8-2"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "background-1",
         "full_width": true,
@@ -36,7 +43,7 @@
         "abfbb19a-0c82-4bac-ac81-439d0160aa9c": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_2_b983ca11-097a-40df-99bf-86a98297a82e.png",
+            "image": "shopify://shop_images/Group_2_b983ca11-097a-40df-99bf-86a98297a82e.png",
             "image_width": 100,
             "alignment": "center"
           }
@@ -45,7 +52,7 @@
           "type": "text",
           "settings": {
             "heading": "",
-            "subtext": "<p>San home design nasce dal desiderio <\/p><p>di circondarsi di bellezza e stile anche a tavola.<br\/>Complementi d’arredo con un design accattivante e originale<br\/>per la colazione, un pranzo in famiglia o una cena formale.<br\/>Tutti i prodotti sono l’espressione<br\/>di una lunga ricerca di materiali e di un continuo studio del design.<\/p>"
+            "subtext": "<p>San home design nasce dal desiderio </p><p>di circondarsi di bellezza e stile anche a tavola.<br/>Complementi d’arredo con un design accattivante e originale<br/>per la colazione, un pranzo in famiglia o una cena formale.<br/>Tutti i prodotti sono l’espressione<br/>di una lunga ricerca di materiali e di un continuo studio del design.</p>"
           }
         }
       },
