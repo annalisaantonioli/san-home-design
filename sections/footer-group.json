@@ -17,11 +17,12 @@
         "afe9a8b2-0895-4dff-865d-b59a809952d4": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>É tempo di <strong>BLACK FRIDAY</strong>! </p><p>Non lasciartelo sfuggire: </p><p>l’offerta dura <strong>solo oggi 1 NOVEMBRE</strong>       </p><p>Fino a - 40%</p>"
+            "text": "<p>É tempo di </p><p><strong>BLACK FRIDAY</strong>! </p><p>Non lasciartelo sfuggire: </p><p>l’offerta dura <strong>solo oggi 1 NOVEMBRE</strong>       </p><p>Fino a - 40%</p>"
           }
         },
         "heading_Rx3KDR": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Subscribe to our emails",
             "heading_size": "h1"
