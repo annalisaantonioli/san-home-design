@@ -26,9 +26,9 @@
         "announcement_7jyPBQ": {
           "type": "announcement",
           "settings": {
-            "text": "CODICI SCONTO -  Happy Kids: 1BF 3Chic: 2BF - Delice: 3BF",
+            "text": "CODICI SCONTO -  Happy Kids: 40HAPPYKIDS - 30TRECHIC - 25DELICE",
             "text_alignment": "center",
-            "color_scheme": "accent-1",
+            "color_scheme": "background-1",
             "link": ""
           }
         }
