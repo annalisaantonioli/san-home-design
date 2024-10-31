@@ -17,15 +17,26 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "SPECIAL BLACK FRIDAY: 1 NOVEMBRE",
+            "text": "Fino a - 40% con il BLACK FRIDAY! Non lasciartelo sfuggire: l’offerta dura solo venerdì 1 novembre",
             "text_alignment": "center",
             "color_scheme": "background-1",
+            "link": ""
+          }
+        },
+        "announcement_7jyPBQ": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "CODICI SCONTO -  Happy Kids: 1BF 3Chic: 2BF - Delice: 3BF",
+            "text_alignment": "center",
+            "color_scheme": "accent-1",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement_7jyPBQ"
       ],
       "settings": {
       }
