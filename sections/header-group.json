@@ -17,7 +17,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Fino a - 40% con il BLACK FRIDAY! Non lasciartelo sfuggire: l’offerta è valida solo venerdì 1 novembre",
+            "text": "Spedizione gratuita a partire da 100€",
             "text_alignment": "center",
             "color_scheme": "background-1",
             "link": ""
@@ -26,7 +26,7 @@
         "announcement_7jyPBQ": {
           "type": "announcement",
           "settings": {
-            "text": "CODICI SCONTO: 40HAPPYKIDS - 30TRECHIC - 25DELICE",
+            "text": "",
             "text_alignment": "center",
             "color_scheme": "background-1",
             "link": ""
@@ -37,8 +37,7 @@
         "announcement-bar-0",
         "announcement_7jyPBQ"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "header": {
       "type": "header",
